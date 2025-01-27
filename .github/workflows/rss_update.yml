@@ -40,6 +40,12 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: python update_rss.py
 
+      - name: Upload Generated RSS File as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RSS-Feed
+          path: deploy_netlify/
+
       - name: Deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
