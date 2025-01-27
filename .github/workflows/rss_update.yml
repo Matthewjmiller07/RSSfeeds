@@ -2,7 +2,7 @@ name: Update RSS Feed
 
 on:
   schedule:
-    - cron: "17 13 * * *"  # Runs at 7:10 AM CST (13:10 UTC)
+    - cron: "10 13 * * *"  # Runs at 7:10 AM CST (13:10 UTC)
   workflow_dispatch:
 
 jobs:
@@ -20,10 +20,30 @@ jobs:
       - name: Install Dependencies
         run: pip install requests python-dateutil
 
-      - name: Install Netlify CLI  # 🔥 Fix: Ensure Netlify CLI is installed
+      - name: Install Netlify CLI
         run: npm install -g netlify-cli
+
+      - name: Debug Netlify CLI
+        run: |
+          netlify --version
+          netlify status
 
       - name: Run RSS Update Script
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: python update_rss.py
+
+      - name: Check Netlify Authentication
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          export PATH="$HOME/.npm-global/bin:$PATH"
+          netlify status
+          netlify sites:list
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          export PATH="$HOME/.npm-global/bin:$PATH"
+          netlify deploy --prod --dir="deploy_netlify" --debug
