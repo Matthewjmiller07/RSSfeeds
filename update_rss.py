@@ -8,6 +8,9 @@ import requests
 # ✅ Set Netlify API Token (Provided by GitHub Actions)
 NETLIFY_AUTH_TOKEN = os.getenv("NETLIFY_AUTH_TOKEN")
 
+if not NETLIFY_AUTH_TOKEN:
+    raise ValueError("❌ NETLIFY_AUTH_TOKEN is missing. Make sure it is set in GitHub Secrets!")
+
 # ✅ Define Netlify Site & RSS Feeds
 site_name = "yutorah-rss"
 rss_file_name = "reiss_daf_podcast.xml"
@@ -33,7 +36,7 @@ print("✅ Created `netlify.toml` to serve XML files correctly.")
 def escape_xml(text):
     """Replaces invalid XML characters with safe equivalents"""
     if not isinstance(text, str):
-        text = str(text)  # Ensure it's a string
+        text = str(text)
     return (text.replace("&", "&amp;")
                 .replace("<", "&lt;")
                 .replace(">", "&gt;")
@@ -71,13 +74,6 @@ new_episodes = data.get("response", {}).get("docs", [])
 
 print(f"📡 Found {len(new_episodes)} new episodes from YUTorah API")
 
-# 🔍 **Debugging: Print the first 5 fetched episodes**
-for episode in new_episodes[:5]:
-    print(f"🎙 Title: {episode.get('shiurtitle', 'Unknown')}")
-    print(f"📅 Date: {episode.get('shiurdateformatted', 'Unknown')}")
-    print(f"🔗 Audio URL: {episode.get('shiurdownloadurl', 'MISSING')}")
-    print("-" * 60)
-
 # ✅ Generate Apple-Compliant RSS Feed XML
 PODCAST_TITLE = escape_xml("R' Reiss Dayan's Daf Yomi")
 PODCAST_DESCRIPTION = escape_xml("Daily Daf Yomi shiurim by R' Reiss Dayan.")
@@ -103,50 +99,44 @@ rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
     <itunes:image href="https://yourpodcastcoverimageurl.com/cover.jpg" />
 '''
 
-episode_count = 0
 for shiur in new_episodes:
     title = escape_xml(shiur.get("shiurtitle", "Untitled Episode"))
     audio_url = shiur.get("shiurdownloadurl", "")
+    episode_page_url = f"https://www.yutorah.org/{shiur.get('shiurid', '')}/"
 
     if not audio_url:
         print(f"⚠️ Skipping episode '{title}' - No audio URL found!")
-        continue  # Skip if no audio
+        continue
 
     file_size = get_audio_file_size(audio_url)
-    episode_page_url = f"https://www.yutorah.org/{shiur.get('shiurid', '')}/"
 
     raw_date = shiur.get("shiurdateformatted", "").strip()
     try:
         parsed_date = parser.parse(raw_date)
         pub_date = parsed_date.strftime("%a, %d %b %Y %H:%M:%S +0000")
     except (ValueError, TypeError):
-        print(f"⚠️ WARNING: Invalid date format for '{title}'. Using current date.")
         pub_date = datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")
 
     rss_content += f'''
     <item>
       <title>{title}</title>
-      <guid isPermaLink="false">{escape_xml(str(shiur.get("shiurid", episode_count)))}</guid>
+      <guid isPermaLink="false">{escape_xml(str(shiur.get("shiurid", "")))}</guid>
       <link>{episode_page_url}</link>
       <enclosure url="{audio_url}" length="{file_size}" type="audio/mpeg"/>
       <itunes:duration>00:29:00</itunes:duration>
-      <itunes:subtitle>Summary of {title}</itunes:subtitle>
-      <itunes:summary>Detailed summary of {title} episode.</itunes:summary>
       <pubDate>{pub_date}</pubDate>
     </item>
 '''
-    episode_count += 1
 
 rss_content += '''
   </channel>
 </rss>
 '''
 
-# ✅ Save RSS Feed to Deploy Folder
 with open(rss_file_path, "w", encoding="utf-8") as f:
     f.write(rss_content)
 
-print(f"✅ RSS Updated! Total Episodes: {episode_count}")
+print(f"✅ RSS Updated!")
 
 # ✅ Deploy to Netlify
 def run_command(command, description):
@@ -164,20 +154,5 @@ def run_command(command, description):
 # ✅ Deploy Site to Netlify
 print("📤 Deploying Site to Netlify...")
 deploy_output = run_command(f"netlify deploy --prod --dir='{deploy_folder}'", "Deploying Site")
-
-# ✅ Extract & Print Deployed Site URL
-site_url = None
-for line in deploy_output.split("\n"):
-    if "Website URL:" in line:
-        site_url = line.split("Website URL:")[1].strip()
-        print(f"🎙 Your RSS Feed is Live at: 🔗 {site_url}/{rss_file_name}")
-        break
-
-# ✅ Final Check
-if site_url:
-    print(f"✅ Deployment Successful! RSS feed available at {site_url}/{rss_file_name}")
-else:
-    print(f"⚠️ Deployment failed. Fetching Netlify logs for details...")
-    run_command("netlify logs", "Fetching Netlify Logs")
 
 time.sleep(5)
