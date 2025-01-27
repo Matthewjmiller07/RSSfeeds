@@ -1,29 +1,26 @@
-name: Update YU Torah RSS Feed
+name: Update RSS Feed
 
 on:
   schedule:
-    - cron: "0 6 * * *"  # Runs at midnight CST (6 AM UTC)
-  workflow_dispatch:  # Allows manual trigger
+    - cron: "10 13 * * *"  # Runs at 13:10 UTC (7:10 AM CST)
+  workflow_dispatch:
 
 jobs:
   update-rss:
     runs-on: ubuntu-latest
     steps:
-      - name: ✅ Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: 🛠️ Set Up Python
+      - name: Set Up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
 
-      - name: 📦 Install Dependencies
-        run: pip install requests
+      - name: Install Dependencies
+        run: pip install requests python-dateutil
 
-      - name: 🌎 Install Netlify CLI
-        run: npm install -g netlify-cli
-
-      - name: 🏗️ Run RSS Update Script
-        run: python update_rss.py
+      - name: Run RSS Update Script
         env:
-          NETLIFY_AUTH_TOKEN: "nfp_AqPdqdmRkDeMQBFUr86KTE6yVTQwPyWMa3b5"
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: python update_rss.py
