@@ -23,23 +23,19 @@ jobs:
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
-      - name: Debug Netlify CLI
+      - name: Verify Netlify CLI & Authentication
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
+          export PATH="$HOME/.npm-global/bin:$PATH"
           netlify --version
           netlify status
+          netlify sites:list
 
       - name: Run RSS Update Script
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: python update_rss.py
-
-      - name: Check Netlify Authentication
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: |
-          export PATH="$HOME/.npm-global/bin:$PATH"
-          netlify status
-          netlify sites:list
 
       - name: Deploy to Netlify
         env:
