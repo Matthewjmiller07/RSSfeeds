@@ -27,10 +27,13 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          export PATH="$HOME/.npm-global/bin:$PATH"
           netlify --version
           netlify status
-          netlify sites:list
+
+      - name: Link Netlify Site
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: netlify link --id ${{ secrets.NETLIFY_SITE_ID }}
 
       - name: Run RSS Update Script
         env:
@@ -40,6 +43,4 @@ jobs:
       - name: Deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: |
-          export PATH="$HOME/.npm-global/bin:$PATH"
-          netlify deploy --prod --dir="deploy_netlify" --debug
+        run: netlify deploy --prod --dir="deploy_netlify" --debug
