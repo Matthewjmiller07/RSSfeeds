@@ -2,7 +2,7 @@ name: Update RSS Feed
 
 on:
   schedule:
-    - cron: "10 13 * * *"  # Runs at 13:10 UTC (7:10 AM CST)
+    - cron: "17 13 * * *"  # Runs at 7:10 AM CST (13:10 UTC)
   workflow_dispatch:
 
 jobs:
@@ -19,6 +19,9 @@ jobs:
 
       - name: Install Dependencies
         run: pip install requests python-dateutil
+
+      - name: Install Netlify CLI  # 🔥 Fix: Ensure Netlify CLI is installed
+        run: npm install -g netlify-cli
 
       - name: Run RSS Update Script
         env:
