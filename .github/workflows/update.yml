@@ -23,17 +23,22 @@ jobs:
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
-      - name: Verify Netlify CLI & Authentication
+      - name: Debug GitHub Secrets
+        run: |
+          echo "Checking environment variables..."
+          echo "NETLIFY_AUTH_TOKEN length: ${#NETLIFY_AUTH_TOKEN}"
+          echo "NETLIFY_SITE_ID: ${NETLIFY_SITE_ID}"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: |
-          netlify --version
-          netlify status
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
       - name: Link Netlify Site
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: netlify link --id ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          echo "Using Site ID: ${{ secrets.NETLIFY_SITE_ID }}"
+          netlify link --id="${{ secrets.NETLIFY_SITE_ID }}"
+          netlify status
 
       - name: Run RSS Update Script
         env:
