@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Shiurim</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .shiur { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+        img { display: block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Search for Shiurim</h1>
+
+    <input type="text" id="query" placeholder="Enter topic (e.g. Emunah)">
+    <input type="text" id="teacher" placeholder="Enter teacher name (optional)">
+    <input type="text" id="category" placeholder="Filter by category (optional)">
+    <input type="text" id="date" placeholder="mm/dd/yyyy (optional)">
+    <button id="searchButton">Search</button>
+
+    <h2>Results</h2>
+    <div id="results"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
