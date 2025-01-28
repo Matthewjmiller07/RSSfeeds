@@ -23,10 +23,13 @@ jobs:
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
-      - name: Check Netlify Authentication
+            - name: Ensure Netlify is Linked
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: netlify status
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          netlify link --id="${{ secrets.NETLIFY_SITE_ID }}" || echo "Netlify already linked"
+          netlify status
 
       - name: Link Netlify Site
         env:
