@@ -1,9 +1,7 @@
 import os
 import subprocess
-import time
 import datetime
 import requests
-import csv
 import json
 from urllib.parse import quote
 from dateutil import parser
@@ -72,32 +70,33 @@ def generate_rss_feed(feed_name, feed_data):
     rss_file_path = os.path.join(deploy_folder, feed_name)
 
     if feed_data["source"] == "yutorah":
-        # ✅ Fetch Data from YUTorah
         base_url = "https://www.yutorah.org/Search/GetSearchResults"
         params = {
             "sort_by": "shiurdate desc",
             "organizationID": feed_data["organizationID"],
-            "search_query": feed_data["search_query"],
+            "search_query": quote(feed_data["search_query"]),
             "page": 1,
         }
         headers = {"accept": "application/json", "user-agent": "Mozilla/5.0"}
-
         response = requests.get(base_url, headers=headers, params=params)
-        data = response.json()
-        new_episodes = data.get("response", {}).get("docs", [])
+
+        if response.status_code == 200:
+            data = response.json()
+            new_episodes = data.get("response", {}).get("docs", [])
+        else:
+            print(f"❌ Error fetching YUTorah data: {response.status_code}")
+            new_episodes = []
 
     elif feed_data["source"] == "torahanytime":
-        # ✅ Fetch Data from TorahAnytime
         speaker_id = feed_data["speaker_id"]
-        limit, offset = 10000, 0
-        url = f"https://trpc.torahanytime.com/website.speakerPage.lectureList.getLectures?batch=1&input={{\"0\":{{\"speakerId\":{speaker_id},\"limit\":{limit},\"offset\":{offset},\"sortDirection\":\"DESC\"}}}}"
+        url = f"https://trpc.torahanytime.com/website.speakerPage.lectureList.getLectures?batch=1&input={{\"0\":{{\"speakerId\":{speaker_id},\"limit\":10000,\"offset\":0,\"sortDirection\":\"DESC\"}}}}"
         response = requests.get(url)
 
         if response.status_code == 200:
             data = response.json()
             new_episodes = data[0].get("result", {}).get("data", [])
         else:
-            print(f"❌ Error fetching TorahAnytime data for {feed_name}: {response.status_code}")
+            print(f"❌ Error fetching TorahAnytime data: {response.status_code}")
             new_episodes = []
 
     else:
@@ -121,7 +120,6 @@ def generate_rss_feed(feed_name, feed_data):
         </itunes:category>
     '''
 
-    # ✅ Process Each Shiur
     for shiur in new_episodes:
         title = escape_xml(shiur.get("shiurtitle", shiur.get("title", "Untitled Episode")))
         episode_page_url = shiur.get("shiurdownloadurl", shiur.get("media"))
@@ -130,12 +128,10 @@ def generate_rss_feed(feed_name, feed_data):
         if feed_data["source"] == "yutorah":
             audio_url = shiur.get("shiurdownloadurl", "")
         else:
-            # Generate TorahAnytime MP3 URL
             speaker_first = shiur.get("speaker_name_first", "").lower().replace(" ", "-")
             speaker_last = shiur.get("speaker_name_last", "").lower().replace(" ", "-")
             date_recorded = shiur.get("date_recorded", "").replace("-", "_")
-            title_prefix = f"1-{speaker_first}-{speaker_last}"
-            url_safe_title = quote(f"{title_prefix}_{date_recorded}.mp3", safe="")
+            url_safe_title = quote(f"1-{speaker_first}-{speaker_last}_{date_recorded}.mp3", safe="")
             audio_url = f"https://dl.torahanytime.com/mp3/{shiur.get('media')}.mp3?title={url_safe_title}"
 
         if not audio_url:
@@ -167,7 +163,6 @@ def generate_rss_feed(feed_name, feed_data):
     </rss>
     '''
 
-    # ✅ Save Updated RSS
     with open(rss_file_path, "w", encoding="utf-8") as f:
         f.write(rss_content)
 
@@ -179,5 +174,9 @@ for feed_name, feed_data in rss_feeds.items():
 
 # ✅ Deploy to Netlify
 print("📤 Deploying Site to Netlify...")
-subprocess.run(f"netlify deploy --prod --dir='{deploy_folder}' --site {NETLIFY_SITE_ID}", shell=True, check=True)
+subprocess.run(
+    ["netlify", "deploy", "--prod", "--dir", deploy_folder, "--site", NETLIFY_SITE_ID],
+    env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
+    check=True
+)
 print("✅ Deployment Complete!")
