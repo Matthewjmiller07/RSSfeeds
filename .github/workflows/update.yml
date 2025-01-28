@@ -13,6 +13,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
+          ref: feature/rss-ui  # ✅ Ensures workflow runs on the correct branch
           fetch-depth: 1  # Only fetch latest commit for speed
 
       - name: Set Up Python
