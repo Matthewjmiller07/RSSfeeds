@@ -3,7 +3,7 @@ name: Update RSS Feed
 on:
   schedule:
     - cron: "00 18 * * *"  # Runs at 12:00 PM CST (18:00 UTC)
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   update-rss:
@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          ref: feature/rss-ui  # ✅ Ensures this runs on feature branch
 
       - name: Set Up Python
         uses: actions/setup-python@v4
@@ -18,7 +20,9 @@ jobs:
           python-version: "3.9"
 
       - name: Install Dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          python -m pip install --upgrade pip  # Ensure latest pip version
 
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
@@ -32,6 +36,13 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
+      - name: Verify Netlify Authentication
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          echo "Verifying Netlify Authentication..."
+          netlify status || echo "⚠️ Netlify authentication failed!"
+
       - name: Link Netlify Site
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -40,18 +51,28 @@ jobs:
           netlify link --id="${{ secrets.NETLIFY_SITE_ID }}"
           netlify status
 
-      - name: Run RSS Update Script
+      - name: Run RSS Update Script for Reiss
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: python update_rss.py
+        run: python update_rss.py  # ✅ This updates the Reiss RSS feed
 
-      - name: Upload Generated RSS File as Artifact
+      - name: Run RSS Update Script for Rav Asher Weiss
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: python update_rav_asher_weiss.py  # ✅ This updates Rav Weiss RSS feed
+
+      - name: Upload Generated RSS Files as Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: RSS-Feed
+          name: RSS-Feeds
           path: deploy_netlify/
+
+      - name: Verify Generated RSS Files
+        run: ls -lh deploy_netlify/  # ✅ Lists generated files before deployment
 
       - name: Deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: netlify deploy --prod --dir="deploy_netlify" --debug
+        run: |
+          echo "Deploying to Netlify..."
+          netlify deploy --prod --dir="deploy_netlify" --debug
