@@ -23,35 +23,23 @@ jobs:
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
-      - name: Debug GitHub Secrets
-        run: |
-          echo "Checking environment variables..."
-          echo "NETLIFY_AUTH_TOKEN length: ${#NETLIFY_AUTH_TOKEN}"
-          echo "NETLIFY_SITE_ID: ${NETLIFY_SITE_ID}"
+      - name: Check Netlify Authentication
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-
-      - name: Verify Netlify Authentication
-        run: |
-          echo "Verifying Netlify Authentication..."
-          netlify status
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: netlify status
 
       - name: Link Netlify Site
-        run: |
-          echo "Using Site ID: $NETLIFY_SITE_ID"
-          netlify link --id="$NETLIFY_SITE_ID"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          netlify link --id="${{ secrets.NETLIFY_SITE_ID }}"
+          netlify status
 
       - name: Run RSS Update Script
-        run: python update_rss.py
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: python update_rss.py
 
       - name: Upload Generated RSS File as Artifact
         uses: actions/upload-artifact@v4
@@ -60,6 +48,6 @@ jobs:
           path: deploy_netlify/
 
       - name: Deploy to Netlify
-        run: netlify deploy --prod --dir="deploy_netlify" --debug
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: netlify deploy --prod --dir="deploy_netlify" --debug
