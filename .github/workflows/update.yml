@@ -3,7 +3,7 @@ name: Update RSS Feed
 on:
   schedule:
     - cron: "00 18 * * *"  # Runs at 12:00 PM CST (18:00 UTC)
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:
 
 jobs:
   update-rss:
@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          ref: feature/rss-ui  # ✅ Ensures this runs on feature branch
 
       - name: Set Up Python
         uses: actions/setup-python@v4
@@ -20,9 +18,7 @@ jobs:
           python-version: "3.9"
 
       - name: Install Dependencies
-        run: |
-          pip install -r requirements.txt
-          python -m pip install --upgrade pip  # Ensure latest pip version
+        run: pip install -r requirements.txt
 
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
@@ -37,42 +33,33 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
       - name: Verify Netlify Authentication
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
           echo "Verifying Netlify Authentication..."
-          netlify status || echo "⚠️ Netlify authentication failed!"
+          netlify status
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
       - name: Link Netlify Site
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          echo "Using Site ID: ${{ secrets.NETLIFY_SITE_ID }}"
-          netlify link --id="${{ secrets.NETLIFY_SITE_ID }}"
-          netlify status
-
-      - name: Run RSS Update Script for Reiss
+          echo "Using Site ID: $NETLIFY_SITE_ID"
+          netlify link --id="$NETLIFY_SITE_ID"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: python update_rss.py  # ✅ This updates the Reiss RSS feed
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
-      - name: Run RSS Update Script for Rav Asher Weiss
+      - name: Run RSS Update Script
+        run: python update_rss.py
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: python update_rav_asher_weiss.py  # ✅ This updates Rav Weiss RSS feed
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
-      - name: Upload Generated RSS Files as Artifacts
+      - name: Upload Generated RSS File as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: RSS-Feeds
+          name: RSS-Feed
           path: deploy_netlify/
 
-      - name: Verify Generated RSS Files
-        run: ls -lh deploy_netlify/  # ✅ Lists generated files before deployment
-
       - name: Deploy to Netlify
+        run: netlify deploy --prod --dir="deploy_netlify" --debug
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: |
-          echo "Deploying to Netlify..."
-          netlify deploy --prod --dir="deploy_netlify" --debug
