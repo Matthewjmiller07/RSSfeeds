@@ -28,18 +28,13 @@ rss_feeds = {
         "speaker_id": 860,  # TorahAnytime Speaker ID for Rav Asher Weiss
         "source": "torahanytime",
     },
-    "shearim_b_tefillah.xml": {
-        "search_query": "She'arim B'Tefillah",
-        "organizationID": 1863,
-        "source": "yutorah",
-    },
 }
 
 # ✅ Ensure Deployment Directory Exists
 os.makedirs(deploy_folder, exist_ok=True)
 
 # ✅ Create `netlify.toml`
-netlify_toml = """
+netlify_toml = """\
 [[headers]]
   for = "/*.xml"
   [headers.values]
@@ -129,7 +124,15 @@ def generate_rss_feed(feed_name, feed_data):
         title = escape_xml(shiur.get("shiurtitle", shiur.get("title", "Untitled Episode")))
         episode_page_url = shiur.get("shiurdownloadurl", shiur.get("media"))
         guid = str(shiur.get("shiurid", shiur.get("id", "")))
-        audio_url = shiur.get("shiurdownloadurl", "")
+
+        if feed_data["source"] == "yutorah":
+            audio_url = shiur.get("shiurdownloadurl", "")
+        else:
+            speaker_first = shiur.get("speaker_name_first", "").lower().replace(" ", "-")
+            speaker_last = shiur.get("speaker_name_last", "").lower().replace(" ", "-")
+            date_recorded = shiur.get("date_recorded", "").replace("-", "_")
+            url_safe_title = quote(f"1-{speaker_first}-{speaker_last}_{date_recorded}.mp3", safe="")
+            audio_url = f"https://dl.torahanytime.com/mp3/{shiur.get('media')}.mp3?title={url_safe_title}"
 
         if not audio_url:
             print(f"⚠️ Skipping '{title}' - No audio URL")
@@ -150,19 +153,30 @@ def generate_rss_feed(feed_name, feed_data):
           <guid isPermaLink="false">{guid}</guid>
           <link>{episode_page_url}</link>
           <enclosure url="{audio_url}" length="{file_size}" type="audio/mpeg"/>
+          <itunes:duration>00:29:00</itunes:duration>
           <pubDate>{pub_date}</pubDate>
         </item>
     '''
 
-    rss_content += '''</channel></rss>'''
+    rss_content += '''
+      </channel>
+    </rss>
+    '''
 
     with open(rss_file_path, "w", encoding="utf-8") as f:
         f.write(rss_content)
+
+    print(f"✅ RSS Updated for {feed_name}!")
 
 # ✅ Generate Feeds
 for feed_name, feed_data in rss_feeds.items():
     generate_rss_feed(feed_name, feed_data)
 
+# ✅ Deploy to Netlify
 print("📤 Deploying Site to Netlify...")
-subprocess.run(["netlify", "deploy", "--prod", "--dir", deploy_folder], check=True)
+subprocess.run(
+    ["netlify", "deploy", "--prod", "--dir", deploy_folder, "--site", NETLIFY_SITE_ID],
+    env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
+    check=True
+)
 print("✅ Deployment Complete!")
