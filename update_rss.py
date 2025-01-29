@@ -33,12 +33,13 @@ rss_feeds = {
         "organizationID": 1863,
         "source": "yutorah",
     },
+}
 
 # ✅ Ensure Deployment Directory Exists
 os.makedirs(deploy_folder, exist_ok=True)
 
 # ✅ Create `netlify.toml`
-netlify_toml = """\
+netlify_toml = """
 [[headers]]
   for = "/*.xml"
   [headers.values]
@@ -73,26 +74,14 @@ def generate_rss_feed(feed_name, feed_data):
     print(f"📡 Fetching new episodes for {feed_name}...")
     rss_file_path = os.path.join(deploy_folder, feed_name)
 
-    if os.path.exists(rss_file_path):
-        with open(rss_file_path, "r", encoding="utf-8") as f:
-            existing_rss = f.read()
-    else:
-        existing_rss = ""
-
     if feed_data["source"] == "yutorah":
         base_url = "https://www.yutorah.org/Search/GetSearchResults"
         params = {
             "sort_by": "shiurdate desc",
+            "organizationID": feed_data["organizationID"],
+            "search_query": quote(feed_data["search_query"]),
+            "page": 1,
         }
-
-        if "organizationID" in feed_data:
-            params["organizationID"] = feed_data["organizationID"]
-            params["search_query"] = quote(feed_data["search_query"])
-
-        if "teacherID" in feed_data and "collectionID" in feed_data:
-            params["teacherID"] = feed_data["teacherID"]
-            params["collectionID"] = feed_data["collectionID"]
-
         headers = {"accept": "application/json", "user-agent": "Mozilla/5.0"}
         response = requests.get(base_url, headers=headers, params=params)
 
@@ -140,12 +129,8 @@ def generate_rss_feed(feed_name, feed_data):
         title = escape_xml(shiur.get("shiurtitle", shiur.get("title", "Untitled Episode")))
         episode_page_url = shiur.get("shiurdownloadurl", shiur.get("media"))
         guid = str(shiur.get("shiurid", shiur.get("id", "")))
-
-        if guid in existing_rss:
-            print(f"⚠️ Skipping duplicate episode '{title}'")
-            continue
-
         audio_url = shiur.get("shiurdownloadurl", "")
+
         if not audio_url:
             print(f"⚠️ Skipping '{title}' - No audio URL")
             continue
@@ -165,30 +150,19 @@ def generate_rss_feed(feed_name, feed_data):
           <guid isPermaLink="false">{guid}</guid>
           <link>{episode_page_url}</link>
           <enclosure url="{audio_url}" length="{file_size}" type="audio/mpeg"/>
-          <itunes:duration>00:29:00</itunes:duration>
           <pubDate>{pub_date}</pubDate>
         </item>
     '''
 
-    rss_content += '''
-      </channel>
-    </rss>
-    '''
+    rss_content += '''</channel></rss>'''
 
     with open(rss_file_path, "w", encoding="utf-8") as f:
         f.write(rss_content)
-
-    print(f"✅ RSS Updated for {feed_name}!")
 
 # ✅ Generate Feeds
 for feed_name, feed_data in rss_feeds.items():
     generate_rss_feed(feed_name, feed_data)
 
-# ✅ Deploy to Netlify
 print("📤 Deploying Site to Netlify...")
-subprocess.run(
-    ["netlify", "deploy", "--prod", "--dir", deploy_folder, "--site", NETLIFY_SITE_ID],
-    env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
-    check=True
-)
+subprocess.run(["netlify", "deploy", "--prod", "--dir", deploy_folder], check=True)
 print("✅ Deployment Complete!")
