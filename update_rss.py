@@ -28,6 +28,11 @@ rss_feeds = {
         "speaker_id": 860,  # TorahAnytime Speaker ID for Rav Asher Weiss
         "source": "torahanytime",
     },
+    "shearim_b_tefillah.xml": {
+        "teacherID": 81012,
+        "collectionID": 1863,
+        "source": "yutorah",
+    },
 }
 
 # ✅ Ensure Deployment Directory Exists
@@ -69,14 +74,26 @@ def generate_rss_feed(feed_name, feed_data):
     print(f"📡 Fetching new episodes for {feed_name}...")
     rss_file_path = os.path.join(deploy_folder, feed_name)
 
+    if os.path.exists(rss_file_path):
+        with open(rss_file_path, "r", encoding="utf-8") as f:
+            existing_rss = f.read()
+    else:
+        existing_rss = ""
+
     if feed_data["source"] == "yutorah":
         base_url = "https://www.yutorah.org/Search/GetSearchResults"
         params = {
             "sort_by": "shiurdate desc",
-            "organizationID": feed_data["organizationID"],
-            "search_query": quote(feed_data["search_query"]),
-            "page": 1,
         }
+
+        if "organizationID" in feed_data:
+            params["organizationID"] = feed_data["organizationID"]
+            params["search_query"] = quote(feed_data["search_query"])
+
+        if "teacherID" in feed_data and "collectionID" in feed_data:
+            params["teacherID"] = feed_data["teacherID"]
+            params["collectionID"] = feed_data["collectionID"]
+
         headers = {"accept": "application/json", "user-agent": "Mozilla/5.0"}
         response = requests.get(base_url, headers=headers, params=params)
 
@@ -125,15 +142,11 @@ def generate_rss_feed(feed_name, feed_data):
         episode_page_url = shiur.get("shiurdownloadurl", shiur.get("media"))
         guid = str(shiur.get("shiurid", shiur.get("id", "")))
 
-        if feed_data["source"] == "yutorah":
-            audio_url = shiur.get("shiurdownloadurl", "")
-        else:
-            speaker_first = shiur.get("speaker_name_first", "").lower().replace(" ", "-")
-            speaker_last = shiur.get("speaker_name_last", "").lower().replace(" ", "-")
-            date_recorded = shiur.get("date_recorded", "").replace("-", "_")
-            url_safe_title = quote(f"1-{speaker_first}-{speaker_last}_{date_recorded}.mp3", safe="")
-            audio_url = f"https://dl.torahanytime.com/mp3/{shiur.get('media')}.mp3?title={url_safe_title}"
+        if guid in existing_rss:
+            print(f"⚠️ Skipping duplicate episode '{title}'")
+            continue
 
+        audio_url = shiur.get("shiurdownloadurl", "")
         if not audio_url:
             print(f"⚠️ Skipping '{title}' - No audio URL")
             continue
