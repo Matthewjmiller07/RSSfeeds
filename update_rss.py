@@ -29,11 +29,10 @@ rss_feeds = {
         "source": "torahanytime",
     },
     "shearim_b_tefillah.xml": {
-        "teacherID": 81012,
-        "collectionID": 1863,
+        "search_query": "She'arim B'Tefillah",
+        "organizationID": 1863,
         "source": "yutorah",
     },
-}
 
 # ✅ Ensure Deployment Directory Exists
 os.makedirs(deploy_folder, exist_ok=True)
