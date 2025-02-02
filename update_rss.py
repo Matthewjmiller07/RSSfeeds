@@ -78,11 +78,19 @@ def generate_rss_feed(feed_name, feed_data):
             "page": 1,
         }
         headers = {"accept": "application/json", "user-agent": "Mozilla/5.0"}
+
         response = requests.get(base_url, headers=headers, params=params)
+        print(f"🔎 YUTorah API Request URL: {response.url}")
+        print(f"🔎 YUTorah API Status Code: {response.status_code}")
 
         if response.status_code == 200:
-            data = response.json()
-            new_episodes = data.get("response", {}).get("docs", [])
+            try:
+                data = response.json()
+                print(f"📦 Raw YUTorah API Response: {json.dumps(data, indent=2)[:500]}")  # Show first 500 chars
+                new_episodes = data.get("response", {}).get("docs", [])
+            except json.JSONDecodeError as e:
+                print(f"❌ JSON Decode Error: {e}")
+                new_episodes = []
         else:
             print(f"❌ Error fetching YUTorah data: {response.status_code}")
             new_episodes = []
@@ -91,9 +99,12 @@ def generate_rss_feed(feed_name, feed_data):
         speaker_id = feed_data["speaker_id"]
         url = f"https://trpc.torahanytime.com/website.speakerPage.lectureList.getLectures?batch=1&input={{\"0\":{{\"speakerId\":{speaker_id},\"limit\":10000,\"offset\":0,\"sortDirection\":\"DESC\"}}}}"
         response = requests.get(url)
+        print(f"🔎 TorahAnytime API Request URL: {response.url}")
+        print(f"🔎 TorahAnytime API Status Code: {response.status_code}")
 
         if response.status_code == 200:
             data = response.json()
+            print(f"📦 Raw TorahAnytime API Response: {json.dumps(data, indent=2)[:500]}")  # Show first 500 chars
             new_episodes = data[0].get("result", {}).get("data", [])
         else:
             print(f"❌ Error fetching TorahAnytime data: {response.status_code}")
@@ -122,6 +133,8 @@ def generate_rss_feed(feed_name, feed_data):
 
     for shiur in new_episodes:
         title = escape_xml(shiur.get("shiurtitle", shiur.get("title", "Untitled Episode")))
+        print(f"🎙 Processing Episode: {title}")
+
         episode_page_url = shiur.get("shiurdownloadurl", shiur.get("media"))
         guid = str(shiur.get("shiurid", shiur.get("id", "")))
 
