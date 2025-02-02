@@ -70,30 +70,26 @@ def generate_rss_feed(feed_name, feed_data):
     rss_file_path = os.path.join(deploy_folder, feed_name)
 
     if feed_data["source"] == "yutorah":
-        base_url = "https://www.yutorah.org/Search/GetSearchResults"
-        params = {
-            "sort_by": "shiurdate desc",
-            "organizationID": feed_data["organizationID"],
-            "search_query": quote(feed_data["search_query"]),
-            "page": 1,
-        }
-        headers = {"accept": "application/json", "user-agent": "Mozilla/5.0"}
+    base_url = "https://www.yutorah.org/Search/GetSearchResults"
+    params = {
+        "sort_by": "shiurdate desc",
+        "organizationID": feed_data["organizationID"],
+        "search_query": feed_data["search_query"],  # Removed quote()
+        "page": 1,
+    }
+    headers = {"accept": "application/json", "user-agent": "Mozilla/5.0"}
+    response = requests.get(base_url, headers=headers, params=params)
 
-        response = requests.get(base_url, headers=headers, params=params)
-        print(f"🔎 YUTorah API Request URL: {response.url}")
-        print(f"🔎 YUTorah API Status Code: {response.status_code}")
+    print(f"🔎 YUTorah API Request URL: {response.url}")  # Check new request URL
+    print(f"🔎 YUTorah API Status Code: {response.status_code}")
 
-        if response.status_code == 200:
-            try:
-                data = response.json()
-                print(f"📦 Raw YUTorah API Response: {json.dumps(data, indent=2)[:500]}")  # Show first 500 chars
-                new_episodes = data.get("response", {}).get("docs", [])
-            except json.JSONDecodeError as e:
-                print(f"❌ JSON Decode Error: {e}")
-                new_episodes = []
-        else:
-            print(f"❌ Error fetching YUTorah data: {response.status_code}")
-            new_episodes = []
+    if response.status_code == 200:
+        data = response.json()
+        print(f"📦 Raw YUTorah API Response: {json.dumps(data, indent=2)}")
+        new_episodes = data.get("response", {}).get("docs", [])
+    else:
+        print(f"❌ Error fetching YUTorah data: {response.status_code}")
+        new_episodes = []
 
     elif feed_data["source"] == "torahanytime":
         speaker_id = feed_data["speaker_id"]
