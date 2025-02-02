@@ -28,6 +28,11 @@ rss_feeds = {
         "speaker_id": 860,  # TorahAnytime Speaker ID for Rav Asher Weiss
         "source": "torahanytime",
     },
+    "shearim_btefillah.xml": {
+        "search_query": "She'arim B'Tefillah",  # Search query for the new feed
+        "organizationID": 301,                  # Same organization ID as the other YU feed
+        "source": "yutorah",
+    },
 }
 
 # ✅ Ensure Deployment Directory Exists
