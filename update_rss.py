@@ -26,6 +26,7 @@ rss_feeds = {
         "title": "Dayan's Daf",
         "description": "Daf Yomi Shiur from Rav Yona Reiss, Shlit”a\nAv Beis Din, Chicago Rabbinical Council (cRc)\nSgan Av Beis Din, Beis Din of America (BDA)\nRosh Yeshiva, RIETS\n\nלע”נ חיים בן סעדיה והב",
         "author": "Rabbi Yona Reiss",  # Added author key
+        "cover_art": "https://i.imgur.com/0sOw92Q.jpeg",  # Added cover art URL
     },
     "rav_asher_weiss.xml": {
         "speaker_id": 860,  # TorahAnytime Speaker ID for Rav Asher Weiss
@@ -38,6 +39,10 @@ rss_feeds = {
         "search_query": "She'arim B'Tefillah",  # Search query for the new feed
         "organizationID": 301,                  # Same organization ID as the other YU feed
         "source": "yutorah",
+        "title": "She'arim B'Tefillah",  # Title for She'arim B'Tefillah
+        "description": "Shiurim from She'arim B'Tefillah",
+        "author": "She'arim B'Tefillah",  # Author for She'arim B'Tefillah
+        "skip_update": True,  # Indicating that no update for episodes is needed
     },
 }
 
@@ -77,7 +82,40 @@ def get_audio_file_size(url):
 
 # ✅ Function to Fetch and Generate RSS Feeds
 def generate_rss_feed(feed_name, feed_data):
-    print(f"📡 Fetching new episodes for {feed_name}...")
+    print(f"📡 Generating RSS feed for {feed_name}...")
+
+    # Check if this feed should skip fetching new episodes (She'arim B'Tefillah)
+    if feed_data.get("skip_update", False):
+        print(f"⚠️ Skipping new episodes for {feed_name} (no updates available)")
+        # Generate RSS content without updating episodes
+        rss_file_path = os.path.join(deploy_folder, feed_name)
+        rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+        <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+          <channel>
+            <title>{escape_xml(feed_data.get('title', feed_name.replace(".xml", "").replace("_", " ")))} </title>
+            <link>https://{site_name}.netlify.app/{feed_name}</link>
+            <description>{escape_xml(feed_data.get('description', f"Shiurim by {feed_data.get('title', feed_name.replace('.xml', '').replace('_', ' '))}"))}</description>
+            <language>en-us</language>
+            <itunes:author>{escape_xml(feed_data.get('author', ''))}</itunes:author>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:category text="Religion &amp; Spirituality">
+              <itunes:category text="Judaism"/>
+            </itunes:category>
+            <itunes:image href="{feed_data.get('cover_art', '')}" />
+        '''
+
+        rss_content += '''
+          </channel>
+        </rss>
+        '''
+        
+        # Save the RSS content
+        with open(rss_file_path, "w", encoding="utf-8") as f:
+            f.write(rss_content)
+        print(f"✅ RSS Updated for {feed_name} (no episode fetch required)!")
+        return
+
+    # Proceed with fetching and updating episodes for other feeds
     rss_file_path = os.path.join(deploy_folder, feed_name)
     new_episodes = []
 
@@ -136,11 +174,12 @@ def generate_rss_feed(feed_name, feed_data):
         <link>https://{site_name}.netlify.app/{feed_name}</link>
         <description>{escape_xml(feed_data.get('description', f"Shiurim by {feed_data.get('title', feed_name.replace('.xml', '').replace('_', ' '))}"))}</description>
         <language>en-us</language>
-        <itunes:author>{escape_xml(feed_data.get('author', ''))}</itunes:author>  <!-- Added dynamic author -->
+        <itunes:author>{escape_xml(feed_data.get('author', ''))}</itunes:author>
         <itunes:explicit>no</itunes:explicit>
         <itunes:category text="Religion &amp; Spirituality">
           <itunes:category text="Judaism"/>
         </itunes:category>
+        <itunes:image href="{feed_data.get('cover_art', '')}" />
     '''
 
     for shiur in new_episodes:
