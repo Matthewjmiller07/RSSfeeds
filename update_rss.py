@@ -19,14 +19,18 @@ print(f"🔑 Using Netlify Site ID: {NETLIFY_SITE_ID}")
 site_name = "yutorah-rss"
 deploy_folder = "deploy_netlify"
 rss_feeds = {
-    "reiss_daf_podcast.xml": {
+    "dayans_daf_podcast.xml": {
         "search_query": "R' Reiss Dayan's Daf",
         "organizationID": 301,
         "source": "yutorah",
+        "title": "Dayan's Daf",
+        "description": "Daf Yomi Shiur from Rav Yona Reiss, Shlit”a\nAv Beis Din, Chicago Rabbinical Council (cRc)\nSgan Av Beis Din, Beis Din of America (BDA)\nRosh Yeshiva, RIETS\n\nלע”נ חיים בן סעדיה והב",
     },
     "rav_asher_weiss.xml": {
         "speaker_id": 860,  # TorahAnytime Speaker ID for Rav Asher Weiss
         "source": "torahanytime",
+        "title": "Rav Asher Weiss' Torah",
+        "description": "Shiurim from Rav Asher Weiss, Shlit”a",
     },
     "shearim_btefillah.xml": {
         "search_query": "She'arim B'Tefillah",  # Search query for the new feed
@@ -126,11 +130,11 @@ def generate_rss_feed(feed_name, feed_data):
     rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
     <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
       <channel>
-        <title>{escape_xml(feed_name.replace(".xml", "").replace("_", " "))}</title>
+        <title>{escape_xml(feed_data.get('title', feed_name.replace(".xml", "").replace("_", " ")))} </title>
         <link>https://{site_name}.netlify.app/{feed_name}</link>
-        <description>{escape_xml(f"Shiurim by {feed_name.replace('.xml', '').replace('_', ' ')}")}</description>
+        <description>{escape_xml(feed_data.get('description', f"Shiurim by {feed_data.get('title', feed_name.replace('.xml', '').replace('_', ' '))}"))}</description>
         <language>en-us</language>
-        <itunes:author>{escape_xml(feed_name.replace('.xml', '').replace('_', ' '))}</itunes:author>
+        <itunes:author>{escape_xml(feed_data.get('title', feed_name.replace('.xml', '').replace('_', ' ')))} </itunes:author>
         <itunes:explicit>no</itunes:explicit>
         <itunes:category text="Religion &amp; Spirituality">
           <itunes:category text="Judaism"/>
