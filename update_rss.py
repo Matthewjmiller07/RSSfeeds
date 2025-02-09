@@ -42,7 +42,6 @@ rss_feeds = {
         "title": "She'arim B'Tefillah",  # Title for She'arim B'Tefillah
         "description": "Shiurim from She'arim B'Tefillah",
         "author": "She'arim B'Tefillah",  # Author for She'arim B'Tefillah
-        "skip_update": True,  # Indicating that no update for episodes is needed
     },
 }
 
