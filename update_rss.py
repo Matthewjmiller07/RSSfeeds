@@ -25,12 +25,14 @@ rss_feeds = {
         "source": "yutorah",
         "title": "Dayan's Daf",
         "description": "Daf Yomi Shiur from Rav Yona Reiss, Shlit”a\nAv Beis Din, Chicago Rabbinical Council (cRc)\nSgan Av Beis Din, Beis Din of America (BDA)\nRosh Yeshiva, RIETS\n\nלע”נ חיים בן סעדיה והב",
+        "author": "Rabbi Yona Reiss",  # Added author key
     },
     "rav_asher_weiss.xml": {
         "speaker_id": 860,  # TorahAnytime Speaker ID for Rav Asher Weiss
         "source": "torahanytime",
         "title": "Rav Asher Weiss' Torah",
         "description": "Shiurim from Rav Asher Weiss, Shlit”a",
+        "author": "Rav Asher Weiss",  # Added author key
     },
     "shearim_btefillah.xml": {
         "search_query": "She'arim B'Tefillah",  # Search query for the new feed
@@ -134,7 +136,7 @@ def generate_rss_feed(feed_name, feed_data):
         <link>https://{site_name}.netlify.app/{feed_name}</link>
         <description>{escape_xml(feed_data.get('description', f"Shiurim by {feed_data.get('title', feed_name.replace('.xml', '').replace('_', ' '))}"))}</description>
         <language>en-us</language>
-        <itunes:author>{escape_xml(feed_data.get('title', feed_name.replace('.xml', '').replace('_', ' ')))} </itunes:author>
+        <itunes:author>{escape_xml(feed_data.get('author', ''))}</itunes:author>  <!-- Added dynamic author -->
         <itunes:explicit>no</itunes:explicit>
         <itunes:category text="Religion &amp; Spirituality">
           <itunes:category text="Judaism"/>
