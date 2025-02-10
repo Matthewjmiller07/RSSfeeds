@@ -104,7 +104,9 @@ def generate_rss_feed(feed_name, feed_data):
               <itunes:category text="Judaism"/>
             </itunes:category>
             <itunes:image href="{feed_data.get('cover_art', '')}" />
-            <itunes:email>{escape_xml(feed_data.get('email', ''))}</itunes:email> <!-- Added email -->
+            <itunes:owner>
+              <itunes:email>{escape_xml(feed_data.get('email', ''))}</itunes:email> <!-- Added email -->
+            </itunes:owner>
         '''
 
         rss_content += '''
@@ -183,7 +185,9 @@ def generate_rss_feed(feed_name, feed_data):
           <itunes:category text="Judaism"/>
         </itunes:category>
         <itunes:image href="{feed_data.get('cover_art', '')}" />
-        <itunes:email>{escape_xml(feed_data.get('email', ''))}</itunes:email> <!-- Added email -->
+        <itunes:owner>
+          <itunes:email>{escape_xml(feed_data.get('email', ''))}</itunes:email> <!-- Added email -->
+        </itunes:owner>
     '''
 
     for shiur in new_episodes:
