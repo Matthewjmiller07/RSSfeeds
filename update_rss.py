@@ -27,6 +27,7 @@ rss_feeds = {
         "description": "Daf Yomi Shiur from Rav Yona Reiss, Shlit”a\nAv Beis Din, Chicago Rabbinical Council (cRc)\nSgan Av Beis Din, Beis Din of America (BDA)\nRosh Yeshiva, RIETS\n\nלע”נ חיים בן סעדיה והב",
         "author": "Rabbi Yona Reiss",  # Added author key
         "cover_art": "https://i.imgur.com/0sOw92Q.jpeg",  # Added cover art URL
+        "email": "info@crckosher.org",  # Added email address
     },
     "rav_asher_weiss.xml": {
         "speaker_id": 860,  # TorahAnytime Speaker ID for Rav Asher Weiss
@@ -34,6 +35,7 @@ rss_feeds = {
         "title": "Rav Asher Weiss' Torah",
         "description": "Shiurim from Rav Asher Weiss, Shlit”a",
         "author": "Rav Asher Weiss",  # Added author key
+        "email": "info@minchasasher.com,  # Added email address
     },
     "shearim_btefillah.xml": {
         "search_query": "She'arim B'Tefillah",  # Search query for the new feed
@@ -42,6 +44,7 @@ rss_feeds = {
         "title": "She'arim B'Tefillah",  # Title for She'arim B'Tefillah
         "description": "Shiurim from She'arim B'Tefillah",
         "author": "She'arim B'Tefillah",  # Author for She'arim B'Tefillah
+        "email": "office@brsonline.org",  # Added email address
     },
 }
 
@@ -101,6 +104,7 @@ def generate_rss_feed(feed_name, feed_data):
               <itunes:category text="Judaism"/>
             </itunes:category>
             <itunes:image href="{feed_data.get('cover_art', '')}" />
+            <itunes:email>{escape_xml(feed_data.get('email', ''))}</itunes:email> <!-- Added email -->
         '''
 
         rss_content += '''
@@ -179,6 +183,7 @@ def generate_rss_feed(feed_name, feed_data):
           <itunes:category text="Judaism"/>
         </itunes:category>
         <itunes:image href="{feed_data.get('cover_art', '')}" />
+        <itunes:email>{escape_xml(feed_data.get('email', ''))}</itunes:email> <!-- Added email -->
     '''
 
     for shiur in new_episodes:
