@@ -35,7 +35,7 @@ rss_feeds = {
         "title": "Rav Asher Weiss' Torah",
         "description": "Shiurim from Rav Asher Weiss, Shlit”a",
         "author": "Rav Asher Weiss",  # Added author key
-        "email": "info@minchasasher.com,  # Added email address
+        "email": "info@minchasasher.com",  # Added email address
     },
     "shearim_btefillah.xml": {
         "search_query": "She'arim B'Tefillah",  # Search query for the new feed
