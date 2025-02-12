@@ -2,7 +2,7 @@ name: Update RSS Feed
 
 on:
   schedule:
-    - cron: "00 18 * * *"  # Runs at 12:00 PM CST (18:00 UTC)
+    - cron: "00 06 * * *"  # Runs at 12:00 AM CST (06:00 UTC)
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
