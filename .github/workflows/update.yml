@@ -2,7 +2,7 @@ name: Update RSS Feed
 
 on:
   schedule:
-    - cron: "00 06 * * *"  # Runs at 12:00 AM CST (06:00 UTC)
+    - cron: "00 06 * * *"  # Runs daily at 12:00 AM CST (06:00 UTC)
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
@@ -13,8 +13,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          ref: feature/rss-ui  # ✅ Ensures workflow runs on the correct branch
-          fetch-depth: 1  # Only fetch latest commit for speed
+          ref: feature/rss-ui  # ✅ Ensure you're on the correct branch
+          fetch-depth: 1
 
       - name: Set Up Python
         uses: actions/setup-python@v4
@@ -29,14 +29,8 @@ jobs:
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
-      - name: Ensure Netlify is Linked
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: |
-          echo "🔗 Checking Netlify status..."
-          netlify status || echo "⚠️ Netlify not linked, linking now..."
-          netlify link --id="${{ secrets.NETLIFY_SITE_ID }}" || echo "✅ Netlify already linked."
+      - name: Decode Google Sheets credentials
+        run: echo "${{ secrets.GOOGLE_SHEETS_CREDENTIALS_B64 }}" | base64 --decode > service_account.json
 
       - name: Run RSS Update Script
         env:
