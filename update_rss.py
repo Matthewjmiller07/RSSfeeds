@@ -1,254 +1,207 @@
-import os
-import subprocess
-import datetime
-import requests
-import json
-from urllib.parse import quote
-from dateutil import parser
 
-# ✅ Load Netlify Secrets
+import os
+import csv
+import requests
+import datetime
+import subprocess
+import gspread
+import xml.etree.ElementTree as ET
+from dateutil import parser
+from google.oauth2.service_account import Credentials
+
+# ---------------- CONFIG ---------------- #
+
+SPEAKER_ID = 860
+SITE_NAME = "yutorah-rss"
+FEED_NAME = "rav_asher_weiss.xml"
+DEPLOY_FOLDER = "deploy_netlify"
+CSV_PATH = "torahanytime_lectures.csv"
+GOOGLE_SHEET_NAME = "Rav Asher Weiss Shiurim"
+
 NETLIFY_AUTH_TOKEN = os.getenv("NETLIFY_AUTH_TOKEN")
 NETLIFY_SITE_ID = os.getenv("NETLIFY_SITE_ID")
+GOOGLE_SHEETS_CREDENTIALS = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
 
-if not NETLIFY_AUTH_TOKEN or not NETLIFY_SITE_ID:
-    raise ValueError("❌ Missing NETLIFY_AUTH_TOKEN or NETLIFY_SITE_ID! Set them as environment variables.")
-
-print(f"🔑 Using Netlify Site ID: {NETLIFY_SITE_ID}")
-
-# ✅ Define Netlify Deployment Variables
-site_name = "yutorah-rss"
-deploy_folder = "deploy_netlify"
-rss_feeds = {
-    "dayans_daf_podcast.xml": {
-        "search_query": "R' Reiss Dayan's Daf",
-        "organizationID": 301,
-        "source": "yutorah",
-        "title": "Dayan's Daf",
-        "description": "Daf Yomi Shiur from Rav Yona Reiss, Shlit”a\nAv Beis Din, Chicago Rabbinical Council (cRc)\nSgan Av Beis Din, Beis Din of America (BDA)\nRosh Yeshiva, RIETS\n\nלע”נ חיים בן סעדיה והב",
-        "author": "Rabbi Yona Reiss",  # Added author key
-        "cover_art": "https://i.imgur.com/0sOw92Q.jpeg",  # Added cover art URL
-        "email": "matthewjmiller07@gmail.com",  # Added email address
-    },
-    "rav_asher_weiss.xml": {
-        "speaker_id": 860,  # TorahAnytime Speaker ID for Rav Asher Weiss
-        "source": "torahanytime",
-        "title": "Rav Asher Weiss' Torah",
-        "description": "Shiurim from Rav Asher Weiss, Shlit”a",
-        "author": "Rav Asher Weiss",  # Added author key
-        "email": "matthewjmiller07@gmail.com",  # Added email address
-    },
-    "shearim_btefillah.xml": {
-        "search_query": "She'arim B'Tefillah",  # Search query for the new feed
-        "organizationID": 301,                  # Same organization ID as the other YU feed
-        "source": "yutorah",
-        "title": "She'arim B'Tefillah",  # Title for She'arim B'Tefillah
-        "description": "Shiurim from She'arim B'Tefillah",
-        "author": "She'arim B'Tefillah",  # Author for She'arim B'Tefillah
-        "email": "matthewjmiller07@gmail.com",  # Added email address
-    },
+FEED_DATA = {
+    "title": "Rav Asher Weiss' Torah",
+    "description": "Shiurim from Rav Asher Weiss, Shlit\"a",
+    "author": "Rav Asher Weiss",
+    "email": "matthewjmiller07@gmail.com"
 }
 
-# ✅ Ensure Deployment Directory Exists
-os.makedirs(deploy_folder, exist_ok=True)
+# ---------------- UTILS ---------------- #
 
-# ✅ Create `netlify.toml`
-netlify_toml = """\
-[[headers]]
-  for = "/*.xml"
-  [headers.values]
-  Content-Type = "application/xml; charset=UTF-8"
-"""
-with open(os.path.join(deploy_folder, "netlify.toml"), "w") as f:
-    f.write(netlify_toml)
-
-print("✅ Created `netlify.toml`.")
-
-# ✅ Function to Escape XML Characters
 def escape_xml(text):
-    if not isinstance(text, str):
-        text = str(text)
-    return (text.replace("&", "&amp;")
-                .replace("<", "&lt;")
-                .replace(">", "&gt;")
-                .replace('"', "&quot;")
-                .replace("'", "&apos;"))
+    return str(text).replace("&", "&amp;").replace("<", "&lt;") \
+        .replace(">", "&gt;").replace('"', "&quot;").replace("'", "&apos;")
 
-# ✅ Function to Get Audio File Size
 def get_audio_file_size(url):
     try:
-        response = requests.head(url, timeout=5)
-        file_size = response.headers.get("Content-Length", "0")
-        return file_size if file_size.isdigit() else "0"
-    except requests.RequestException:
+        r = requests.head(url, timeout=5)
+        return r.headers.get("Content-Length", "0") or "0"
+    except:
         return "0"
 
-# ✅ Function to Fetch and Generate RSS Feeds
-def generate_rss_feed(feed_name, feed_data):
-    print(f"📡 Generating RSS feed for {feed_name}...")
+def get_existing_rss_ids(filepath):
+    if not os.path.exists(filepath):
+        return set()
+    try:
+        tree = ET.parse(filepath)
+        return set(item.find("guid").text for item in tree.findall(".//item") if item.find("guid") is not None)
+    except Exception as e:
+        print(f"⚠️ Failed to parse existing RSS: {e}")
+        return set()
 
-    # Check if this feed should skip fetching new episodes (She'arim B'Tefillah)
-    if feed_data.get("skip_update", False):
-        print(f"⚠️ Skipping new episodes for {feed_name} (no updates available)")
-        # Generate RSS content without updating episodes
-        rss_file_path = os.path.join(deploy_folder, feed_name)
-        rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-        <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-          <channel>
-            <title>{escape_xml(feed_data.get('title', feed_name.replace(".xml", "").replace("_", " ")))} </title>
-            <link>https://{site_name}.netlify.app/{feed_name}</link>
-            <description>{escape_xml(feed_data.get('description', f"Shiurim by {feed_data.get('title', feed_name.replace('.xml', '').replace('_', ' '))}"))}</description>
-            <language>en-us</language>
-            <itunes:author>{escape_xml(feed_data.get('author', ''))}</itunes:author>
-            <itunes:explicit>no</itunes:explicit>
-            <itunes:category text="Religion &amp; Spirituality">
-              <itunes:category text="Judaism"/>
-            </itunes:category>
-            <itunes:image href="{feed_data.get('cover_art', '')}" />
-            <itunes:owner>
-              <itunes:email>{escape_xml(feed_data.get('email', ''))}</itunes:email> <!-- Added email -->
-            </itunes:owner>
-        '''
-
-        rss_content += '''
-          </channel>
-        </rss>
-        '''
-        
-        # Save the RSS content
-        with open(rss_file_path, "w", encoding="utf-8") as f:
-            f.write(rss_content)
-        print(f"✅ RSS Updated for {feed_name} (no episode fetch required)!")
+def upload_to_google_sheets(new_rows):
+    if not GOOGLE_SHEETS_CREDENTIALS or not os.path.exists(GOOGLE_SHEETS_CREDENTIALS):
+        print("❌ Missing Google Sheets credentials.")
         return
 
-    # Proceed with fetching and updating episodes for other feeds
-    rss_file_path = os.path.join(deploy_folder, feed_name)
-    new_episodes = []
+    creds = Credentials.from_service_account_file(
+        GOOGLE_SHEETS_CREDENTIALS,
+        scopes=["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/spreadsheets"]
+    )
+    client = gspread.authorize(creds)
 
-    if feed_data["source"] == "yutorah":
-        base_url = "https://www.yutorah.org/Search/GetSearchResults"
-        page = 1
-        while True:
-            params = {
-                "sort_by": "shiurdate desc",
-                "organizationID": feed_data["organizationID"],
-                "search_query": feed_data["search_query"],
-                "page": page,
-            }
-            headers = {"accept": "application/json", "user-agent": "Mozilla/5.0"}
-            response = requests.get(base_url, headers=headers, params=params)
+    try:
+        sheet = client.open(GOOGLE_SHEET_NAME)
+        worksheet = sheet.sheet1
+    except gspread.SpreadsheetNotFound:
+        sheet = client.create(GOOGLE_SHEET_NAME)
+        worksheet = sheet.sheet1
+        sheet.share(creds.service_account_email, perm_type="user", role="writer")
 
-            print(f"🔎 YUTorah API Request URL: {response.url}")
-            print(f"🔎 YUTorah API Status Code: {response.status_code}")
-
-            if response.status_code == 200:
-                data = response.json()
-                episodes = data.get("response", {}).get("docs", [])
-                if not episodes:
-                    break  # No more episodes found, exit the loop
-                new_episodes.extend(episodes)
-                print(f"📦 Fetched {len(episodes)} episodes from page {page}")
-                page += 1
-            else:
-                print(f"❌ Error fetching YUTorah data: {response.status_code}")
-                break
-
-    elif feed_data["source"] == "torahanytime":
-        speaker_id = feed_data["speaker_id"]
-        url = f"https://trpc.torahanytime.com/website.speakerPage.lectureList.getLectures?batch=1&input={{\"0\":{{\"speakerId\":{speaker_id},\"limit\":10000,\"offset\":0,\"sortDirection\":\"DESC\"}}}}"
-        response = requests.get(url)
-        print(f"🔎 TorahAnytime API Request URL: {response.url}")
-        print(f"🔎 TorahAnytime API Status Code: {response.status_code}")
-
-        if response.status_code == 200:
-            data = response.json()
-            new_episodes = data[0].get("result", {}).get("data", [])
-        else:
-            print(f"❌ Error fetching TorahAnytime data: {response.status_code}")
-
+    header = ["Title", "Date", "Audio URL", "File Size", "Page URL"]
+    values = worksheet.get_all_values()
+    if not values or values[0] != header:
+        worksheet.clear()
+        worksheet.append_row(header)
+        existing_keys = set()
     else:
-        print(f"❌ Unknown source for {feed_name}")
-        return
+        existing_keys = set((row[0], row[1]) for row in values[1:])
 
-    print(f"📡 Found {len(new_episodes)} new episodes for {feed_name}")
+    appendable = [row for row in new_rows if (row[0], row[1]) not in existing_keys]
+    if appendable:
+        worksheet.append_rows(appendable, value_input_option="USER_ENTERED")
+        print(f"✅ Appended {len(appendable)} new rows to Google Sheet.")
+    else:
+        print("✅ Google Sheet is already up to date.")
 
-    # ✅ Generate RSS Content
-    rss_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-    <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-      <channel>
-        <title>{escape_xml(feed_data.get('title', feed_name.replace(".xml", "").replace("_", " ")))} </title>
-        <link>https://{site_name}.netlify.app/{feed_name}</link>
-        <description>{escape_xml(feed_data.get('description', f"Shiurim by {feed_data.get('title', feed_name.replace('.xml', '').replace('_', ' '))}"))}</description>
-        <language>en-us</language>
-        <itunes:author>{escape_xml(feed_data.get('author', ''))}</itunes:author>
-        <itunes:explicit>no</itunes:explicit>
-        <itunes:category text="Religion &amp; Spirituality">
-          <itunes:category text="Judaism"/>
-        </itunes:category>
-        <itunes:image href="{feed_data.get('cover_art', '')}" />
-        <itunes:owner>
-          <itunes:email>{escape_xml(feed_data.get('email', ''))}</itunes:email> <!-- Added email -->
-        </itunes:owner>
-    '''
+# ---------------- MAIN ---------------- #
 
-    for shiur in new_episodes:
-        title = escape_xml(shiur.get("shiurtitle", shiur.get("title", "Untitled Episode")))
-        print(f"🎙 Processing Episode: {title}")
+def fetch_and_save_csv():
+    url = f"https://api.torahanytime.com/speakers/{SPEAKER_ID}/lectures?limit=10000"
+    res = requests.get(url)
+    if res.status_code != 200:
+        print(f"❌ Error: Unable to fetch data (status code {res.status_code})")
+        exit()
 
-        episode_page_url = shiur.get("shiurdownloadurl", shiur.get("media"))
-        guid = str(shiur.get("shiurid", shiur.get("id", "")))
+    data = res.json().get("lecture", [])
+    print(f"📥 Fetched {len(data)} lectures from TorahAnytime.")
 
-        if feed_data["source"] == "yutorah":
-            audio_url = shiur.get("shiurdownloadurl", "")
-        else:
-            speaker_first = shiur.get("speaker_name_first", "").lower().replace(" ", "-")
-            speaker_last = shiur.get("speaker_name_last", "").lower().replace(" ", "-")
-            date_recorded = shiur.get("date_recorded", "").replace("-", "_")
-            url_safe_title = quote(f"1-{speaker_first}-{speaker_last}_{date_recorded}.mp3", safe="")
-            audio_url = f"https://dl.torahanytime.com/mp3/{shiur.get('media')}.mp3?title={url_safe_title}"
+    with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
+        fieldnames = [
+            "id", "title", "date_recorded", "duration", "language_name",
+            "category", "subcategories", "thumbnail_url",
+            "audio_url", "mp4_url", "m3u8_url",
+            "speaker_name_first", "speaker_name_last"
+        ]
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for lec in data:
+            writer.writerow({
+                "id": lec["id"],
+                "title": lec["title"],
+                "date_recorded": lec["date_recorded"],
+                "duration": lec["duration"],
+                "language_name": lec.get("language_name", ""),
+                "category": lec.get("categories", [{}])[0].get("name", ""),
+                "subcategories": ", ".join([s.get("name", "") for s in lec.get("subcategories", [])]),
+                "thumbnail_url": lec.get("thumbnail_url", ""),
+                "audio_url": lec.get("mp3_url", ""),
+                "mp4_url": lec.get("mp4_url", ""),
+                "m3u8_url": lec.get("m3u8_url", ""),
+                "speaker_name_first": lec.get("speaker_name_first", ""),
+                "speaker_name_last": lec.get("speaker_name_last", "")
+            })
+    print(f"✅ Saved to {CSV_PATH}")
 
-        if not audio_url:
-            print(f"⚠️ Skipping '{title}' - No audio URL")
+def generate_rss_incrementally():
+    import pandas as pd
+    os.makedirs(DEPLOY_FOLDER, exist_ok=True)
+    rss_path = os.path.join(DEPLOY_FOLDER, FEED_NAME)
+    rss_url = f"https://{SITE_NAME}.netlify.app/{FEED_NAME}"
+
+    df = pd.read_csv(CSV_PATH)
+    existing_ids = get_existing_rss_ids(rss_path)
+
+    print(f"📖 Existing RSS entries: {len(existing_ids)}")
+    print(f"🧮 Checking for new entries in {len(df)} total rows...")
+
+    if os.path.exists(rss_path):
+        tree = ET.parse(rss_path)
+        rss = tree.getroot()
+        channel = rss.find("channel")
+    else:
+        rss = ET.Element("rss", version="2.0", attrib={
+            "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"
+        })
+        channel = ET.SubElement(rss, "channel")
+        ET.SubElement(channel, "title").text = FEED_DATA["title"]
+        ET.SubElement(channel, "link").text = rss_url
+        ET.SubElement(channel, "description").text = FEED_DATA["description"]
+        ET.SubElement(channel, "language").text = "en-us"
+        ET.SubElement(channel, "itunes:author").text = FEED_DATA["author"]
+        ET.SubElement(channel, "itunes:explicit").text = "no"
+        cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
+        ET.SubElement(cat, "itunes:category", text="Judaism")
+        owner = ET.SubElement(channel, "itunes:owner")
+        ET.SubElement(owner, "itunes:email").text = FEED_DATA["email"]
+
+    sheet_data = []
+    new_count = 0
+
+    for _, row in df.iterrows():
+        lec_id = str(row["id"])
+        if lec_id in existing_ids:
             continue
 
+        title = escape_xml(row["title"])
+        date_str = row["date_recorded"]
+        audio_url = row["audio_url"]
+        page_url = f"https://www.torahanytime.com/lectures/{lec_id}"
         file_size = get_audio_file_size(audio_url)
-        raw_date = shiur.get("shiurdateformatted", shiur.get("date_recorded", "")).strip()
 
         try:
-            parsed_date = parser.parse(raw_date)
-            pub_date = parsed_date.strftime("%a, %d %b %Y %H:%M:%S +0000")
-        except (ValueError, TypeError):
-            pub_date = datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")
+            pub_date = parser.parse(date_str).strftime("%a, %d %b %Y %H:%M:%S +0000")
+        except:
+            pub_date = datetime.datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
 
-        rss_content += f'''
-        <item>
-          <title>{title}</title>
-          <guid isPermaLink="false">{guid}</guid>
-          <link>{episode_page_url}</link>
-          <enclosure url="{audio_url}" length="{file_size}" type="audio/mpeg"/>
-          <itunes:duration>00:29:00</itunes:duration>
-          <pubDate>{pub_date}</pubDate>
-        </item>
-    '''
+        item = ET.SubElement(channel, "item")
+        ET.SubElement(item, "title").text = title
+        ET.SubElement(item, "guid", isPermaLink="false").text = lec_id
+        ET.SubElement(item, "link").text = page_url
+        ET.SubElement(item, "enclosure", url=audio_url, length=file_size, type="audio/mpeg")
+        ET.SubElement(item, "itunes:duration").text = "00:45:00"
+        ET.SubElement(item, "pubDate").text = pub_date
 
-    rss_content += '''
-      </channel>
-    </rss>
-    '''
+        sheet_data.append([title, date_str, audio_url, file_size, page_url])
+        new_count += 1
 
-    with open(rss_file_path, "w", encoding="utf-8") as f:
-        f.write(rss_content)
+    ET.ElementTree(rss).write(rss_path, encoding="utf-8", xml_declaration=True)
+    print(f"📝 RSS updated: {new_count} new items added")
+    print(f"🌐 RSS feed: {rss_url}")
 
-    print(f"✅ RSS Updated for {feed_name}!")
+    upload_to_google_sheets(sheet_data)
 
-# ✅ Generate Feeds
-for feed_name, feed_data in rss_feeds.items():
-    generate_rss_feed(feed_name, feed_data)
+    print("🚀 Deploying RSS to Netlify...")
+    subprocess.run(
+        ["netlify", "deploy", "--prod", "--dir", DEPLOY_FOLDER, "--site", NETLIFY_SITE_ID],
+        env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
+        check=True
+    )
+    print("✅ Deployment complete!")
 
-# ✅ Deploy to Netlify
-print("📤 Deploying Site to Netlify...")
-subprocess.run(
-    ["netlify", "deploy", "--prod", "--dir", deploy_folder, "--site", NETLIFY_SITE_ID],
-    env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
-    check=True
-)
-print("✅ Deployment Complete!")
+if __name__ == "__main__":
+    fetch_and_save_csv()
+    generate_rss_incrementally()
