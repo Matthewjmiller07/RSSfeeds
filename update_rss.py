@@ -8,6 +8,8 @@ import gspread
 import xml.etree.ElementTree as ET
 from dateutil import parser
 from google.oauth2.service_account import Credentials
+# 👇 Ensure this points to the decoded secret
+os.environ["GOOGLE_SHEETS_CREDENTIALS"] = "service_account.json"
 
 # ---------------- CONFIG ---------------- #
 
