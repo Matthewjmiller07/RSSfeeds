@@ -1,4 +1,3 @@
-
 import os
 import csv
 import requests
@@ -8,7 +7,7 @@ import gspread
 import xml.etree.ElementTree as ET
 from dateutil import parser
 from google.oauth2.service_account import Credentials
-# 👇 Ensure this points to the decoded secret
+
 os.environ["GOOGLE_SHEETS_CREDENTIALS"] = "service_account.json"
 
 # ---------------- CONFIG ---------------- #
@@ -43,16 +42,6 @@ def get_audio_file_size(url):
         return r.headers.get("Content-Length", "0") or "0"
     except:
         return "0"
-
-def get_existing_rss_ids(filepath):
-    if not os.path.exists(filepath):
-        return set()
-    try:
-        tree = ET.parse(filepath)
-        return set(item.find("guid").text for item in tree.findall(".//item") if item.find("guid") is not None)
-    except Exception as e:
-        print(f"⚠️ Failed to parse existing RSS: {e}")
-        return set()
 
 def upload_to_google_sheets(new_rows):
     if not GOOGLE_SHEETS_CREDENTIALS or not os.path.exists(GOOGLE_SHEETS_CREDENTIALS):
@@ -128,7 +117,7 @@ def fetch_and_save_csv():
             })
     print(f"✅ Saved to {CSV_PATH}")
 
-def generate_rss_incrementally():
+def generate_rss():
     import pandas as pd
     from xml.dom import minidom
 
@@ -137,10 +126,7 @@ def generate_rss_incrementally():
     rss_url = f"https://{SITE_NAME}.netlify.app/{FEED_NAME}"
 
     df = pd.read_csv(CSV_PATH)
-    existing_ids = get_existing_rss_ids(rss_path)
-
-    print(f"📖 Existing RSS entries: {len(existing_ids)}")
-    print(f"🧮 Checking for new entries in {len(df)} total rows...")
+    print(f"🧮 Generating RSS from {len(df)} episodes...")
 
     rss = ET.Element("rss", {
         "version": "2.0",
@@ -159,7 +145,7 @@ def generate_rss_incrementally():
     ET.SubElement(channel, "itunes:summary").text = FEED_DATA["description"]
     ET.SubElement(channel, "itunes:subtitle").text = FEED_DATA["description"]
     ET.SubElement(channel, "itunes:explicit").text = "no"
-    ET.SubElement(channel, "itunes:image", href="https://yutorah-rss.netlify.app/rav_asher_icon.jpg")  # Customize as needed
+    ET.SubElement(channel, "itunes:image", href="https://yutorah-rss.netlify.app/rav_asher_icon.jpg")
 
     cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
     ET.SubElement(cat, "itunes:category", text="Judaism")
@@ -169,16 +155,15 @@ def generate_rss_incrementally():
     ET.SubElement(owner, "itunes:email").text = FEED_DATA["email"]
 
     sheet_data = []
-    new_count = 0
 
     for _, row in df.iterrows():
         lec_id = str(row["id"])
-        if lec_id in existing_ids:
-            continue
-
         title = escape_xml(row["title"])
         date_str = row["date_recorded"]
         audio_url = row["audio_url"]
+        if not audio_url:
+            continue
+
         page_url = f"https://www.torahanytime.com/lectures/{lec_id}"
         file_size = get_audio_file_size(audio_url)
 
@@ -197,7 +182,7 @@ def generate_rss_incrementally():
         ET.SubElement(item, "itunes:subtitle").text = title
         ET.SubElement(item, "itunes:explicit").text = "no"
         ET.SubElement(item, "itunes:episodeType").text = "full"
-        ET.SubElement(item, "itunes:duration").text = "00:45:00"  # Optional: replace with row["duration"] if available
+        ET.SubElement(item, "itunes:duration").text = "00:45:00"
 
         enclosure = ET.SubElement(item, "enclosure")
         enclosure.set("url", audio_url)
@@ -205,15 +190,14 @@ def generate_rss_incrementally():
         enclosure.set("type", "audio/mpeg")
 
         sheet_data.append([title, date_str, audio_url, file_size, page_url])
-        new_count += 1
 
-    # Pretty print XML for Apple Podcasts compliance
+    # Pretty print
     rough_string = ET.tostring(rss, encoding="utf-8")
     reparsed = minidom.parseString(rough_string)
     with open(rss_path, "w", encoding="utf-8") as f:
         f.write(reparsed.toprettyxml(indent="  "))
 
-    print(f"📝 RSS updated: {new_count} new items added")
+    print(f"📝 RSS updated with {len(sheet_data)} total items.")
     print(f"🌐 RSS feed: {rss_url}")
 
     upload_to_google_sheets(sheet_data)
@@ -228,4 +212,4 @@ def generate_rss_incrementally():
 
 if __name__ == "__main__":
     fetch_and_save_csv()
-    generate_rss_incrementally()
+    generate_rss()
