@@ -130,6 +130,8 @@ def fetch_and_save_csv():
 
 def generate_rss_incrementally():
     import pandas as pd
+    from xml.dom import minidom
+
     os.makedirs(DEPLOY_FOLDER, exist_ok=True)
     rss_path = os.path.join(DEPLOY_FOLDER, FEED_NAME)
     rss_url = f"https://{SITE_NAME}.netlify.app/{FEED_NAME}"
@@ -140,25 +142,31 @@ def generate_rss_incrementally():
     print(f"📖 Existing RSS entries: {len(existing_ids)}")
     print(f"🧮 Checking for new entries in {len(df)} total rows...")
 
-    if os.path.exists(rss_path):
-        tree = ET.parse(rss_path)
-        rss = tree.getroot()
-        channel = rss.find("channel")
-    else:
-        rss = ET.Element("rss", version="2.0", attrib={
-            "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"
-        })
-        channel = ET.SubElement(rss, "channel")
-        ET.SubElement(channel, "title").text = FEED_DATA["title"]
-        ET.SubElement(channel, "link").text = rss_url
-        ET.SubElement(channel, "description").text = FEED_DATA["description"]
-        ET.SubElement(channel, "language").text = "en-us"
-        ET.SubElement(channel, "itunes:author").text = FEED_DATA["author"]
-        ET.SubElement(channel, "itunes:explicit").text = "no"
-        cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
-        ET.SubElement(cat, "itunes:category", text="Judaism")
-        owner = ET.SubElement(channel, "itunes:owner")
-        ET.SubElement(owner, "itunes:email").text = FEED_DATA["email"]
+    rss = ET.Element("rss", {
+        "version": "2.0",
+        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd",
+        "xmlns:atom": "http://www.w3.org/2005/Atom"
+    })
+    channel = ET.SubElement(rss, "channel")
+
+    # Feed metadata
+    ET.SubElement(channel, "title").text = FEED_DATA["title"]
+    ET.SubElement(channel, "link").text = rss_url
+    ET.SubElement(channel, "atom:link", href=rss_url, rel="self", type="application/rss+xml")
+    ET.SubElement(channel, "description").text = FEED_DATA["description"]
+    ET.SubElement(channel, "language").text = "en-us"
+    ET.SubElement(channel, "itunes:author").text = FEED_DATA["author"]
+    ET.SubElement(channel, "itunes:summary").text = FEED_DATA["description"]
+    ET.SubElement(channel, "itunes:subtitle").text = FEED_DATA["description"]
+    ET.SubElement(channel, "itunes:explicit").text = "no"
+    ET.SubElement(channel, "itunes:image", href="https://yutorah-rss.netlify.app/rav_asher_icon.jpg")  # Customize as needed
+
+    cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
+    ET.SubElement(cat, "itunes:category", text="Judaism")
+
+    owner = ET.SubElement(channel, "itunes:owner")
+    ET.SubElement(owner, "itunes:name").text = FEED_DATA["author"]
+    ET.SubElement(owner, "itunes:email").text = FEED_DATA["email"]
 
     sheet_data = []
     new_count = 0
@@ -183,14 +191,28 @@ def generate_rss_incrementally():
         ET.SubElement(item, "title").text = title
         ET.SubElement(item, "guid", isPermaLink="false").text = lec_id
         ET.SubElement(item, "link").text = page_url
-        ET.SubElement(item, "enclosure", url=audio_url, length=file_size, type="audio/mpeg")
-        ET.SubElement(item, "itunes:duration").text = "00:45:00"
         ET.SubElement(item, "pubDate").text = pub_date
+        ET.SubElement(item, "description").text = title
+        ET.SubElement(item, "itunes:summary").text = title
+        ET.SubElement(item, "itunes:subtitle").text = title
+        ET.SubElement(item, "itunes:explicit").text = "no"
+        ET.SubElement(item, "itunes:episodeType").text = "full"
+        ET.SubElement(item, "itunes:duration").text = "00:45:00"  # Optional: replace with row["duration"] if available
+
+        enclosure = ET.SubElement(item, "enclosure")
+        enclosure.set("url", audio_url)
+        enclosure.set("length", file_size)
+        enclosure.set("type", "audio/mpeg")
 
         sheet_data.append([title, date_str, audio_url, file_size, page_url])
         new_count += 1
 
-    ET.ElementTree(rss).write(rss_path, encoding="utf-8", xml_declaration=True)
+    # Pretty print XML for Apple Podcasts compliance
+    rough_string = ET.tostring(rss, encoding="utf-8")
+    reparsed = minidom.parseString(rough_string)
+    with open(rss_path, "w", encoding="utf-8") as f:
+        f.write(reparsed.toprettyxml(indent="  "))
+
     print(f"📝 RSS updated: {new_count} new items added")
     print(f"🌐 RSS feed: {rss_url}")
 
