@@ -145,7 +145,11 @@ def generate_rss():
     ET.SubElement(channel, "itunes:summary").text = FEED_DATA["description"]
     ET.SubElement(channel, "itunes:subtitle").text = FEED_DATA["description"]
     ET.SubElement(channel, "itunes:explicit").text = "no"
-    ET.SubElement(channel, "itunes:image", href="https://yutorah-rss.netlify.app/rav_asher_icon.jpg")
+    ET.SubElement(channel, "itunes:image", href="https://i.imgur.com/hkwQrh9.png")  # ✅ UPDATED HERE
+    image = ET.SubElement(channel, "image")
+    ET.SubElement(image, "url").text = "https://i.imgur.com/hkwQrh9.png"
+    ET.SubElement(image, "title").text = FEED_DATA["title"]
+    ET.SubElement(image, "link").text = rss_url
 
     cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
     ET.SubElement(cat, "itunes:category", text="Judaism")
