@@ -165,6 +165,7 @@ def generate_rss():
         }
         for _, row in df.iterrows() if row["audio_url"]
     ]
+    print(f"📦 Generating Rav Asher Weiss RSS feed with {len(entries)} entries...")
     write_rss("Rav Asher Weiss' Torah", "Rav Asher Weiss", "matthewjmiller07@gmail.com", rss_url, rss_path, entries)
     upload_to_google_sheets([
         [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]] for e in entries
@@ -183,6 +184,7 @@ def generate_rss():
             }
             for row in lectures if row.get("shiurdownloadurl") and teacher["filter_func"](row)
         ]
+        print(f"📦 Generating RSS feed for {teacher['title']} with {len(entries)} entries...")
         rss_path = os.path.join(DEPLOY_FOLDER, teacher["rss_filename"])
         rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
         write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries)
@@ -221,7 +223,8 @@ def write_rss(title, author, email, rss_url, rss_path, entries):
     owner = ET.SubElement(channel, "itunes:owner")
     ET.SubElement(owner, "itunes:name").text = author
     ET.SubElement(owner, "itunes:email").text = email
-    for entry in entries:
+    for i, entry in enumerate(entries, 1):
+        print(f"📝 Writing RSS item {i}/{len(entries)}: {entry['title'][:60]}...")
         pub_date = parser.parse(entry["date"]).strftime("%a, %d %b %Y %H:%M:%S +0000") if entry["date"] else datetime.datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
         item = ET.SubElement(channel, "item")
         ET.SubElement(item, "title").text = entry["title"]
