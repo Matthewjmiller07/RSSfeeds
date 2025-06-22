@@ -38,7 +38,7 @@ YUTORAH_TEACHERS = [
         "title": "Rabbi Efrem Goldberg - Parsha Shiurim",
         "author": "Rabbi Efrem Goldberg",
         "email": "matthewjmiller07@gmail.com",
-        "filter_func": lambda x: "Parsha" in x.get("categoryname", [])
+        "filter_func": lambda x: "Parsha" in (x.get("categoryname") or [])
     }
 ]
 
@@ -142,9 +142,9 @@ def fetch_yutorah_lectures(teacher_id):
         docs = data.get("response", {}).get("docs", [])
         if not docs:
             break
-        for doc in docs:
-            all_lectures.append(doc)
+        all_lectures.extend(docs)
         page += 1
+        print(f"📄 Fetched page {page} for teacher ID {teacher_id}")
     return all_lectures
 
 def generate_rss():
@@ -165,7 +165,6 @@ def generate_rss():
         }
         for _, row in df.iterrows() if row["audio_url"]
     ]
-    print(f"📦 Generating Rav Asher Weiss RSS feed with {len(entries)} entries...")
     write_rss("Rav Asher Weiss' Torah", "Rav Asher Weiss", "matthewjmiller07@gmail.com", rss_url, rss_path, entries)
     upload_to_google_sheets([
         [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]] for e in entries
@@ -173,7 +172,9 @@ def generate_rss():
 
     # -------- YUTorah RSS Feeds --------
     for teacher in YUTORAH_TEACHERS:
+        print(f"📡 Generating RSS for {teacher['title']}...")
         lectures = fetch_yutorah_lectures(teacher["teacher_id"])
+        print(f"📦 Fetched {len(lectures)} lectures for {teacher['author']}")
         entries = [
             {
                 "id": str(row.get("shiurid")),
@@ -184,10 +185,11 @@ def generate_rss():
             }
             for row in lectures if row.get("shiurdownloadurl") and teacher["filter_func"](row)
         ]
-        print(f"📦 Generating RSS feed for {teacher['title']} with {len(entries)} entries...")
+        print(f"🔎 {len(entries)} entries passed filters for {teacher['author']}")
         rss_path = os.path.join(DEPLOY_FOLDER, teacher["rss_filename"])
         rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
         write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries)
+        print(f"✅ RSS written to {rss_path}")
 
     print("🚀 Deploying RSS to Netlify...")
     subprocess.run(
@@ -224,7 +226,7 @@ def write_rss(title, author, email, rss_url, rss_path, entries):
     ET.SubElement(owner, "itunes:name").text = author
     ET.SubElement(owner, "itunes:email").text = email
     for i, entry in enumerate(entries, 1):
-        print(f"📝 Writing RSS item {i}/{len(entries)}: {entry['title'][:60]}...")
+        print(f"📝 Writing RSS item {i}/{len(entries)}: {entry['title'][:50]}...")
         pub_date = parser.parse(entry["date"]).strftime("%a, %d %b %Y %H:%M:%S +0000") if entry["date"] else datetime.datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
         item = ET.SubElement(channel, "item")
         ET.SubElement(item, "title").text = entry["title"]
