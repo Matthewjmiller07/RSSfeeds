@@ -204,12 +204,21 @@ def generate_rss():
         print(f"✅ RSS written to {rss_path}")
 
     print("🚀 Deploying RSS to Netlify...")
-    subprocess.run(
-        ["netlify", "deploy", "--prod", "--dir", DEPLOY_FOLDER, "--site", NETLIFY_SITE_ID],
-        env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
-        check=True
-    )
-    print("✅ Deployment complete!")
+    try:
+        result = subprocess.run(
+            ["netlify", "deploy", "--prod", "--dir", DEPLOY_FOLDER, "--site", NETLIFY_SITE_ID],
+            env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        print("✅ Deployment complete!")
+        print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print("❌ Netlify deployment failed!")
+        print("Command output:", e.output)
+        print("Standard error:", e.stderr)
+        exit(1)
 
 def write_rss(title, author, email, rss_url, rss_path, entries, existing_ids):
     if os.path.exists(rss_path):
