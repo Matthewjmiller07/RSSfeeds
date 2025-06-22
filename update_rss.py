@@ -151,10 +151,21 @@ def generate_rss():
     import pandas as pd
     os.makedirs(DEPLOY_FOLDER, exist_ok=True)
 
+    def load_existing_ids(path):
+        if not os.path.exists(path):
+            return set()
+        try:
+            tree = ET.parse(path)
+            root = tree.getroot()
+            return set(item.find("guid").text for item in root.findall("./channel/item"))
+        except:
+            return set()
+
     # -------- Rav Asher Weiss RSS --------
     rss_path = os.path.join(DEPLOY_FOLDER, "rav_asher_weiss.xml")
     rss_url = f"https://{SITE_NAME}.netlify.app/rav_asher_weiss.xml"
     df = pd.read_csv(CSV_PATH)
+    existing_ids = load_existing_ids(rss_path)
     entries = [
         {
             "id": str(row["id"]),
@@ -163,9 +174,9 @@ def generate_rss():
             "audio_url": row["audio_url"],
             "page_url": f"https://www.torahanytime.com/lectures/{row['id']}"
         }
-        for _, row in df.iterrows() if row["audio_url"]
+        for _, row in df.iterrows() if row["audio_url"] and str(row["id"]) not in existing_ids
     ]
-    write_rss("Rav Asher Weiss' Torah", "Rav Asher Weiss", "matthewjmiller07@gmail.com", rss_url, rss_path, entries)
+    write_rss("Rav Asher Weiss' Torah", "Rav Asher Weiss", "matthewjmiller07@gmail.com", rss_url, rss_path, entries, existing_ids)
     upload_to_google_sheets([
         [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]] for e in entries
     ])
@@ -173,6 +184,9 @@ def generate_rss():
     # -------- YUTorah RSS Feeds --------
     for teacher in YUTORAH_TEACHERS:
         print(f"📡 Generating RSS for {teacher['title']}...")
+        rss_path = os.path.join(DEPLOY_FOLDER, teacher["rss_filename"])
+        rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
+        existing_ids = load_existing_ids(rss_path)
         lectures = fetch_yutorah_lectures(teacher["teacher_id"])
         print(f"📦 Fetched {len(lectures)} lectures for {teacher['author']}")
         entries = [
@@ -183,12 +197,10 @@ def generate_rss():
                 "audio_url": row.get("shiurdownloadurl", ""),
                 "page_url": row.get("shiurplayerurl", "")
             }
-            for row in lectures if row.get("shiurdownloadurl") and teacher["filter_func"](row)
+            for row in lectures if row.get("shiurdownloadurl") and teacher["filter_func"](row) and str(row.get("shiurid")) not in existing_ids
         ]
         print(f"🔎 {len(entries)} entries passed filters for {teacher['author']}")
-        rss_path = os.path.join(DEPLOY_FOLDER, teacher["rss_filename"])
-        rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
-        write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries)
+        write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries, existing_ids)
         print(f"✅ RSS written to {rss_path}")
 
     print("🚀 Deploying RSS to Netlify...")
@@ -199,32 +211,38 @@ def generate_rss():
     )
     print("✅ Deployment complete!")
 
-def write_rss(title, author, email, rss_url, rss_path, entries):
-    rss = ET.Element("rss", {
-        "version": "2.0",
-        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd",
-        "xmlns:atom": "http://www.w3.org/2005/Atom"
-    })
-    channel = ET.SubElement(rss, "channel")
-    ET.SubElement(channel, "title").text = title
-    ET.SubElement(channel, "link").text = rss_url
-    ET.SubElement(channel, "atom:link", href=rss_url, rel="self", type="application/rss+xml")
-    ET.SubElement(channel, "description").text = title
-    ET.SubElement(channel, "language").text = "en-us"
-    ET.SubElement(channel, "itunes:author").text = author
-    ET.SubElement(channel, "itunes:summary").text = title
-    ET.SubElement(channel, "itunes:subtitle").text = title
-    ET.SubElement(channel, "itunes:explicit").text = "no"
-    ET.SubElement(channel, "itunes:image", href="https://i.imgur.com/hkwQrh9.png")
-    image = ET.SubElement(channel, "image")
-    ET.SubElement(image, "url").text = "https://i.imgur.com/hkwQrh9.png"
-    ET.SubElement(image, "title").text = title
-    ET.SubElement(image, "link").text = rss_url
-    cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
-    ET.SubElement(cat, "itunes:category", text="Judaism")
-    owner = ET.SubElement(channel, "itunes:owner")
-    ET.SubElement(owner, "itunes:name").text = author
-    ET.SubElement(owner, "itunes:email").text = email
+def write_rss(title, author, email, rss_url, rss_path, entries, existing_ids):
+    if os.path.exists(rss_path):
+        tree = ET.parse(rss_path)
+        root = tree.getroot()
+        channel = root.find("channel")
+    else:
+        root = ET.Element("rss", {
+            "version": "2.0",
+            "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd",
+            "xmlns:atom": "http://www.w3.org/2005/Atom"
+        })
+        channel = ET.SubElement(root, "channel")
+        ET.SubElement(channel, "title").text = title
+        ET.SubElement(channel, "link").text = rss_url
+        ET.SubElement(channel, "atom:link", href=rss_url, rel="self", type="application/rss+xml")
+        ET.SubElement(channel, "description").text = title
+        ET.SubElement(channel, "language").text = "en-us"
+        ET.SubElement(channel, "itunes:author").text = author
+        ET.SubElement(channel, "itunes:summary").text = title
+        ET.SubElement(channel, "itunes:subtitle").text = title
+        ET.SubElement(channel, "itunes:explicit").text = "no"
+        ET.SubElement(channel, "itunes:image", href="https://i.imgur.com/hkwQrh9.png")
+        image = ET.SubElement(channel, "image")
+        ET.SubElement(image, "url").text = "https://i.imgur.com/hkwQrh9.png"
+        ET.SubElement(image, "title").text = title
+        ET.SubElement(image, "link").text = rss_url
+        cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
+        ET.SubElement(cat, "itunes:category", text="Judaism")
+        owner = ET.SubElement(channel, "itunes:owner")
+        ET.SubElement(owner, "itunes:name").text = author
+        ET.SubElement(owner, "itunes:email").text = email
+
     for i, entry in enumerate(entries, 1):
         print(f"📝 Writing RSS item {i}/{len(entries)}: {entry['title'][:50]}...")
         pub_date = parser.parse(entry["date"]).strftime("%a, %d %b %Y %H:%M:%S +0000") if entry["date"] else datetime.datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
@@ -243,7 +261,8 @@ def write_rss(title, author, email, rss_url, rss_path, entries):
         enclosure.set("url", entry["audio_url"])
         enclosure.set("length", get_audio_file_size(entry["audio_url"]))
         enclosure.set("type", "audio/mpeg")
-    rough_string = ET.tostring(rss, encoding="utf-8")
+
+    rough_string = ET.tostring(root, encoding="utf-8")
     reparsed = minidom.parseString(rough_string)
     with open(rss_path, "w", encoding="utf-8") as f:
         f.write(reparsed.toprettyxml(indent="  "))
