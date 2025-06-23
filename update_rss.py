@@ -55,7 +55,7 @@ def get_audio_file_size(url):
     except:
         return "0"
 
-def upload_to_google_sheets(new_rows):
+def upload_to_google_sheets(new_rows, sheet_tab_name="Sheet1"):
     if not GOOGLE_SHEETS_CREDENTIALS or not os.path.exists(GOOGLE_SHEETS_CREDENTIALS):
         print("❌ Missing Google Sheets credentials.")
         return
@@ -68,11 +68,14 @@ def upload_to_google_sheets(new_rows):
 
     try:
         sheet = client.open(GOOGLE_SHEET_NAME)
-        worksheet = sheet.sheet1
     except gspread.SpreadsheetNotFound:
         sheet = client.create(GOOGLE_SHEET_NAME)
-        worksheet = sheet.sheet1
         sheet.share(creds.service_account_email, perm_type="user", role="writer")
+
+    try:
+        worksheet = sheet.worksheet(sheet_tab_name)
+    except gspread.WorksheetNotFound:
+        worksheet = sheet.add_worksheet(title=sheet_tab_name, rows="100", cols="5")
 
     header = ["Title", "Date", "Audio URL", "File Size", "Page URL"]
     values = worksheet.get_all_values()
@@ -86,9 +89,9 @@ def upload_to_google_sheets(new_rows):
     appendable = [row for row in new_rows if (row[0], row[1]) not in existing_keys]
     if appendable:
         worksheet.append_rows(appendable, value_input_option="USER_ENTERED")
-        print(f"✅ Appended {len(appendable)} new rows to Google Sheet.")
+        print(f"✅ Appended {len(appendable)} new rows to sheet tab '{sheet_tab_name}'.")
     else:
-        print("✅ Google Sheet is already up to date.")
+        print(f"✅ Sheet tab '{sheet_tab_name}' is already up to date.")
 
 # ---------------- MAIN ---------------- #
 
@@ -190,6 +193,12 @@ def generate_rss():
         rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
         write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries)
         print(f"✅ RSS written to {rss_path}")
+
+        # Upload to dedicated Google Sheet tab
+        upload_to_google_sheets([
+            [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]]
+            for e in entries
+        ], sheet_tab_name=teacher["title"])
 
     print("🚀 Deploying RSS to Netlify...")
     subprocess.run(
