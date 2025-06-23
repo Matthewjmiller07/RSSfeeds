@@ -77,7 +77,7 @@ def upload_to_google_sheets(new_rows, sheet_tab_name="Sheet1"):
     except gspread.WorksheetNotFound:
         worksheet = sheet.add_worksheet(title=sheet_tab_name, rows="100", cols="5")
 
-    header = ["Title", "Date", "Audio URL", "File Size", "Page URL"]
+    header = ["Title", "Date", "Audio URL", "File Size", "Page URL", "Duration"]
     values = worksheet.get_all_values()
     if not values or values[0] != header:
         worksheet.clear()
@@ -184,7 +184,8 @@ def generate_rss():
                 "title": escape_xml(row.get("shiurtitle", "")),
                 "date": row.get("shiurdatesubmitted", ""),
                 "audio_url": row.get("shiurdownloadurl", ""),
-                "page_url": row.get("shiurplayerurl", "")
+                "page_url": row.get("shiurplayerurl", ""),
+                "duration": row.get("durationformatted", "00:45:00")
             }
             for row in lectures if row.get("shiurdownloadurl") and teacher["filter_func"](row)
         ]
@@ -196,9 +197,9 @@ def generate_rss():
 
         # Upload to dedicated Google Sheet tab
         upload_to_google_sheets([
-            [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]]
-            for e in entries
-        ], sheet_tab_name=teacher["title"])
+        [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"], e["duration"]]
+        for e in entries
+    ], sheet_tab_name=teacher["title"])
 
     print("🚀 Deploying RSS to Netlify...")
     subprocess.run(
@@ -247,7 +248,7 @@ def write_rss(title, author, email, rss_url, rss_path, entries):
         ET.SubElement(item, "itunes:subtitle").text = entry["title"]
         ET.SubElement(item, "itunes:explicit").text = "no"
         ET.SubElement(item, "itunes:episodeType").text = "full"
-        ET.SubElement(item, "itunes:duration").text = "00:45:00"
+        ET.SubElement(item, "itunes:duration").text = entry.get("duration", "00:45:00")
         enclosure = ET.SubElement(item, "enclosure")
         enclosure.set("url", entry["audio_url"])
         enclosure.set("length", get_audio_file_size(entry["audio_url"]))
