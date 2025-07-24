@@ -171,7 +171,28 @@ def generate_rss():
     write_rss("Rav Asher Weiss' Torah", "Rav Asher Weiss", "matthewjmiller07@gmail.com", rss_url, rss_path, entries)
     upload_to_google_sheets([
         [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]] for e in entries
-    ])
+    ], sheet_tab_name="Rav Asher Weiss")
+    
+    # -------- Rabbi Shmuel Fuerst RSS --------
+    SPEAKER_ID = 982  # Update the speaker ID for this section
+    fetch_and_save_csv()  # This will fetch lectures for the new speaker ID
+    rss_path = os.path.join(DEPLOY_FOLDER, "shmuel_fuerst.xml")
+    rss_url = f"https://{SITE_NAME}.netlify.app/shmuel_fuerst.xml"
+    df = pd.read_csv(CSV_PATH)
+    entries = [
+        {
+            "id": str(row["id"]),
+            "title": escape_xml(row["title"]),
+            "date": row["date_recorded"],
+            "audio_url": row["audio_url"],
+            "page_url": f"https://www.torahanytime.com/lectures/{row['id']}"
+        }
+        for _, row in df.iterrows() if row["audio_url"]
+    ]
+    write_rss("Rabbi Shmuel Fuerst's Torah", "Rabbi Shmuel Fuerst", "matthewjmiller07@gmail.com", rss_url, rss_path, entries)
+    upload_to_google_sheets([
+        [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]] for e in entries
+    ], sheet_tab_name="Rabbi Shmuel Fuerst")
 
     # -------- YUTorah RSS Feeds --------
     for teacher in YUTORAH_TEACHERS:
