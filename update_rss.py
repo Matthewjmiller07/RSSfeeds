@@ -153,48 +153,65 @@ def fetch_yutorah_lectures(teacher_id):
 def generate_rss():
     import pandas as pd
     os.makedirs(DEPLOY_FOLDER, exist_ok=True)
-
-    # -------- Rav Asher Weiss RSS --------
-    rss_path = os.path.join(DEPLOY_FOLDER, "rav_asher_weiss.xml")
-    rss_url = f"https://{SITE_NAME}.netlify.app/rav_asher_weiss.xml"
-    df = pd.read_csv(CSV_PATH)
-    entries = [
-        {
-            "id": str(row["id"]),
-            "title": escape_xml(row["title"]),
-            "date": row["date_recorded"],
-            "audio_url": row["audio_url"],
-            "page_url": f"https://www.torahanytime.com/lectures/{row['id']}"
-        }
-        for _, row in df.iterrows() if row["audio_url"]
-    ]
-    write_rss("Rav Asher Weiss' Torah", "Rav Asher Weiss", "matthewjmiller07@gmail.com", rss_url, rss_path, entries)
-    upload_to_google_sheets([
-        [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]] for e in entries
-    ], sheet_tab_name="Rav Asher Weiss")
     
-    # -------- Rabbi Shmuel Fuerst RSS --------
-    SPEAKER_ID = 982  # Update the speaker ID for this section
-    fetch_and_save_csv()  # This will fetch lectures for the new speaker ID
-    rss_path = os.path.join(DEPLOY_FOLDER, "shmuel_fuerst.xml")
-    rss_url = f"https://{SITE_NAME}.netlify.app/shmuel_fuerst.xml"
-    df = pd.read_csv(CSV_PATH)
-    entries = [
+    # List of speakers to process with their details
+    speakers = [
         {
-            "id": str(row["id"]),
-            "title": escape_xml(row["title"]),
-            "date": row["date_recorded"],
-            "audio_url": row["audio_url"],
-            "page_url": f"https://www.torahanytime.com/lectures/{row['id']}"
+            "speaker_id": 860,  # Rav Asher Weiss
+            "rss_filename": "rav_asher_weiss.xml",
+            "title": "Rav Asher Weiss' Torah",
+            "author": "Rav Asher Weiss",
+            "email": "matthewjmiller07@gmail.com"
+        },
+        {
+            "speaker_id": 982,  # Rabbi Shmuel Fuerst
+            "rss_filename": "shmuel_fuerst.xml",
+            "title": "Rabbi Shmuel Fuerst's Torah",
+            "author": "Rabbi Shmuel Fuerst",
+            "email": "matthewjmiller07@gmail.com"
         }
-        for _, row in df.iterrows() if row["audio_url"]
     ]
-    write_rss("Rabbi Shmuel Fuerst's Torah", "Rabbi Shmuel Fuerst", "matthewjmiller07@gmail.com", rss_url, rss_path, entries)
-    upload_to_google_sheets([
-        [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"]] for e in entries
-    ], sheet_tab_name="Rabbi Shmuel Fuerst")
+    
+    # Process each speaker
+    for speaker in speakers:
+        print(f"📡 Processing {speaker['author']}...")
+        
+        # Fetch and save CSV for this speaker
+        global SPEAKER_ID
+        SPEAKER_ID = speaker["speaker_id"]
+        fetch_and_save_csv()
+        
+        # Generate RSS feed
+        rss_path = os.path.join(DEPLOY_FOLDER, speaker["rss_filename"])
+        rss_url = f"https://{SITE_NAME}.netlify.app/{speaker['rss_filename']}"
+        
+        df = pd.read_csv(CSV_PATH)
+        entries = [
+            {
+                "id": str(row["id"]),
+                "title": escape_xml(row["title"]),
+                "date": row["date_recorded"],
+                "audio_url": row["audio_url"],
+                "page_url": f"https://www.torahanytime.com/lectures/{row['id']}",
+                "duration": "00:45:00"  # Default duration
+            }
+            for _, row in df.iterrows() if row["audio_url"]
+        ]
+        
+        write_rss(speaker["title"], speaker["author"], speaker["email"], rss_url, rss_path, entries)
+        
+        # Upload to Google Sheets
+        upload_to_google_sheets(
+            [
+                [e["title"], e["date"], e["audio_url"], 
+                 get_audio_file_size(e["audio_url"]), e["page_url"]] 
+                for e in entries
+            ], 
+            sheet_tab_name=speaker["author"]
+        )
+        print(f"✅ Finished processing {speaker['author']}")
 
-    # -------- YUTorah RSS Feeds --------
+    # Process YUTORAH_TEACHERS
     for teacher in YUTORAH_TEACHERS:
         print(f"📡 Generating RSS for {teacher['title']}...")
         lectures = fetch_yutorah_lectures(teacher["teacher_id"])
@@ -210,17 +227,25 @@ def generate_rss():
             }
             for row in lectures if row.get("shiurdownloadurl") and teacher["filter_func"](row)
         ]
-        print(f"🔎 {len(entries)} entries passed filters for {teacher['author']}")
-        rss_path = os.path.join(DEPLOY_FOLDER, teacher["rss_filename"])
-        rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
-        write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries)
-        print(f"✅ RSS written to {rss_path}")
-
-        # Upload to dedicated Google Sheet tab
-        upload_to_google_sheets([
-        [e["title"], e["date"], e["audio_url"], get_audio_file_size(e["audio_url"]), e["page_url"], e["duration"]]
-        for e in entries
-    ], sheet_tab_name=teacher["title"])
+        
+        if entries:
+            print(f"🔎 {len(entries)} entries passed filters for {teacher['author']}")
+            rss_path = os.path.join(DEPLOY_FOLDER, teacher["rss_filename"])
+            rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
+            write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries)
+            
+            # Upload to Google Sheets
+            upload_to_google_sheets(
+                [
+                    [e["title"], e["date"], e["audio_url"], 
+                     get_audio_file_size(e["audio_url"]), e["page_url"], e["duration"]]
+                    for e in entries
+                ], 
+                sheet_tab_name=teacher["title"]
+            )
+            print(f"✅ RSS written to {rss_path}")
+        else:
+            print(f"ℹ️ No entries found for {teacher['author']} after filtering")
 
     print("🚀 Deploying RSS to Netlify...")
     subprocess.run(
@@ -280,5 +305,4 @@ def write_rss(title, author, email, rss_url, rss_path, entries):
         f.write(reparsed.toprettyxml(indent="  "))
 
 if __name__ == "__main__":
-    fetch_and_save_csv()
     generate_rss()
