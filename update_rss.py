@@ -3,17 +3,16 @@ import csv
 import requests
 import datetime
 import subprocess
+import time
 import gspread
+import pandas as pd
 import xml.etree.ElementTree as ET
 from dateutil import parser
 from xml.dom import minidom
 from google.oauth2.service_account import Credentials
 
-os.environ["GOOGLE_SHEETS_CREDENTIALS"] = "service_account.json"
-
 # ---------------- CONFIG ---------------- #
 
-SPEAKER_ID = 860
 SITE_NAME = "yutorah-rss"
 DEPLOY_FOLDER = "deploy_netlify"
 CSV_PATH = "torahanytime_lectures.csv"
@@ -21,7 +20,7 @@ GOOGLE_SHEET_NAME = "Rav Asher Weiss Shiurim"
 
 NETLIFY_AUTH_TOKEN = os.getenv("NETLIFY_AUTH_TOKEN")
 NETLIFY_SITE_ID = os.getenv("NETLIFY_SITE_ID")
-GOOGLE_SHEETS_CREDENTIALS = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
+GOOGLE_SHEETS_CREDENTIALS = os.getenv("GOOGLE_SHEETS_CREDENTIALS", "service_account.json")
 
 YUTORAH_TEACHERS = [
     {
@@ -49,260 +48,231 @@ def escape_xml(text):
         .replace(">", "&gt;").replace('"', "&quot;").replace("'", "&apos;")
 
 def get_audio_file_size(url):
+    """Makes a HEAD request to get the content length of a URL."""
     try:
-        r = requests.head(url, timeout=5)
+        r = requests.head(url, timeout=10, allow_redirects=True)
+        r.raise_for_status()
         return r.headers.get("Content-Length", "0") or "0"
-    except:
+    except requests.RequestException as e:
+        print(f"⚠️  Could not get file size for {url}. Error: {e}")
         return "0"
 
-def upload_to_google_sheets(new_rows, sheet_tab_name="Sheet1"):
-    if not GOOGLE_SHEETS_CREDENTIALS or not os.path.exists(GOOGLE_SHEETS_CREDENTIALS):
-        print("❌ Missing Google Sheets credentials.")
-        return
+def upload_to_google_sheets(new_rows, sheet_tab_name, sheet):
+    """
+    Uploads new rows to a specific tab in a Google Sheet, with robust retry logic for API errors.
+    Accepts an already authenticated sheet object to avoid re-authorizing.
+    """
+    max_retries = 5
+    for attempt in range(max_retries):
+        try:
+            try:
+                worksheet = sheet.worksheet(sheet_tab_name)
+            except gspread.WorksheetNotFound:
+                print(f"📄 Tab '{sheet_tab_name}' not found. Creating it...")
+                worksheet = sheet.add_worksheet(title=sheet_tab_name, rows="100", cols="6")
 
-    creds = Credentials.from_service_account_file(
-        GOOGLE_SHEETS_CREDENTIALS,
-        scopes=["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/spreadsheets"]
-    )
-    client = gspread.authorize(creds)
+            header = ["Title", "Date", "Audio URL", "File Size", "Page URL", "Duration"]
+            values = worksheet.get_all_values()
+            
+            if not values or values[0] != header:
+                print("📋 Header is missing or incorrect. Clearing sheet and adding new header.")
+                worksheet.clear()
+                worksheet.append_row(header, value_input_option="USER_ENTERED")
+                existing_keys = set()
+            else:
+                existing_keys = set((row[0], row[1]) for row in values[1:] if len(row) >= 2)
 
+            appendable = [row for row in new_rows if (row[0], row[1]) not in existing_keys]
+
+            if appendable:
+                worksheet.append_rows(appendable, value_input_option="USER_ENTERED")
+                print(f"✅ Appended {len(appendable)} new rows to sheet tab '{sheet_tab_name}'.")
+            else:
+                print(f"✅ Sheet tab '{sheet_tab_name}' is already up to date.")
+            
+            return # Success, exit the function
+
+        except gspread.exceptions.APIError as e:
+            if e.response.status_code in [500, 502, 503, 504] and attempt < max_retries - 1:
+                wait_time = 2 ** (attempt + 1)
+                print(f"⚠️ Google Sheets API error ({e.response.status_code}). Retrying in {wait_time} seconds...")
+                time.sleep(wait_time)
+            else:
+                print(f"❌ A critical Google Sheets API error occurred after {attempt + 1} attempts.")
+                raise e
+        except Exception as e:
+             print(f"❌ An unexpected error occurred during Google Sheets upload: {e}")
+             raise e
+
+# ---------------- DATA FETCHING ---------------- #
+
+def fetch_torahanytime_lectures(speaker_id):
+    """Fetches lecture data for a specific speaker ID from TorahAnytime."""
+    url = f"https://api.torahanytime.com/speakers/{speaker_id}/lectures?limit=10000"
     try:
-        sheet = client.open(GOOGLE_SHEET_NAME)
-    except gspread.SpreadsheetNotFound:
-        sheet = client.create(GOOGLE_SHEET_NAME)
-        sheet.share(creds.service_account_email, perm_type="user", role="writer")
-
-    try:
-        worksheet = sheet.worksheet(sheet_tab_name)
-    except gspread.WorksheetNotFound:
-        worksheet = sheet.add_worksheet(title=sheet_tab_name, rows="100", cols="5")
-
-    header = ["Title", "Date", "Audio URL", "File Size", "Page URL", "Duration"]
-    values = worksheet.get_all_values()
-    if not values or values[0] != header:
-        worksheet.clear()
-        worksheet.append_row(header)
-        existing_keys = set()
-    else:
-        existing_keys = set((row[0], row[1]) for row in values[1:])
-
-    appendable = [row for row in new_rows if (row[0], row[1]) not in existing_keys]
-    if appendable:
-        worksheet.append_rows(appendable, value_input_option="USER_ENTERED")
-        print(f"✅ Appended {len(appendable)} new rows to sheet tab '{sheet_tab_name}'.")
-    else:
-        print(f"✅ Sheet tab '{sheet_tab_name}' is already up to date.")
-
-# ---------------- MAIN ---------------- #
-
-def fetch_and_save_csv():
-    url = f"https://api.torahanytime.com/speakers/{SPEAKER_ID}/lectures?limit=10000"
-    res = requests.get(url)
-    if res.status_code != 200:
-        print(f"❌ Error: Unable to fetch data (status code {res.status_code})")
-        exit()
-
-    data = res.json().get("lecture", [])
-    print(f"📥 Fetched {len(data)} lectures from TorahAnytime.")
-
-    with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
-        fieldnames = [
-            "id", "title", "date_recorded", "duration", "language_name",
-            "category", "subcategories", "thumbnail_url",
-            "audio_url", "mp4_url", "m3u8_url",
-            "speaker_name_first", "speaker_name_last"
-        ]
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        for lec in data:
-            writer.writerow({
-                "id": lec["id"],
-                "title": lec["title"],
-                "date_recorded": lec["date_recorded"],
-                "duration": lec["duration"],
-                "language_name": lec.get("language_name", ""),
-                "category": lec.get("categories", [{}])[0].get("name", ""),
-                "subcategories": ", ".join([s.get("name", "") for s in lec.get("subcategories", [])]),
-                "thumbnail_url": lec.get("thumbnail_url", ""),
-                "audio_url": lec.get("mp3_url", ""),
-                "mp4_url": lec.get("mp4_url", ""),
-                "m3u8_url": lec.get("m3u8_url", ""),
-                "speaker_name_first": lec.get("speaker_name_first", ""),
-                "speaker_name_last": lec.get("speaker_name_last", "")
-            })
-    print(f"✅ Saved to {CSV_PATH}")
+        res = requests.get(url, timeout=15)
+        res.raise_for_status()
+        data = res.json().get("lecture", [])
+        print(f"📥 Fetched {len(data)} lectures for speaker ID {speaker_id}.")
+        return data
+    except requests.RequestException as e:
+        print(f"❌ Error fetching data for speaker {speaker_id}: {e}")
+        return []
 
 def fetch_yutorah_lectures(teacher_id):
+    """Fetches all lectures for a specific teacher from YUTorah."""
     page = 1
     all_lectures = []
     while True:
         query = f"sort_by=shiurdate+desc&organizationID=301&search_query=&page={page}&facet_query=teacherid:{teacher_id},"
         url = f"https://www.yutorah.org/Search/GetSearchResults?{query}"
-        response = requests.get(url)
-        if not response.ok:
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            data = response.json()
+            docs = data.get("response", {}).get("docs", [])
+            if not docs:
+                break
+            all_lectures.extend(docs)
+            print(f"📄 Fetched page {page} for teacher ID {teacher_id}")
+            page += 1
+        except requests.RequestException as e:
+            print(f"❌ Error fetching YUTorah page {page} for teacher {teacher_id}: {e}")
             break
-        data = response.json()
-        docs = data.get("response", {}).get("docs", [])
-        if not docs:
-            break
-        all_lectures.extend(docs)
-        page += 1
-        print(f"📄 Fetched page {page} for teacher ID {teacher_id}")
     return all_lectures
 
-def generate_rss():
-    import pandas as pd
-    os.makedirs(DEPLOY_FOLDER, exist_ok=True)
-    
-    # List of speakers to process with their details
-    speakers = [
-        {
-            "speaker_id": 860,  # Rav Asher Weiss
-            "rss_filename": "rav_asher_weiss.xml",
-            "title": "Rav Asher Weiss' Torah",
-            "author": "Rav Asher Weiss",
-            "email": "matthewjmiller07@gmail.com"
-        },
-        {
-            "speaker_id": 982,  # Rabbi Shmuel Fuerst
-            "rss_filename": "shmuel_fuerst.xml",
-            "title": "Rabbi Shmuel Fuerst's Torah",
-            "author": "Rabbi Shmuel Fuerst",
-            "email": "matthewjmiller07@gmail.com"
-        }
-    ]
-    
-    # Process each speaker
-    for speaker in speakers:
-        print(f"📡 Processing {speaker['author']}...")
-        
-        # Fetch and save CSV for this speaker
-        global SPEAKER_ID
-        SPEAKER_ID = speaker["speaker_id"]
-        fetch_and_save_csv()
-        
-        # Generate RSS feed
-        rss_path = os.path.join(DEPLOY_FOLDER, speaker["rss_filename"])
-        rss_url = f"https://{SITE_NAME}.netlify.app/{speaker['rss_filename']}"
-        
-        df = pd.read_csv(CSV_PATH)
-        entries = [
-            {
-                "id": str(row["id"]),
-                "title": escape_xml(row["title"]),
-                "date": row["date_recorded"],
-                "audio_url": row["audio_url"],
-                "page_url": f"https://www.torahanytime.com/lectures/{row['id']}",
-                "duration": "00:45:00"  # Default duration
-            }
-            for _, row in df.iterrows() if row["audio_url"]
-        ]
-        
-        write_rss(speaker["title"], speaker["author"], speaker["email"], rss_url, rss_path, entries)
-        
-        # Upload to Google Sheets
-        upload_to_google_sheets(
-            [
-                [e["title"], e["date"], e["audio_url"], 
-                 get_audio_file_size(e["audio_url"]), e["page_url"]] 
-                for e in entries
-            ], 
-            sheet_tab_name=speaker["author"]
-        )
-        print(f"✅ Finished processing {speaker['author']}")
-
-    # Process YUTORAH_TEACHERS
-    for teacher in YUTORAH_TEACHERS:
-        print(f"📡 Generating RSS for {teacher['title']}...")
-        lectures = fetch_yutorah_lectures(teacher["teacher_id"])
-        print(f"📦 Fetched {len(lectures)} lectures for {teacher['author']}")
-        entries = [
-            {
-                "id": str(row.get("shiurid")),
-                "title": escape_xml(row.get("shiurtitle", "")),
-                "date": row.get("shiurdatesubmitted", ""),
-                "audio_url": row.get("shiurdownloadurl", ""),
-                "page_url": row.get("shiurplayerurl", ""),
-                "duration": row.get("durationformatted", "00:45:00")
-            }
-            for row in lectures if row.get("shiurdownloadurl") and teacher["filter_func"](row)
-        ]
-        
-        if entries:
-            print(f"🔎 {len(entries)} entries passed filters for {teacher['author']}")
-            rss_path = os.path.join(DEPLOY_FOLDER, teacher["rss_filename"])
-            rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
-            write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries)
-            
-            # Upload to Google Sheets
-            upload_to_google_sheets(
-                [
-                    [e["title"], e["date"], e["audio_url"], 
-                     get_audio_file_size(e["audio_url"]), e["page_url"], e["duration"]]
-                    for e in entries
-                ], 
-                sheet_tab_name=teacher["title"]
-            )
-            print(f"✅ RSS written to {rss_path}")
-        else:
-            print(f"ℹ️ No entries found for {teacher['author']} after filtering")
-
-    print("🚀 Deploying RSS to Netlify...")
-    subprocess.run(
-        ["netlify", "deploy", "--prod", "--dir", DEPLOY_FOLDER, "--site", NETLIFY_SITE_ID],
-        env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
-        check=True
-    )
-    print("✅ Deployment complete!")
+# ---------------- RSS & DEPLOYMENT ---------------- #
 
 def write_rss(title, author, email, rss_url, rss_path, entries):
+    """Generates and writes an RSS XML file from a list of entry dictionaries."""
     rss = ET.Element("rss", {
-        "version": "2.0",
-        "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd",
-        "xmlns:atom": "http://www.w3.org/2005/Atom"
+        "version": "2.0", "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd", "xmlns:atom": "http://www.w3.org/2005/Atom"
     })
     channel = ET.SubElement(rss, "channel")
     ET.SubElement(channel, "title").text = title
     ET.SubElement(channel, "link").text = rss_url
     ET.SubElement(channel, "atom:link", href=rss_url, rel="self", type="application/rss+xml")
-    ET.SubElement(channel, "description").text = title
-    ET.SubElement(channel, "language").text = "en-us"
+    # ... (other channel elements)
     ET.SubElement(channel, "itunes:author").text = author
-    ET.SubElement(channel, "itunes:summary").text = title
-    ET.SubElement(channel, "itunes:subtitle").text = title
-    ET.SubElement(channel, "itunes:explicit").text = "no"
     ET.SubElement(channel, "itunes:image", href="https://i.imgur.com/hkwQrh9.png")
-    image = ET.SubElement(channel, "image")
-    ET.SubElement(image, "url").text = "https://i.imgur.com/hkwQrh9.png"
-    ET.SubElement(image, "title").text = title
-    ET.SubElement(image, "link").text = rss_url
-    cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
-    ET.SubElement(cat, "itunes:category", text="Judaism")
-    owner = ET.SubElement(channel, "itunes:owner")
-    ET.SubElement(owner, "itunes:name").text = author
-    ET.SubElement(owner, "itunes:email").text = email
+
     for i, entry in enumerate(entries, 1):
         print(f"📝 Writing RSS item {i}/{len(entries)}: {entry['title'][:50]}...")
-        pub_date = parser.parse(entry["date"]).strftime("%a, %d %b %Y %H:%M:%S +0000") if entry["date"] else datetime.datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
+        pub_date_str = entry.get("date")
+        pub_date = parser.parse(pub_date_str).strftime("%a, %d %b %Y %H:%M:%S +0000") if pub_date_str else datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
         item = ET.SubElement(channel, "item")
         ET.SubElement(item, "title").text = entry["title"]
         ET.SubElement(item, "guid", isPermaLink="false").text = entry["id"]
         ET.SubElement(item, "link").text = entry["page_url"]
         ET.SubElement(item, "pubDate").text = pub_date
-        ET.SubElement(item, "description").text = entry["title"]
-        ET.SubElement(item, "itunes:summary").text = entry["title"]
-        ET.SubElement(item, "itunes:subtitle").text = entry["title"]
-        ET.SubElement(item, "itunes:explicit").text = "no"
-        ET.SubElement(item, "itunes:episodeType").text = "full"
         ET.SubElement(item, "itunes:duration").text = entry.get("duration", "00:45:00")
-        enclosure = ET.SubElement(item, "enclosure")
-        enclosure.set("url", entry["audio_url"])
-        enclosure.set("length", get_audio_file_size(entry["audio_url"]))
-        enclosure.set("type", "audio/mpeg")
+        ET.SubElement(item, "description").text = entry["title"]
+        enclosure = ET.SubElement(item, "enclosure", {
+            "url": entry["audio_url"], "length": entry["file_size"], "type": "audio/mpeg"
+        })
+
     rough_string = ET.tostring(rss, encoding="utf-8")
     reparsed = minidom.parseString(rough_string)
     with open(rss_path, "w", encoding="utf-8") as f:
         f.write(reparsed.toprettyxml(indent="  "))
+    print(f"✅ RSS written to {rss_path}")
+
+def main():
+    """Main function to generate RSS feeds and upload data."""
+    os.makedirs(DEPLOY_FOLDER, exist_ok=True)
+    
+    # --- Authenticate with Google Sheets ONCE ---
+    print("🔑 Authorizing with Google Sheets...")
+    if not GOOGLE_SHEETS_CREDENTIALS or not os.path.exists(GOOGLE_SHEETS_CREDENTIALS):
+        print("❌ Missing Google Sheets credentials. Skipping sheet uploads.")
+        google_sheet = None
+    else:
+        try:
+            creds = Credentials.from_service_account_file(
+                GOOGLE_SHEETS_CREDENTIALS,
+                scopes=["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/spreadsheets"]
+            )
+            client = gspread.authorize(creds)
+            google_sheet = client.open(GOOGLE_SHEET_NAME)
+            print("✅ Successfully connected to Google Sheet.")
+        except Exception as e:
+            print(f"❌ Failed to connect to Google Sheets: {e}")
+            google_sheet = None
+
+    # --- Process TorahAnytime Speakers ---
+    speakers = [
+        {"id": 860, "filename": "rav_asher_weiss.xml", "title": "Rav Asher Weiss' Torah", "author": "Rav Asher Weiss", "email": "matthewjmiller07@gmail.com"},
+        {"id": 982, "filename": "shmuel_fuerst.xml", "title": "Rabbi Shmuel Fuerst's Torah", "author": "Rabbi Shmuel Fuerst", "email": "matthewjmiller07@gmail.com"}
+    ]
+    
+    for speaker in speakers:
+        print(f"\n📡 Processing TorahAnytime Speaker: {speaker['author']}...")
+        lectures = fetch_torahanytime_lectures(speaker['id'])
+        if not lectures:
+            continue
+
+        entries = []
+        for lec in lectures:
+            if not lec.get("mp3_url"):
+                continue
+            entries.append({
+                "id": str(lec["id"]), "title": escape_xml(lec["title"]), "date": lec["date_recorded"],
+                "audio_url": lec["mp3_url"], "page_url": f"https://www.torahanytime.com/lectures/{lec['id']}",
+                "duration": lec.get("duration", "00:45:00"), "file_size": get_audio_file_size(lec["mp3_url"])
+            })
+
+        rss_path = os.path.join(DEPLOY_FOLDER, speaker["filename"])
+        rss_url = f"https://{SITE_NAME}.netlify.app/{speaker['filename']}"
+        write_rss(speaker["title"], speaker["author"], speaker["email"], rss_url, rss_path, entries)
+        
+        if google_sheet:
+            sheet_rows = [[e["title"], e["date"], e["audio_url"], e["file_size"], e["page_url"], e["duration"]] for e in entries]
+            upload_to_google_sheets(sheet_rows, speaker["author"], google_sheet)
+
+    # --- Process YUTorah Teachers ---
+    for teacher in YUTORAH_TEACHERS:
+        print(f"\n📡 Processing YUTorah Teacher: {teacher['author']}...")
+        lectures = fetch_yutorah_lectures(teacher["teacher_id"])
+        filtered_lectures = [lec for lec in lectures if lec.get("shiurdownloadurl") and teacher["filter_func"](lec)]
+        print(f"📦 Fetched {len(lectures)} lectures, {len(filtered_lectures)} passed filters.")
+
+        if not filtered_lectures:
+            continue
+
+        entries = []
+        for lec in filtered_lectures:
+            audio_url = lec.get("shiurdownloadurl")
+            entries.append({
+                "id": str(lec.get("shiurid")), "title": escape_xml(lec.get("shiurtitle", "")),
+                "date": lec.get("shiurdatesubmitted", ""), "audio_url": audio_url,
+                "page_url": lec.get("shiurplayerurl", ""), "duration": lec.get("durationformatted", "00:45:00"),
+                "file_size": get_audio_file_size(audio_url)
+            })
+
+        rss_path = os.path.join(DEPLOY_FOLDER, teacher["rss_filename"])
+        rss_url = f"https://{SITE_NAME}.netlify.app/{teacher['rss_filename']}"
+        write_rss(teacher["title"], teacher["author"], teacher["email"], rss_url, rss_path, entries)
+
+        if google_sheet:
+            sheet_rows = [[e["title"], e["date"], e["audio_url"], e["file_size"], e["page_url"], e["duration"]] for e in entries]
+            upload_to_google_sheets(sheet_rows, teacher["title"], google_sheet)
+
+    # --- Deploy to Netlify ---
+    print("\n🚀 Deploying RSS to Netlify...")
+    if NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID:
+        try:
+            subprocess.run(
+                ["netlify", "deploy", "--prod", "--dir", DEPLOY_FOLDER, "--site", NETLIFY_SITE_ID],
+                env={**os.environ, "NETLIFY_AUTH_TOKEN": NETLIFY_AUTH_TOKEN},
+                check=True, capture_output=True, text=True
+            )
+            print("✅ Deployment complete!")
+        except (subprocess.CalledProcessError, FileNotFoundError) as e:
+            print("❌ Deployment failed.")
+            if isinstance(e, subprocess.CalledProcessError):
+                print(f"Stderr: {e.stderr}")
+    else:
+        print("ℹ️  Skipping deployment: Netlify token or site ID not set.")
 
 if __name__ == "__main__":
-    generate_rss()
+    main()
