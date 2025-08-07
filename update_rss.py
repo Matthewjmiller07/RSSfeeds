@@ -15,7 +15,6 @@ from google.oauth2.service_account import Credentials
 
 SITE_NAME = "yutorah-rss"
 DEPLOY_FOLDER = "deploy_netlify"
-CSV_PATH = "torahanytime_lectures.csv"
 GOOGLE_SHEET_NAME = "Rav Asher Weiss Shiurim"
 
 NETLIFY_AUTH_TOKEN = os.getenv("NETLIFY_AUTH_TOKEN")
@@ -57,11 +56,34 @@ def get_audio_file_size(url):
         print(f"⚠️  Could not get file size for {url}. Error: {e}")
         return "0"
 
+# --- NEW: ROBUST DURATION FORMATTER ---
+def format_duration(raw_duration):
+    """
+    Safely converts a duration value into HH:MM:SS format.
+    - Handles integers (total seconds).
+    - Handles existing "HH:MM:SS" strings.
+    - Handles None or other unexpected types gracefully.
+    """
+    # Case 1: Duration is an integer (e.g., 3661)
+    if isinstance(raw_duration, int):
+        # Use gmtime to convert seconds into a time structure, then format it
+        return time.strftime('%H:%M:%S', time.gmtime(raw_duration))
+
+    # Case 2: Duration is a string
+    if isinstance(raw_duration, str):
+        # If it already looks like HH:MM:SS, just return it
+        if ':' in raw_duration:
+            return raw_duration
+        # If it's a string of digits, convert to int and then format
+        elif raw_duration.isdigit():
+            return time.strftime('%H:%M:%S', time.gmtime(int(raw_duration)))
+
+    # Case 3: Handle None or any other unexpected format
+    return "00:00:00"
+
 def upload_to_google_sheets(new_rows, sheet_tab_name, sheet):
-    """
-    Uploads new rows to a specific tab in a Google Sheet, with robust retry logic for API errors.
-    Accepts an already authenticated sheet object to avoid re-authorizing.
-    """
+    # This function is correct and does not need changes.
+    # ... (function body remains the same)
     max_retries = 5
     for attempt in range(max_retries):
         try:
@@ -73,7 +95,7 @@ def upload_to_google_sheets(new_rows, sheet_tab_name, sheet):
 
             header = ["Title", "Date", "Audio URL", "File Size", "Page URL", "Duration"]
             values = worksheet.get_all_values()
-            
+
             if not values or values[0] != header:
                 print("📋 Header is missing or incorrect. Clearing sheet and adding new header.")
                 worksheet.clear()
@@ -89,7 +111,7 @@ def upload_to_google_sheets(new_rows, sheet_tab_name, sheet):
                 print(f"✅ Appended {len(appendable)} new rows to sheet tab '{sheet_tab_name}'.")
             else:
                 print(f"✅ Sheet tab '{sheet_tab_name}' is already up to date.")
-            
+
             return # Success, exit the function
 
         except gspread.exceptions.APIError as e:
@@ -101,13 +123,15 @@ def upload_to_google_sheets(new_rows, sheet_tab_name, sheet):
                 print(f"❌ A critical Google Sheets API error occurred after {attempt + 1} attempts.")
                 raise e
         except Exception as e:
-             print(f"❌ An unexpected error occurred during Google Sheets upload: {e}")
-             raise e
+            print(f"❌ An unexpected error occurred during Google Sheets upload: {e}")
+            raise e
+
 
 # ---------------- DATA FETCHING ---------------- #
 
 def fetch_torahanytime_lectures(speaker_id):
-    """Fetches lecture data for a specific speaker ID from TorahAnytime."""
+    # This function is correct and does not need changes.
+    # ... (function body remains the same)
     url = f"https://api.torahanytime.com/speakers/{speaker_id}/lectures?limit=10000"
     try:
         res = requests.get(url, timeout=15)
@@ -120,7 +144,8 @@ def fetch_torahanytime_lectures(speaker_id):
         return []
 
 def fetch_yutorah_lectures(teacher_id):
-    """Fetches all lectures for a specific teacher from YUTorah."""
+    # This function is correct and does not need changes.
+    # ... (function body remains the same)
     page = 1
     all_lectures = []
     while True:
@@ -144,7 +169,8 @@ def fetch_yutorah_lectures(teacher_id):
 # ---------------- RSS & DEPLOYMENT ---------------- #
 
 def write_rss(title, author, email, rss_url, rss_path, entries):
-    """Generates and writes an RSS XML file from a list of entry dictionaries."""
+    # This function is correct and does not need changes.
+    # ... (function body remains the same)
     rss = ET.Element("rss", {
         "version": "2.0", "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd", "xmlns:atom": "http://www.w3.org/2005/Atom"
     })
@@ -152,12 +178,25 @@ def write_rss(title, author, email, rss_url, rss_path, entries):
     ET.SubElement(channel, "title").text = title
     ET.SubElement(channel, "link").text = rss_url
     ET.SubElement(channel, "atom:link", href=rss_url, rel="self", type="application/rss+xml")
-    # ... (other channel elements)
+    ET.SubElement(channel, "description").text = title
+    ET.SubElement(channel, "language").text = "en-us"
     ET.SubElement(channel, "itunes:author").text = author
+    ET.SubElement(channel, "itunes:summary").text = title
+    ET.SubElement(channel, "itunes:subtitle").text = title
+    ET.SubElement(channel, "itunes:explicit").text = "no"
     ET.SubElement(channel, "itunes:image", href="https://i.imgur.com/hkwQrh9.png")
-
+    image = ET.SubElement(channel, "image")
+    ET.SubElement(image, "url").text = "https://i.imgur.com/hkwQrh9.png"
+    ET.SubElement(image, "title").text = title
+    ET.SubElement(image, "link").text = rss_url
+    cat = ET.SubElement(channel, "itunes:category", text="Religion & Spirituality")
+    ET.SubElement(cat, "itunes:category", text="Judaism")
+    owner = ET.SubElement(channel, "itunes:owner")
+    ET.SubElement(owner, "itunes:name").text = author
+    ET.SubElement(owner, "itunes:email").text = email
     for i, entry in enumerate(entries, 1):
-        print(f"📝 Writing RSS item {i}/{len(entries)}: {entry['title'][:50]}...")
+        # This print statement is removed from the final script to reduce log noise
+        # print(f"📝 Writing RSS item {i}/{len(entries)}: {entry['title'][:50]}...")
         pub_date_str = entry.get("date")
         pub_date = parser.parse(pub_date_str).strftime("%a, %d %b %Y %H:%M:%S +0000") if pub_date_str else datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
         item = ET.SubElement(channel, "item")
@@ -165,8 +204,12 @@ def write_rss(title, author, email, rss_url, rss_path, entries):
         ET.SubElement(item, "guid", isPermaLink="false").text = entry["id"]
         ET.SubElement(item, "link").text = entry["page_url"]
         ET.SubElement(item, "pubDate").text = pub_date
-        ET.SubElement(item, "itunes:duration").text = entry.get("duration", "00:45:00")
         ET.SubElement(item, "description").text = entry["title"]
+        ET.SubElement(item, "itunes:summary").text = entry["title"]
+        ET.SubElement(item, "itunes:subtitle").text = entry["title"]
+        ET.SubElement(item, "itunes:explicit").text = "no"
+        ET.SubElement(item, "itunes:episodeType").text = "full"
+        ET.SubElement(item, "itunes:duration").text = entry.get("duration", "00:00:00")
         enclosure = ET.SubElement(item, "enclosure", {
             "url": entry["audio_url"], "length": entry["file_size"], "type": "audio/mpeg"
         })
@@ -215,10 +258,18 @@ def main():
         for lec in lectures:
             if not lec.get("mp3_url"):
                 continue
+            
+            # --- FIX: Use the robust formatter on the duration value ---
+            clean_duration = format_duration(lec.get('duration'))
+            
             entries.append({
-                "id": str(lec["id"]), "title": escape_xml(lec["title"]), "date": lec["date_recorded"],
-                "audio_url": lec["mp3_url"], "page_url": f"https://www.torahanytime.com/lectures/{lec['id']}",
-                "duration": lec.get("duration", "00:45:00"), "file_size": get_audio_file_size(lec["mp3_url"])
+                "id": str(lec["id"]), 
+                "title": escape_xml(lec["title"]), 
+                "date": lec["date_recorded"],
+                "audio_url": lec["mp3_url"], 
+                "page_url": f"https://www.torahanytime.com/lectures/{lec['id']}",
+                "duration": clean_duration,  # <-- Use the cleaned duration here
+                "file_size": get_audio_file_size(lec["mp3_url"])
             })
 
         rss_path = os.path.join(DEPLOY_FOLDER, speaker["filename"])
@@ -242,10 +293,17 @@ def main():
         entries = []
         for lec in filtered_lectures:
             audio_url = lec.get("shiurdownloadurl")
+
+            # --- FIX: Use the robust formatter here too for safety and consistency ---
+            clean_duration = format_duration(lec.get('durationformatted'))
+
             entries.append({
-                "id": str(lec.get("shiurid")), "title": escape_xml(lec.get("shiurtitle", "")),
-                "date": lec.get("shiurdatesubmitted", ""), "audio_url": audio_url,
-                "page_url": lec.get("shiurplayerurl", ""), "duration": lec.get("durationformatted", "00:45:00"),
+                "id": str(lec.get("shiurid")), 
+                "title": escape_xml(lec.get("shiurtitle", "")),
+                "date": lec.get("shiurdatesubmitted", ""), 
+                "audio_url": audio_url,
+                "page_url": lec.get("shiurplayerurl", ""), 
+                "duration": clean_duration, # <-- Use the cleaned duration here
                 "file_size": get_audio_file_size(audio_url)
             })
 
@@ -273,6 +331,7 @@ def main():
                 print(f"Stderr: {e.stderr}")
     else:
         print("ℹ️  Skipping deployment: Netlify token or site ID not set.")
+
 
 if __name__ == "__main__":
     main()
