@@ -1,4 +1,5 @@
 import os
+import sys
 import csv
 import requests
 import datetime
@@ -223,6 +224,8 @@ def write_rss(title, author, email, rss_url, rss_path, entries):
 def main():
     """Main function to generate RSS feeds and upload data."""
     os.makedirs(DEPLOY_FOLDER, exist_ok=True)
+    sources_ok = []
+    sources_failed = []
     
     # --- Authenticate with Google Sheets ONCE ---
     print("🔑 Authorizing with Google Sheets...")
@@ -256,7 +259,9 @@ def main():
 
         entries = []
         for lec in lectures:
-            if not lec.get("mp3_url"):
+            # TorahAnytime schema: audio file is now in `audio_url` (was `mp3_url`)
+            audio_url = lec.get("audio_url") or lec.get("proxy_mp3_url")
+            if not audio_url:
                 continue
             
             # --- FIX: Use the robust formatter on the duration value ---
@@ -264,13 +269,19 @@ def main():
             
             entries.append({
                 "id": str(lec["id"]), 
-                "title": escape_xml(lec["title"]), 
-                "date": lec["date_recorded"],
-                "audio_url": lec["mp3_url"], 
+                "title": escape_xml(lec.get("title", "")), 
+                "date": lec.get("date_recorded"),
+                "audio_url": audio_url, 
                 "page_url": f"https://www.torahanytime.com/lectures/{lec['id']}",
                 "duration": clean_duration,  # <-- Use the cleaned duration here
-                "file_size": get_audio_file_size(lec["mp3_url"])
+                "file_size": get_audio_file_size(audio_url)
             })
+
+        if not entries:
+            print(f"⚠️  WARNING: no usable lectures for {speaker['author']} — leaving previous feed file untouched.")
+            sources_failed.append(f"TorahAnytime/{speaker['author']}")
+            continue
+        sources_ok.append(f"TorahAnytime/{speaker['author']}")
 
         rss_path = os.path.join(DEPLOY_FOLDER, speaker["filename"])
         rss_url = f"https://{SITE_NAME}.netlify.app/{speaker['filename']}"
@@ -288,7 +299,10 @@ def main():
         print(f"📦 Fetched {len(lectures)} lectures, {len(filtered_lectures)} passed filters.")
 
         if not filtered_lectures:
+            print(f"⚠️  WARNING: no usable lectures for {teacher['author']} — leaving previous feed file untouched.")
+            sources_failed.append(f"YUTorah/{teacher['author']}")
             continue
+        sources_ok.append(f"YUTorah/{teacher['author']}")
 
         entries = []
         for lec in filtered_lectures:
@@ -315,6 +329,14 @@ def main():
             sheet_rows = [[e["title"], e["date"], e["audio_url"], e["file_size"], e["page_url"], e["duration"]] for e in entries]
             upload_to_google_sheets(sheet_rows, teacher["title"], google_sheet)
 
+    # --- Source summary ---
+    print(f"\n📊 Sources OK: {sources_ok or 'none'}")
+    if sources_failed:
+        print(f"⚠️  Sources failed: {sources_failed}")
+    if not sources_ok:
+        print("❌ All sources failed — failing the workflow so this is visible instead of deploying empty feeds.")
+        sys.exit(1)
+
     # --- Deploy to Netlify ---
     print("\n🚀 Deploying RSS to Netlify...")
     if NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID:
@@ -335,3 +357,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
