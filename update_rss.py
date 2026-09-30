@@ -43,10 +43,6 @@ YUTORAH_TEACHERS = [
 
 # ---------------- UTILS ---------------- #
 
-def escape_xml(text):
-    return str(text).replace("&", "&amp;").replace("<", "&lt;") \
-        .replace(">", "&gt;").replace('"', "&quot;").replace("'", "&apos;")
-
 def get_audio_file_size(url):
     """Makes a HEAD request to get the content length of a URL."""
     try:
@@ -269,7 +265,7 @@ def main():
             
             entries.append({
                 "id": str(lec["id"]), 
-                "title": escape_xml(lec.get("title", "")), 
+                "title": lec.get("title", ""), 
                 "date": lec.get("date_recorded"),
                 "audio_url": audio_url, 
                 "page_url": f"https://www.torahanytime.com/lectures/{lec['id']}",
@@ -313,7 +309,7 @@ def main():
 
             entries.append({
                 "id": str(lec.get("shiurid")), 
-                "title": escape_xml(lec.get("shiurtitle", "")),
+                "title": lec.get("shiurtitle", ""),
                 "date": lec.get("shiurdatesubmitted", ""), 
                 "audio_url": audio_url,
                 "page_url": lec.get("shiurplayerurl", ""), 
