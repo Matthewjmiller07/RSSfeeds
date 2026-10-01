@@ -20,6 +20,18 @@
           background:#fff; cursor:pointer; font-size:.9rem; color:var(--ink); }
   .chip.on { background:var(--accent); border-color:var(--accent); color:#fff; }
   #count { color:var(--muted); font-size:.9rem; margin:.4rem 0 1rem; }
+  #stats { background:var(--card); border:1px solid var(--line); border-radius:12px;
+           padding:1.1rem 1.2rem; margin:1.2rem 0; display:none; }
+  #stats .big { font-family:Georgia,serif; font-size:1.25rem; margin-bottom:.5rem; }
+  #stats .big b { font-size:1.6rem; }
+  .bar { background:#e9e2d2; border-radius:999px; height:10px; overflow:hidden; }
+  .bar > div { background:var(--accent); height:100%; border-radius:999px;
+               transition:width .6s ease; }
+  #stats .sub { color:var(--muted); font-size:.88rem; margin-top:.55rem; }
+  .lrow { display:grid; grid-template-columns:92px 1fr auto; gap:.6rem; align-items:center;
+          margin-top:.45rem; font-size:.88rem; }
+  .lrow .bar { height:7px; }
+  .lrow .n { color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; }
   .row { display:block; background:var(--card); border:1px solid var(--line);
          border-radius:10px; padding:.8rem 1rem; margin-bottom:.6rem;
          text-decoration:none; color:inherit; cursor:pointer; }
@@ -49,6 +61,13 @@
 </header>
 <main>
   <div id="list">
+    <div id="stats">
+      <div class="big"><b id="stCount">–</b> of <span id="stTotal">–</span> shiurim transcribed</div>
+      <div class="bar"><div id="stBar" style="width:0%"></div></div>
+      <div class="sub" id="stHours"></div>
+      <div id="stLangs"></div>
+      <div class="sub" id="stPace"></div>
+    </div>
     <div id="controls">
       <input id="q" type="search" placeholder="Search titles&hellip;" autocomplete="off">
       <button class="chip on" data-lang="">All</button>
@@ -145,11 +164,45 @@ document.querySelectorAll(".chip").forEach(c => c.onclick = () => {
   c.classList.add("on"); lang = c.dataset.lang; renderList();
 });
 
+function fmtH(s){ return (s/3600).toFixed(s >= 36000 ? 0 : 1); }
+
+function renderStats(st){
+  if (!st || !st.total || !st.total.count) return;
+  document.getElementById("stats").style.display = "block";
+  const done = st.transcribed.count, total = st.total.count;
+  const pct = (100*done/total);
+  document.getElementById("stCount").textContent = done;
+  document.getElementById("stTotal").textContent = total;
+  document.getElementById("stBar").style.width = Math.max(pct, 0.5) + "%";
+  document.getElementById("stHours").textContent =
+    fmtH(st.transcribed.seconds) + " of " + fmtH(st.total.seconds) +
+    " hours (" + pct.toFixed(1) + "%)";
+  const box = document.getElementById("stLangs"); box.innerHTML = "";
+  for (const lang of ["en","he","yi"]){
+    const t = st.total.by_lang[lang], d = (st.transcribed.by_lang[lang]||{count:0});
+    if (!t) continue;
+    const p = 100*d.count/t.count;
+    const row = document.createElement("div");
+    row.className = "lrow";
+    row.innerHTML = '<span>'+esc(LANG_LABEL[lang]||lang)+'</span>'+
+      '<div class="bar"><div style="width:'+Math.max(p,0.5)+'%"></div></div>'+
+      '<span class="n">'+d.count+' / '+t.count+'</span>';
+    box.appendChild(row);
+  }
+  const days = (st.daily||[]).slice(-7);
+  const n = days.reduce((a,d) => a+d.count, 0);
+  document.getElementById("stPace").textContent =
+    n + " transcribed in the last 7 days" +
+    (st.generated_at ? " · updated " + st.generated_at.slice(0,10) : "");
+}
+
 fetch("index.json").then(r => r.json()).then(data => {
   items = data;
   renderList();
   if (location.hash.length > 1) show(location.hash.slice(1));
 });
+
+fetch("stats.json").then(r => r.ok ? r.json() : null).then(renderStats).catch(()=>{});
 </script>
 </body>
 </html>
