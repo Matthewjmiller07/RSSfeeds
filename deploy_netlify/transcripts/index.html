@@ -50,7 +50,10 @@
   .para { margin:0 0 1rem; }
   .ts { display:inline-block; font-family:ui-monospace,Menlo,monospace; font-size:.78rem;
         background:#efe9da; color:#6d5f45; border-radius:6px;
-        padding:.1rem .45rem; margin-inline-end:.5rem; vertical-align:baseline; }
+        padding:.1rem .45rem; margin-inline-end:.5rem; vertical-align:baseline;
+        cursor:pointer; }
+  .ts:hover { background:#e0d3b6; }
+  #dAudio { width:100%; margin:0 0 1.2rem; display:block; }
   footer { text-align:center; color:var(--muted); font-size:.8rem; padding:2rem 1rem; }
 </style>
 </head>
@@ -82,6 +85,7 @@
     <a class="back" id="backBtn">&#8592; All transcripts</a>
     <h2 id="dTitle" dir="auto"></h2>
     <div class="meta" id="dMeta"></div>
+    <audio id="dAudio" controls preload="none" style="display:none"></audio>
     <div class="warn">Auto-generated transcript. Treat as a close paraphrase, not an exact quote.</div>
     <div id="dBody"></div>
   </div>
@@ -129,6 +133,9 @@ async function show(id){
   document.getElementById("dMeta").textContent =
     (LANG_LABEL[it.language]||it.language) + " · " + (it.date||"") +
     (it.duration_s ? " · " + fmtDur(it.duration_s) : "");
+  const audio = document.getElementById("dAudio");
+  if (it.audio){ audio.src = it.audio; audio.style.display = "block"; }
+  else { audio.removeAttribute("src"); audio.style.display = "none"; }
   const body = document.getElementById("dBody");
   body.innerHTML = "<p>Loading&hellip;</p>";
   try {
@@ -144,15 +151,27 @@ async function show(id){
       const m = p.match(/^\[(\d{2}:\d{2}:\d{2})\]\s*([\s\S]*)$/);
       const div = document.createElement("p");
       div.className = "para"; div.setAttribute("dir","auto");
-      if (m) div.innerHTML = '<span class="ts">'+esc(m[1])+'</span>'+esc(m[2]);
+      if (m){
+        const tp = m[1].split(":").map(Number);
+        const secs = tp[0]*3600 + tp[1]*60 + tp[2];
+        div.innerHTML = '<span class="ts" data-t="'+secs+'" title="Play from here">'+esc(m[1])+'</span>'+esc(m[2]);
+      }
       else div.textContent = p;
       body.appendChild(div);
     }
+    body.querySelectorAll(".ts").forEach(chip => chip.onclick = () => {
+      const a = document.getElementById("dAudio");
+      if (!a.getAttribute("src")) return;
+      a.currentTime = +chip.dataset.t;
+      a.play();
+    });
   } catch(e){ body.innerHTML = "<p>Could not load transcript.</p>"; }
   window.scrollTo(0,0);
 }
 
 function back(){
+  const a = document.getElementById("dAudio");
+  if (a) a.pause();
   document.getElementById("detail").style.display = "none";
   document.getElementById("list").style.display = "block";
 }

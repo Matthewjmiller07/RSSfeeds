@@ -5,7 +5,17 @@
   "date": "2026-09-30",
   "language": "he",
   "duration_s": "3009",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/481078/481078-tm720q.mp3"
+ },
+ {
+  "id": "480779",
+  "title": "הקבלת פני רבו בקהילת חיי נפש סוכות תשפ\"ז",
+  "date": "2026-09-28",
+  "language": "he",
+  "duration_s": "1555",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/480779/480779-tm36ok.mp3"
  },
  {
   "id": "480653",
@@ -13,7 +23,8 @@
   "date": "2026-09-27",
   "language": "he",
   "duration_s": "3205",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/480653/480653-tm0w84.mp3"
  },
  {
   "id": "480656",
@@ -21,7 +32,8 @@
   "date": "2026-09-27",
   "language": "he",
   "duration_s": "449",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/480656/480656-tm1543.mp3"
  },
  {
   "id": "480361",
@@ -29,7 +41,8 @@
   "date": "2026-09-24",
   "language": "en",
   "duration_s": "2186",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/480361/480361-tlvp6y.mp3"
  },
  {
   "id": "479743",
@@ -37,7 +50,8 @@
   "date": "2026-09-21",
   "language": "he",
   "duration_s": "588",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479743/479743-tlqigl.mp3"
  },
  {
   "id": "479745",
@@ -45,7 +59,8 @@
   "date": "2026-09-21",
   "language": "he",
   "duration_s": "3649",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479745/479745-tlqji7.mp3"
  },
  {
   "id": "479620",
@@ -53,7 +68,8 @@
   "date": "2026-09-20",
   "language": "en",
   "duration_s": "2927",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479620/479620-tlnodn.mp3"
  },
  {
   "id": "479288",
@@ -61,7 +77,8 @@
   "date": "2026-09-18",
   "language": "en",
   "duration_s": "720",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479288/479288-tlk4tg.mp3"
  },
  {
   "id": "479333",
@@ -69,7 +86,8 @@
   "date": "2026-09-18",
   "language": "he",
   "duration_s": "2524",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479333/479333-tlk6r8.mp3"
  },
  {
   "id": "479029",
@@ -77,7 +95,8 @@
   "date": "2026-09-17",
   "language": "he",
   "duration_s": "964",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479029/479029-tlivd2.mp3"
  },
  {
   "id": "479035",
@@ -85,7 +104,8 @@
   "date": "2026-09-17",
   "language": "he",
   "duration_s": "1394",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479035/479035-tliwgj.mp3"
  },
  {
   "id": "478681",
@@ -93,7 +113,8 @@
   "date": "2026-09-16",
   "language": "yi",
   "duration_s": "1179",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/478681/478681-tlgpi7.mp3"
  },
  {
   "id": "478517",
@@ -101,7 +122,8 @@
   "date": "2026-09-15",
   "language": "he",
   "duration_s": "4689",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/478517/478517-tlff1f.mp3"
  },
  {
   "id": "478266",
@@ -109,7 +131,8 @@
   "date": "2026-09-14",
   "language": "he",
   "duration_s": "3215",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/478266/478266-tldguw.mp3"
  },
  {
   "id": "477767",
@@ -117,7 +140,8 @@
   "date": "2026-09-10",
   "language": "en",
   "duration_s": "841",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/477767/477767-tl624y.mp3"
  },
  {
   "id": "477182",
@@ -125,7 +149,8 @@
   "date": "2026-09-08",
   "language": "en",
   "duration_s": "3057",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/477182/477182-tl2588.mp3"
  },
  {
   "id": "476820",
@@ -133,7 +158,8 @@
   "date": "2026-09-07",
   "language": "en",
   "duration_s": "2980",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/476820/476820-tkzu3s.mp3"
  },
  {
   "id": "476969",
@@ -141,7 +167,8 @@
   "date": "2026-09-07",
   "language": "he",
   "duration_s": "3423",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/476969/476969-tl0im5.mp3"
  },
  {
   "id": "476585",
@@ -149,7 +176,8 @@
   "date": "2026-09-06",
   "language": "he",
   "duration_s": "2262",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/476585/476585-tkxwuk.mp3"
  },
  {
   "id": "476323",
@@ -157,7 +185,8 @@
   "date": "2026-09-04",
   "language": "en",
   "duration_s": "2018",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/476323/476323-tku7aa.mp3"
  },
  {
   "id": "475959",
@@ -165,7 +194,8 @@
   "date": "2026-09-03",
   "language": "yi",
   "duration_s": "2318",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/475959/475959-tksh3r.mp3"
  },
  {
   "id": "473096",
@@ -173,7 +203,8 @@
   "date": "2026-09-01",
   "language": "en",
   "duration_s": "2916",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/473096/473096-tkohuy.mp3"
  },
  {
   "id": "472987",
@@ -181,7 +212,8 @@
   "date": "2026-08-31",
   "language": "he",
   "duration_s": "2984",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/472987/472987-tkni89.mp3"
  },
  {
   "id": "472713",
@@ -189,7 +221,8 @@
   "date": "2026-08-30",
   "language": "en",
   "duration_s": "2353",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/472713/472713-tklmku.mp3"
  },
  {
   "id": "472290",
@@ -197,7 +230,8 @@
   "date": "2026-08-28",
   "language": "en",
   "duration_s": "1978",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/472290/472290-tkh1t7.mp3"
  },
  {
   "id": "471970",
@@ -205,7 +239,8 @@
   "date": "2026-08-27",
   "language": "en",
   "duration_s": "1038",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471970/471970-tkfmzo.mp3"
  },
  {
   "id": "471735",
@@ -213,7 +248,8 @@
   "date": "2026-08-26",
   "language": "en",
   "duration_s": "1995",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471735/471735-tkdwj2.mp3"
  },
  {
   "id": "471434",
@@ -221,7 +257,8 @@
   "date": "2026-08-25",
   "language": "he",
   "duration_s": "2647",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471434/471434-tkbzr1.mp3"
  },
  {
   "id": "471556",
@@ -229,7 +266,8 @@
   "date": "2026-08-25",
   "language": "he",
   "duration_s": "3351",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471556/471556-tkceul.mp3"
  },
  {
   "id": "471102",
@@ -237,7 +275,8 @@
   "date": "2026-08-24",
   "language": "en",
   "duration_s": "2795",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471102/471102-tk9usg.mp3"
  },
  {
   "id": "470998",
@@ -245,7 +284,8 @@
   "date": "2026-08-23",
   "language": "en",
   "duration_s": "3323",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/470998/470998-tk8oaz.mp3"
  },
  {
   "id": "470614",
@@ -253,7 +293,8 @@
   "date": "2026-08-21",
   "language": "en",
   "duration_s": "3127",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/470614/470614-tk44mc.mp3"
  },
  {
   "id": "470681",
@@ -261,7 +302,8 @@
   "date": "2026-08-21",
   "language": "en",
   "duration_s": "2125",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/470681/470681-tk49m0.mp3"
  },
  {
   "id": "470475",
@@ -269,7 +311,8 @@
   "date": "2026-08-20",
   "language": "he",
   "duration_s": "3735",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/470475/470475-tk36nq.mp3"
  },
  {
   "id": "469915",
@@ -277,7 +320,8 @@
   "date": "2026-08-18",
   "language": "he",
   "duration_s": "3029",
-  "normalized": true
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/469915/469915-tjzgbi.mp3"
  },
  {
   "id": "468003",
@@ -285,7 +329,8 @@
   "date": "2026-08-08",
   "language": "en",
   "duration_s": "2010",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/468003/468003-tjgsv5.mp3"
  },
  {
   "id": "467716",
@@ -293,7 +338,8 @@
   "date": "2026-08-06",
   "language": "en",
   "duration_s": "2108",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/467716/467716-tjd2fe.mp3"
  },
  {
   "id": "467497",
@@ -301,7 +347,8 @@
   "date": "2026-08-05",
   "language": "en",
   "duration_s": "1732",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/467497/467497-tjb5m8.mp3"
  },
  {
   "id": "467106",
@@ -309,7 +356,8 @@
   "date": "2026-08-03",
   "language": "en",
   "duration_s": "1936",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/467106/467106-tj7l6y.mp3"
  },
  {
   "id": "466924",
@@ -317,7 +365,8 @@
   "date": "2026-08-02",
   "language": "en",
   "duration_s": "1975",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/466924/466924-tj5rm7.mp3"
  },
  {
   "id": "466396",
@@ -325,7 +374,8 @@
   "date": "2026-07-30",
   "language": "en",
   "duration_s": "2190",
-  "normalized": false
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/466396/466396-tj02xq.mp3"
  },
  {
   "id": "399213",
@@ -333,6 +383,7 @@
   "date": "2025-10-13",
   "language": "he",
   "duration_s": "638",
-  "normalized": true
+  "normalized": true,
+  "audio": ""
  }
 ]
