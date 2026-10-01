@@ -113,7 +113,8 @@ async function show(id){
   const body = document.getElementById("dBody");
   body.innerHTML = "<p>Loading&hellip;</p>";
   try {
-    const res = await fetch(encodeURIComponent(it.id) + ".md");
+    const res = await fetch("rav_asher_weiss/" + encodeURIComponent(it.id) + ".md");
+    if (!res.ok) throw new Error("HTTP " + res.status);
     const raw = await res.text();
     const parts = raw.split(/^---$/m);
     const text = parts.length >= 3 ? parts.slice(2).join("---") : raw;
