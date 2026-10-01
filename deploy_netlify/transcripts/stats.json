@@ -1,0 +1,49 @@
+{
+ "generated_at": "2026-10-01T09:28:18Z",
+ "total": {
+  "count": 1098,
+  "seconds": 2402429,
+  "by_lang": {
+   "he": {
+    "count": 331,
+    "seconds": 714545
+   },
+   "yi": {
+    "count": 46,
+    "seconds": 96973
+   },
+   "en": {
+    "count": 721,
+    "seconds": 1590911
+   }
+  }
+ },
+ "transcribed": {
+  "count": 42,
+  "seconds": 97582,
+  "by_lang": {
+   "he": {
+    "count": 18,
+    "seconds": 45755
+   },
+   "en": {
+    "count": 22,
+    "seconds": 48330
+   },
+   "yi": {
+    "count": 2,
+    "seconds": 3497
+   }
+  }
+ },
+ "daily": [
+  {
+   "date": "2026-09-30",
+   "count": 13
+  },
+  {
+   "date": "2026-10-01",
+   "count": 29
+  }
+ ]
+}

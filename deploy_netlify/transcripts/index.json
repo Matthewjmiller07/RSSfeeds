@@ -8,14 +8,6 @@
   "normalized": true
  },
  {
-  "id": "480779",
-  "title": "הקבלת פני רבו בקהילת חיי נפש סוכות תשפ\"ז",
-  "date": "2026-09-28",
-  "language": "yi",
-  "duration_s": "1555",
-  "normalized": false
- },
- {
   "id": "480653",
   "title": "ולקחתם לכם - דיני לקיחה תמה בד' מינים (בקהילת בני תורה הר נוף)",
   "date": "2026-09-27",
@@ -278,6 +270,62 @@
   "language": "he",
   "duration_s": "3735",
   "normalized": true
+ },
+ {
+  "id": "469915",
+  "title": "האם תשובה פוטרת מעונשין",
+  "date": "2026-08-18",
+  "language": "he",
+  "duration_s": "3029",
+  "normalized": true
+ },
+ {
+  "id": "468003",
+  "title": "The Mitzvah of Building a Shul",
+  "date": "2026-08-08",
+  "language": "en",
+  "duration_s": "2010",
+  "normalized": false
+ },
+ {
+  "id": "467716",
+  "title": "Hilchos Brachos: גדר של ברכת הריח",
+  "date": "2026-08-06",
+  "language": "en",
+  "duration_s": "2108",
+  "normalized": false
+ },
+ {
+  "id": "467497",
+  "title": "Hilchos Brachos: כל שיש בו מחמשת מיני דגן",
+  "date": "2026-08-05",
+  "language": "en",
+  "duration_s": "1732",
+  "normalized": false
+ },
+ {
+  "id": "467106",
+  "title": "Hilchos Brachos: עיקר וטפל",
+  "date": "2026-08-03",
+  "language": "en",
+  "duration_s": "1936",
+  "normalized": false
+ },
+ {
+  "id": "466924",
+  "title": "Hilchos Brachos: הרהור בברכות הנהנין בשעת הדחק",
+  "date": "2026-08-02",
+  "language": "en",
+  "duration_s": "1975",
+  "normalized": false
+ },
+ {
+  "id": "466396",
+  "title": "Hakdama to Hilchos Brachos",
+  "date": "2026-07-30",
+  "language": "en",
+  "duration_s": "2190",
+  "normalized": false
  },
  {
   "id": "399213",
