@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rav Asher Weiss — Shiur Transcripts</title>
+<style>
+  :root { --ink:#2b2620; --muted:#8a8177; --paper:#faf8f2; --card:#ffffff; --line:#e8e2d5; --accent:#7a5c2e; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family:-apple-system,"Segoe UI",Arial,sans-serif; line-height:1.6; }
+  header { background:#1f1a13; color:#f3ecdd; padding:2.2rem 1.2rem 1.8rem; text-align:center; }
+  header h1 { margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:600; font-size:1.7rem; }
+  header p { margin:.4rem 0 0; color:#c9bfa9; font-size:.95rem; }
+  main { max-width:760px; margin:0 auto; padding:1.2rem 1rem 4rem; }
+  #controls { display:flex; gap:.6rem; flex-wrap:wrap; margin:1.2rem 0; }
+  #q { flex:1; min-width:200px; padding:.6rem .8rem; font-size:1rem;
+       border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .chip { padding:.55rem .9rem; border:1px solid var(--line); border-radius:999px;
+          background:#fff; cursor:pointer; font-size:.9rem; color:var(--ink); }
+  .chip.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+  #count { color:var(--muted); font-size:.9rem; margin:.4rem 0 1rem; }
+  .row { display:block; background:var(--card); border:1px solid var(--line);
+         border-radius:10px; padding:.8rem 1rem; margin-bottom:.6rem;
+         text-decoration:none; color:inherit; cursor:pointer; }
+  .row:hover { border-color:var(--accent); }
+  .row .t { font-weight:600; font-size:1.02rem; }
+  .row .m { color:var(--muted); font-size:.85rem; margin-top:.15rem; }
+  .tag { display:inline-block; font-size:.72rem; border:1px solid var(--line);
+         border-radius:999px; padding:.05rem .55rem; margin-inline-end:.4rem; color:var(--muted); }
+  #detail { display:none; }
+  #detail .back { display:inline-block; margin:1rem 0; color:var(--accent);
+                  cursor:pointer; text-decoration:underline; font-size:.95rem; }
+  #detail h2 { font-family:Georgia,serif; margin:.2rem 0 .4rem; font-size:1.5rem; }
+  #detail .meta { color:var(--muted); font-size:.9rem; margin-bottom:1.2rem; }
+  #detail .warn { background:#fdf3e3; border:1px solid #ecd9ac; border-radius:8px;
+                  padding:.6rem .9rem; font-size:.85rem; color:#7a5c2e; margin-bottom:1.2rem; }
+  .para { margin:0 0 1rem; }
+  .ts { display:inline-block; font-family:ui-monospace,Menlo,monospace; font-size:.78rem;
+        background:#efe9da; color:#6d5f45; border-radius:6px;
+        padding:.1rem .45rem; margin-inline-end:.5rem; vertical-align:baseline; }
+  footer { text-align:center; color:var(--muted); font-size:.8rem; padding:2rem 1rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Rav Asher Weiss</h1>
+  <p>Shiur transcripts &mdash; TorahAnytime archive</p>
+</header>
+<main>
+  <div id="list">
+    <div id="controls">
+      <input id="q" type="search" placeholder="Search titles&hellip;" autocomplete="off">
+      <button class="chip on" data-lang="">All</button>
+      <button class="chip" data-lang="en">English</button>
+      <button class="chip" data-lang="he">עברית</button>
+      <button class="chip" data-lang="yi">יידיש</button>
+    </div>
+    <div id="count"></div>
+    <div id="rows"></div>
+  </div>
+  <div id="detail">
+    <a class="back" id="backBtn">&#8592; All transcripts</a>
+    <h2 id="dTitle" dir="auto"></h2>
+    <div class="meta" id="dMeta"></div>
+    <div class="warn">Auto-generated transcript. Treat as a close paraphrase, not an exact quote.</div>
+    <div id="dBody"></div>
+  </div>
+</main>
+<footer>Transcripts generated with Whisper &middot; not reviewed</footer>
+<script>
+const LANG_LABEL = { en:"English", he:"עברית", yi:"יידיש" };
+let items = [], lang = "", query = "";
+
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+function fmtDur(s){ if(!s) return ""; s=+s;
+  return Math.floor(s/3600)+":"+String(Math.floor(s%3600/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0"); }
+
+function renderList(){
+  const rows = document.getElementById("rows"); rows.innerHTML = "";
+  const q = query.trim().toLowerCase();
+  const filt = items.filter(it =>
+    (!lang || it.language === lang) &&
+    (!q || it.title.toLowerCase().includes(q)));
+  document.getElementById("count").textContent =
+    filt.length + " of " + items.length + " transcripts";
+  for (const it of filt){
+    const a = document.createElement("a");
+    a.className = "row"; a.href = "#" + it.id;
+    a.innerHTML = '<div class="t" dir="auto">'+esc(it.title)+'</div>'+
+      '<div class="m"><span class="tag">'+esc(LANG_LABEL[it.language]||it.language)+'</span>'+
+      esc(it.date||"") + (it.duration_s ? " &middot; " + fmtDur(it.duration_s) : "") + '</div>';
+    a.onclick = e => { e.preventDefault(); show(it.id); };
+    rows.appendChild(a);
+  }
+}
+
+function fmVal(fm, k){
+  const m = fm.match(new RegExp("^"+k+":\\s*(.*)$","m"));
+  return m ? m[1].trim().replace(/^"|"$/g,"") : "";
+}
+
+async function show(id){
+  const it = items.find(x => String(x.id) === String(id));
+  if (!it) return;
+  document.getElementById("list").style.display = "none";
+  const d = document.getElementById("detail"); d.style.display = "block";
+  document.getElementById("dTitle").textContent = it.title;
+  document.getElementById("dMeta").textContent =
+    (LANG_LABEL[it.language]||it.language) + " · " + (it.date||"") +
+    (it.duration_s ? " · " + fmtDur(it.duration_s) : "");
+  const body = document.getElementById("dBody");
+  body.innerHTML = "<p>Loading&hellip;</p>";
+  try {
+    const res = await fetch(encodeURIComponent(it.id) + ".md");
+    const raw = await res.text();
+    const parts = raw.split(/^---$/m);
+    const text = parts.length >= 3 ? parts.slice(2).join("---") : raw;
+    const paras = text.trim().split(/\n\s*\n/);
+    body.innerHTML = "";
+    for (const p of paras){
+      if (/^#\s/.test(p)) continue;
+      const m = p.match(/^\[(\d{2}:\d{2}:\d{2})\]\s*([\s\S]*)$/);
+      const div = document.createElement("p");
+      div.className = "para"; div.setAttribute("dir","auto");
+      if (m) div.innerHTML = '<span class="ts">'+esc(m[1])+'</span>'+esc(m[2]);
+      else div.textContent = p;
+      body.appendChild(div);
+    }
+  } catch(e){ body.innerHTML = "<p>Could not load transcript.</p>"; }
+  window.scrollTo(0,0);
+}
+
+function back(){
+  document.getElementById("detail").style.display = "none";
+  document.getElementById("list").style.display = "block";
+}
+document.getElementById("backBtn").onclick = e => { e.preventDefault(); back(); history.replaceState(null,""," "); };
+
+document.getElementById("q").addEventListener("input", e => { query = e.target.value; renderList(); });
+document.querySelectorAll(".chip").forEach(c => c.onclick = () => {
+  document.querySelectorAll(".chip").forEach(x => x.classList.remove("on"));
+  c.classList.add("on"); lang = c.dataset.lang; renderList();
+});
+
+fetch("index.json").then(r => r.json()).then(data => {
+  items = data;
+  renderList();
+  if (location.hash.length > 1) show(location.hash.slice(1));
+});
+</script>
+</body>
+</html>
