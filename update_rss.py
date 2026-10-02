@@ -149,7 +149,7 @@ def fetch_yutorah_lectures(teacher_id):
         query = f"sort_by=shiurdate+desc&organizationID=301&search_query=&page={page}&facet_query=teacherid:{teacher_id},"
         url = f"https://www.yutorah.org/Search/GetSearchResults?{query}"
         try:
-            response = requests.get(url)
+            response = requests.get(url, timeout=20)
             response.raise_for_status()
             data = response.json()
             docs = data.get("response", {}).get("docs", [])
@@ -353,4 +353,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
