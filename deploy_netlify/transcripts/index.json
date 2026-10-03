@@ -1,5 +1,23 @@
 [
  {
+  "id": "481337",
+  "title": "Hoshanah Rabbah: The Takeaway for an Awesome Year",
+  "date": "2026-10-02",
+  "language": "en",
+  "duration_s": "1793",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "481359",
+  "title": "The Takeaway for an Awesome Year",
+  "date": "2026-10-02",
+  "language": "en",
+  "duration_s": "1795",
+  "normalized": false,
+  "audio": ""
+ },
+ {
   "id": "481213",
   "title": "מסר קצר להושענא רבה ושמחת תורה",
   "date": "2026-10-01",
@@ -1123,6 +1141,1041 @@
   "duration_s": "3179",
   "normalized": true,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/443289/443289-tdtyj9.mp3"
+ },
+ {
+  "id": "443007",
+  "title": "Introduction to Chalav Akum (@ Kollel Zichron HMC)",
+  "date": "2026-04-20",
+  "language": "en",
+  "duration_s": "2149",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/443007/443007-tds52n.mp3"
+ },
+ {
+  "id": "443047",
+  "title": "מצוות לא תחמוד (יידיש)",
+  "date": "2026-04-20",
+  "language": "yi",
+  "duration_s": "2802",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/443047/443047-tdsoo0.mp3"
+ },
+ {
+  "id": "442929",
+  "title": "The Mitzvah of Sefiras HaOmer",
+  "date": "2026-04-19",
+  "language": "en",
+  "duration_s": "3203",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/442929/442929-tdrdtg.mp3"
+ },
+ {
+  "id": "442932",
+  "title": "Agudah Zoom Shiur: The Mitzvah of Ve'ahavta L'reyacha Kamocha",
+  "date": "2026-04-19",
+  "language": "en",
+  "duration_s": "2419",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/442932/442932-tdre3w.mp3"
+ },
+ {
+  "id": "442440",
+  "title": "בעל דברי חיים זצ\"ל: דרכו, עבודתו, והשפעתו על עולם ההלכה",
+  "date": "2026-04-16",
+  "language": "he",
+  "duration_s": "3573",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/442440/442440-tdlvm3.mp3"
+ },
+ {
+  "id": "441921",
+  "title": "שווי פרוטה ופרוטה חמורה (בבית המדרש אמונת אי\"ש)",
+  "date": "2026-04-14",
+  "language": "he",
+  "duration_s": "2501",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/441921/441921-tdi3lk.mp3"
+ },
+ {
+  "id": "441177",
+  "title": "Shlissel Challah: Minhag Yisrael or Pagan Influence",
+  "date": "2026-04-09",
+  "language": "en",
+  "duration_s": "108",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/441177/441177-td8pag.mp3"
+ },
+ {
+  "id": "441035",
+  "title": "מצוות סיפור יציאת מצריים (בישיבת נצח ישראל רחביה)",
+  "date": "2026-04-07",
+  "language": "he",
+  "duration_s": "3420",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/441035/441035-td40dj.mp3"
+ },
+ {
+  "id": "440777",
+  "title": "אפשר לברורי ברוב ובחזקה (בקהילת בני תורה הר נוף)",
+  "date": "2026-04-05",
+  "language": "he",
+  "duration_s": "3054",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/440777/440777-td1e0m.mp3"
+ },
+ {
+  "id": "440779",
+  "title": "מסר קצר לפסח וענייני דיומא",
+  "date": "2026-04-05",
+  "language": "he",
+  "duration_s": "422",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/440779/440779-td1fy8.mp3"
+ },
+ {
+  "id": "439630",
+  "title": "Short Thought for Pesach",
+  "date": "2026-03-28",
+  "language": "en",
+  "duration_s": "462",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/439630/439630-tcmkwb.mp3"
+ },
+ {
+  "id": "439631",
+  "title": "מסר קצר לליל הסדר",
+  "date": "2026-03-28",
+  "language": "he",
+  "duration_s": "1004",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/439631/439631-tcml2d.mp3"
+ },
+ {
+  "id": "439480",
+  "title": "ד׳ כוסות בליל הסדר",
+  "date": "2026-03-27",
+  "language": "he",
+  "duration_s": "1899",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/439480/439480-tcjygc.mp3"
+ },
+ {
+  "id": "439233",
+  "title": "פרדס שלמה טעגליך: זיבן טעמים אויף די נאמען שבת הגדול",
+  "date": "2026-03-26",
+  "language": "yi",
+  "duration_s": "392",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/439233/439233-tciaz7.mp3"
+ },
+ {
+  "id": "439389",
+  "title": "ברכת האילנות",
+  "date": "2026-03-26",
+  "language": "he",
+  "duration_s": "2742",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/439389/439389-tcj03f.mp3"
+ },
+ {
+  "id": "438659",
+  "title": "Agudah Zoom Shiur: Inyanai Arba Kosos",
+  "date": "2026-03-23",
+  "language": "en",
+  "duration_s": "2360",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/438659/438659-tcd88i.mp3"
+ },
+ {
+  "id": "438439",
+  "title": "Birkas Ha’ilanos",
+  "date": "2026-03-22",
+  "language": "en",
+  "duration_s": "3119",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/438439/438439-tcbl57.mp3"
+ },
+ {
+  "id": "438442",
+  "title": "Thoughts on Leil HaSeder",
+  "date": "2026-03-22",
+  "language": "en",
+  "duration_s": "864",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/438442/438442-tcbn84.mp3"
+ },
+ {
+  "id": "438214",
+  "title": "Short Thought on Chodesh Nissan",
+  "date": "2026-03-21",
+  "language": "en",
+  "duration_s": "429",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/438214/438214-tc9hpx.mp3"
+ },
+ {
+  "id": "438001",
+  "title": "מסר קצר לחודש ניסן",
+  "date": "2026-03-20",
+  "language": "he",
+  "duration_s": "411",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/438001/438001-tc6qkn.mp3"
+ },
+ {
+  "id": "437916",
+  "title": "פרשת ויקרא: אמירת קורבנות בכל יום",
+  "date": "2026-03-19",
+  "language": "he",
+  "duration_s": "2768",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/437916/437916-tc64a3.mp3"
+ },
+ {
+  "id": "437152",
+  "title": "חזקתו בדוק (אם סומכין על חזקה כשאפשר לברר)",
+  "date": "2026-03-17",
+  "language": "yi",
+  "duration_s": "1845",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/437152/437152-tc28e3.mp3"
+ },
+ {
+  "id": "436687",
+  "title": "Parshas Vayikra: Saying Korbanos Every Day",
+  "date": "2026-03-16",
+  "language": "en",
+  "duration_s": "3406",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/436687/436687-tbzrz0.mp3"
+ },
+ {
+  "id": "436605",
+  "title": "Agudah Zoom Shiur: Mitzvas Sipur Yetzias Mitzrayim",
+  "date": "2026-03-15",
+  "language": "en",
+  "duration_s": "2862",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/436605/436605-tbyr9u.mp3"
+ },
+ {
+  "id": "436243",
+  "title": "Short Thought on Parshas Vayakhel Pekudei & Current Events",
+  "date": "2026-03-13",
+  "language": "en",
+  "duration_s": "432",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/436243/436243-tbu2ef.mp3"
+ },
+ {
+  "id": "423502",
+  "title": "The Mitzvah of Heseibah",
+  "date": "2026-03-12",
+  "language": "he",
+  "duration_s": "2868",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/423502/423502-t94q8j.mp3"
+ },
+ {
+  "id": "435708",
+  "title": "מסר קצר לפרשת ויקהל פקודי",
+  "date": "2026-03-11",
+  "language": "he",
+  "duration_s": "359",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/435708/435708-tbqgk9.mp3"
+ },
+ {
+  "id": "435727",
+  "title": "Pardes Shlomo Daily: Parshas Pikudei",
+  "date": "2026-03-11",
+  "language": "en",
+  "duration_s": "295",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/435727/435727-tbqjhp.mp3"
+ },
+ {
+  "id": "435516",
+  "title": "פרשת ויקהל פקודי: בעניין עובדין דחול בשבת",
+  "date": "2026-03-10",
+  "language": "he",
+  "duration_s": "2621",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/435516/435516-tbozlm.mp3"
+ },
+ {
+  "id": "435292",
+  "title": "Agudah Zoom Shiur: What Can One Do Before Davening Shachris",
+  "date": "2026-03-09",
+  "language": "en",
+  "duration_s": "2373",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/435292/435292-tbn9wr.mp3"
+ },
+ {
+  "id": "435144",
+  "title": "Parshas Vayakhel - Pekudei: Uvdin D'chol",
+  "date": "2026-03-08",
+  "language": "en",
+  "duration_s": "3268",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/435144/435144-tblqbg.mp3"
+ },
+ {
+  "id": "434935",
+  "title": "First Yartzeit of Rav Nota Schiller ZT\"L",
+  "date": "2026-03-07",
+  "language": "en",
+  "duration_s": "851",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/434935/434935-tbjjv0.mp3"
+ },
+ {
+  "id": "434805",
+  "title": "Parshas Parah and the Cheit Ha'Eigel",
+  "date": "2026-03-06",
+  "language": "en",
+  "duration_s": "1368",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/434805/434805-tbhc40.mp3"
+ },
+ {
+  "id": "434284",
+  "title": "Purim: The Mitzvah of Reading the Megillah (@TC)",
+  "date": "2026-03-04",
+  "language": "en",
+  "duration_s": "2446",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/434284/434284-tbddfc.mp3"
+ },
+ {
+  "id": "433773",
+  "title": "Divrei Chizzuk on Current Iran War & Purim",
+  "date": "2026-03-01",
+  "language": "en",
+  "duration_s": "310",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/433773/433773-tb8h5r.mp3"
+ },
+ {
+  "id": "433801",
+  "title": "Purim: The Mitzvah of Mishloach Manos",
+  "date": "2026-03-01",
+  "language": "en",
+  "duration_s": "2116",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/433801/433801-tb8ptb.mp3"
+ },
+ {
+  "id": "433573",
+  "title": "Short Thought on Purim (@TC)",
+  "date": "2026-02-28",
+  "language": "en",
+  "duration_s": "306",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/433573/433573-tb6rjz.mp3"
+ },
+ {
+  "id": "433394",
+  "title": "Divrei Chizzuk for Purim",
+  "date": "2026-02-27",
+  "language": "en",
+  "duration_s": "1552",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/433394/433394-tb3rfz.mp3"
+ },
+ {
+  "id": "433104",
+  "title": "Short Thought on Purim",
+  "date": "2026-02-26",
+  "language": "en",
+  "duration_s": "690",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/433104/433104-tb233s.mp3"
+ },
+ {
+  "id": "432933",
+  "title": "Kennes Rabbanim in Woodmere: Q&A with Rav Yosef Efrati",
+  "date": "2026-02-25",
+  "language": "en",
+  "duration_s": "3674",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/432933/432933-tb0w1w.mp3"
+ },
+ {
+  "id": "432507",
+  "title": "קריאת המגילה בלילה וביום",
+  "date": "2026-02-24",
+  "language": "he",
+  "duration_s": "3773",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/432507/432507-taya37.mp3"
+ },
+ {
+  "id": "432813",
+  "title": "The Mitzvah of Reading the Megillah",
+  "date": "2026-02-24",
+  "language": "en",
+  "duration_s": "3770",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/432813/432813-tb04c3.mp3"
+ },
+ {
+  "id": "432309",
+  "title": "Purim, Hidden Miracles & Current Events",
+  "date": "2026-02-23",
+  "language": "en",
+  "duration_s": "832",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/432309/432309-tawhus.mp3"
+ },
+ {
+  "id": "432026",
+  "title": "Purim: Reading the Megillah at Nighttime & Daytime",
+  "date": "2026-02-21",
+  "language": "en",
+  "duration_s": "3461",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/432026/432026-tatuvq.mp3"
+ },
+ {
+  "id": "431844",
+  "title": "Parshas Terumah: The Mitzvah of Building a Shul",
+  "date": "2026-02-20",
+  "language": "en",
+  "duration_s": "2181",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/431844/431844-tar39e.mp3"
+ },
+ {
+  "id": "431847",
+  "title": "Short Thought on Parshas Terumah",
+  "date": "2026-02-20",
+  "language": "en",
+  "duration_s": "619",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/431847/431847-tar5hu.mp3"
+ },
+ {
+  "id": "431555",
+  "title": "הלכות נדה #21 אבד העד והכתם",
+  "date": "2026-02-19",
+  "language": "yi",
+  "duration_s": "1555",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/431555/431555-tapk4y.mp3"
+ },
+ {
+  "id": "431740",
+  "title": "מסר קצר לפרשת תרומה",
+  "date": "2026-02-19",
+  "language": "he",
+  "duration_s": "357",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/431740/431740-taq7nx.mp3"
+ },
+ {
+  "id": "431049",
+  "title": "Agudah Yerushalayim Yarchei Kallah 5786: Shiur Iyun- Shiur Pesicha - עניני ערב",
+  "date": "2026-02-18",
+  "language": "en",
+  "duration_s": "3782",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/431049/431049-tam2sc.mp3"
+ },
+ {
+  "id": "431289",
+  "title": "Kennes Rabbanim in Woodmere: Halachic Guidelines in Pikuach Nefesh & End-of-Life Care",
+  "date": "2026-02-18",
+  "language": "en",
+  "duration_s": "3136",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/431289/431289-tannxv.mp3"
+ },
+ {
+  "id": "430849",
+  "title": "Agudah Yerushalayim Yarchei Kallah 5786: Shiur Hakdama - מצות הלואה",
+  "date": "2026-02-17",
+  "language": "en",
+  "duration_s": "4304",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/430849/430849-takhy3.mp3"
+ },
+ {
+  "id": "430960",
+  "title": "פרשת תרומה: מצוות בניין בית כנסת",
+  "date": "2026-02-17",
+  "language": "he",
+  "duration_s": "3135",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/430960/430960-talbra.mp3"
+ },
+ {
+  "id": "431150",
+  "title": "Kennes Rabbanim in Woodmere: Contemporary Dilemmas in Hilchos Tzedaka.mp4",
+  "date": "2026-02-17",
+  "language": "en",
+  "duration_s": "3015",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/431150/431150-tamfrw.mp3"
+ },
+ {
+  "id": "430520",
+  "title": "Kennes Rabbanim in Woodmere: Leading with Nuance, Confidence & Humility",
+  "date": "2026-02-15",
+  "language": "en",
+  "duration_s": "1865",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/430520/430520-tai1u7.mp3"
+ },
+ {
+  "id": "430416",
+  "title": "Kennes Rabbanim in Woodmere: The Most Challenging Piskei Halacha of the Past Year",
+  "date": "2026-02-14",
+  "language": "en",
+  "duration_s": "2827",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/430416/430416-tagwhz.mp3"
+ },
+ {
+  "id": "430111",
+  "title": "Short Thought on Parshat Mishpatim",
+  "date": "2026-02-13",
+  "language": "en",
+  "duration_s": "319",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/430111/430111-tae158.mp3"
+ },
+ {
+  "id": "430172",
+  "title": "Shiur in Detroit: Heter Iska & Ribbis Nowadays",
+  "date": "2026-02-13",
+  "language": "en",
+  "duration_s": "2874",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/430172/430172-tae9o7.mp3"
+ },
+ {
+  "id": "429786",
+  "title": "Shiur in Detroit to Post-Seminary Girls: The Thematic Structure of Chumash Shemos",
+  "date": "2026-02-12",
+  "language": "en",
+  "duration_s": "1534",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/429786/429786-tac2bi.mp3"
+ },
+ {
+  "id": "429867",
+  "title": "מסר קצר לפרשת משפטים",
+  "date": "2026-02-12",
+  "language": "he",
+  "duration_s": "214",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/429867/429867-tacob2.mp3"
+ },
+ {
+  "id": "430010",
+  "title": "Shiur in Detroit: Lab Produced Milk or Meat & Structures of Bliyos",
+  "date": "2026-02-12",
+  "language": "en",
+  "duration_s": "2504",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/430010/430010-tadcsw.mp3"
+ },
+ {
+  "id": "429154",
+  "title": "פרשת משפטים: מצוות הלוואה",
+  "date": "2026-02-10",
+  "language": "he",
+  "duration_s": "1983",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/429154/429154-ta8f14.mp3"
+ },
+ {
+  "id": "429227",
+  "title": "Your Responsibility",
+  "date": "2026-02-10",
+  "language": "en",
+  "duration_s": "126",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/429227/429227-ta8v8g.mp3"
+ },
+ {
+  "id": "428909",
+  "title": "Parshas Mishpatim: Mitzvas Halva'ah",
+  "date": "2026-02-09",
+  "language": "en",
+  "duration_s": "3392",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/428909/428909-ta6rqt.mp3"
+ },
+ {
+  "id": "428986",
+  "title": "הלכות נדה #20: דם מכה",
+  "date": "2026-02-09",
+  "language": "he",
+  "duration_s": "1878",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/428986/428986-ta75mc.mp3"
+ },
+ {
+  "id": "428384",
+  "title": "Pardes Shlomo Daily: Parshas Yisro",
+  "date": "2026-02-06",
+  "language": "en",
+  "duration_s": "429",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/428384/428384-ta15qt.mp3"
+ },
+ {
+  "id": "428391",
+  "title": "Parshas Yisro: Bracha She'aina Tzricha",
+  "date": "2026-02-06",
+  "language": "en",
+  "duration_s": "2451",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/428391/428391-ta1ahe.mp3"
+ },
+ {
+  "id": "428069",
+  "title": "Short Thought for Parshas Yisro",
+  "date": "2026-02-05",
+  "language": "en",
+  "duration_s": "659",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/428069/428069-t9zhqb.mp3"
+ },
+ {
+  "id": "428252",
+  "title": "מסר קצר לפרשת יתרו",
+  "date": "2026-02-05",
+  "language": "he",
+  "duration_s": "682",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/428252/428252-ta0cta.mp3"
+ },
+ {
+  "id": "428386",
+  "title": "Short Thought on Parshas Yisro (@TC)",
+  "date": "2026-02-05",
+  "language": "en",
+  "duration_s": "692",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/428386/428386-ta16rl.mp3"
+ },
+ {
+  "id": "427738",
+  "title": "Special Event Coming Together as One",
+  "date": "2026-02-04",
+  "language": "en",
+  "duration_s": "1423",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/427738/427738-t9xkyz.mp3"
+ },
+ {
+  "id": "427323",
+  "title": "פרשת יתרו: ברכה לבטלה",
+  "date": "2026-02-02",
+  "language": "he",
+  "duration_s": "3174",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/427323/427323-t9uq9p.mp3"
+ },
+ {
+  "id": "427162",
+  "title": "Parshas Yisro: Bracha L'Vatalah",
+  "date": "2026-02-01",
+  "language": "en",
+  "duration_s": "2915",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/427162/427162-t9th9m.mp3"
+ },
+ {
+  "id": "426627",
+  "title": "Short Thought on Parshas Beshalach (@TC)",
+  "date": "2026-01-30",
+  "language": "en",
+  "duration_s": "458",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/426627/426627-t9o745.mp3"
+ },
+ {
+  "id": "426635",
+  "title": "Pardes Shlomo Daily: Parshas Beshalach",
+  "date": "2026-01-30",
+  "language": "en",
+  "duration_s": "410",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/426635/426635-t9o7i1.mp3"
+ },
+ {
+  "id": "426643",
+  "title": "Parshas Beshalach: Krias HaTorah (@TC)",
+  "date": "2026-01-30",
+  "language": "en",
+  "duration_s": "1907",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/426643/426643-t9obqz.mp3"
+ },
+ {
+  "id": "426271",
+  "title": "Short Thought Parshat Beshalach",
+  "date": "2026-01-29",
+  "language": "en",
+  "duration_s": "397",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "426470",
+  "title": "מסר קצר לפרשת בשלח",
+  "date": "2026-01-29",
+  "language": "he",
+  "duration_s": "474",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/426470/426470-t9n8yx.mp3"
+ },
+ {
+  "id": "425914",
+  "title": "פרשת בשלח: קריאת התורה",
+  "date": "2026-01-28",
+  "language": "he",
+  "duration_s": "2660",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "425043",
+  "title": "שיעור לרופאים: האם מותר לכהן לתרום כליה",
+  "date": "2026-01-25",
+  "language": "he",
+  "duration_s": "3355",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "425143",
+  "title": "Parshas Beshalach: Mitzvas Krias HaTorah",
+  "date": "2026-01-25",
+  "language": "en",
+  "duration_s": "2883",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "424706",
+  "title": "Short Thought on Parshas Bo",
+  "date": "2026-01-23",
+  "language": "en",
+  "duration_s": "604",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "424711",
+  "title": "Parshas Bo: Amira L'Nochri",
+  "date": "2026-01-23",
+  "language": "en",
+  "duration_s": "2305",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "424370",
+  "title": "Pardes Shlomo Daily: Parshas Bo",
+  "date": "2026-01-22",
+  "language": "en",
+  "duration_s": "447",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "424561",
+  "title": "מסר קצר לפרשת בא",
+  "date": "2026-01-22",
+  "language": "he",
+  "duration_s": "555",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "424346",
+  "title": "הלכות נדה #19 תליה במכה",
+  "date": "2026-01-21",
+  "language": "yi",
+  "duration_s": "1681",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "423798",
+  "title": "Thoughts on Parshas Bo",
+  "date": "2026-01-20",
+  "language": "en",
+  "duration_s": "1076",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "423344",
+  "title": "Parshas Bo: Mitzvas Kiddush Levanah",
+  "date": "2026-01-19",
+  "language": "en",
+  "duration_s": "3469",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "423598",
+  "title": "פרשת בא: אמירה לנכרי",
+  "date": "2026-01-19",
+  "language": "he",
+  "duration_s": "3490",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "423072",
+  "title": "The Centrality of Mitzvas Talmud Torah (@Yeshivas Mevaseret)",
+  "date": "2026-01-18",
+  "language": "en",
+  "duration_s": "2988",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "422677",
+  "title": "מסר קצר לפרשת וארא",
+  "date": "2026-01-15",
+  "language": "he",
+  "duration_s": "416",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "422706",
+  "title": "פרשת וארא: כוונה בברכת אבות",
+  "date": "2026-01-15",
+  "language": "he",
+  "duration_s": "3441",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "422810",
+  "title": "Parshas Vaera: Mitzvas Kiddush Hashem",
+  "date": "2026-01-15",
+  "language": "en",
+  "duration_s": "2293",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "420784",
+  "title": "מסר קצר לפרשת שמות",
+  "date": "2026-01-08",
+  "language": "he",
+  "duration_s": "582",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "420956",
+  "title": "Short Thought on Parshas Shemos",
+  "date": "2026-01-08",
+  "language": "en",
+  "duration_s": "530",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "420550",
+  "title": "Kashrus Shiur for Ako Conference: Filet Mignon & AI in Halacha",
+  "date": "2026-01-07",
+  "language": "en",
+  "duration_s": "3600",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "420186",
+  "title": "פרשת שמות: שלא שינו את שמם ומלבושם",
+  "date": "2026-01-06",
+  "language": "he",
+  "duration_s": "3249",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "419946",
+  "title": "Parshas Shemos: Using Non-Jewish Names",
+  "date": "2026-01-05",
+  "language": "en",
+  "duration_s": "3387",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "419999",
+  "title": "הלכות נדה #18: חייב אדם לפקוד את אשתו",
+  "date": "2026-01-05",
+  "language": "yi",
+  "duration_s": "1745",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "419356",
+  "title": "מסר קצר לפרשת ויחי",
+  "date": "2026-01-02",
+  "language": "he",
+  "duration_s": "646",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "419358",
+  "title": "Short Thought on Parshas Vayechi (@ TC)",
+  "date": "2026-01-02",
+  "language": "en",
+  "duration_s": "370",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "419372",
+  "title": "Parshas Vayechi: Baruch Shem Kevod Malchuso (@TC)",
+  "date": "2026-01-02",
+  "language": "en",
+  "duration_s": "2038",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "419048",
+  "title": "Pardes Shlomo Daily: Parshas Vayechi",
+  "date": "2026-01-01",
+  "language": "en",
+  "duration_s": "458",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "419077",
+  "title": "בגדר חברה בע\"מ",
+  "date": "2026-01-01",
+  "language": "he",
+  "duration_s": "2436",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "418735",
+  "title": "Short Thought on Parshas Vayechi",
+  "date": "2025-12-31",
+  "language": "en",
+  "duration_s": "562",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "418423",
+  "title": "פרשת ויחי: ברוך שם כבוד מלכותו לעולם ועד",
+  "date": "2025-12-30",
+  "language": "he",
+  "duration_s": "3497",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "418122",
+  "title": "Parshas Vayechi: Baruch Shem Kevod Malchuso",
+  "date": "2025-12-29",
+  "language": "en",
+  "duration_s": "3286",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "417935",
+  "title": "Paying Workers on Time (@TC)",
+  "date": "2025-12-27",
+  "language": "en",
+  "duration_s": "1694",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "417577",
+  "title": "Short Thought on Parshas Vayigash",
+  "date": "2025-12-26",
+  "language": "en",
+  "duration_s": "483",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "417431",
+  "title": "מסר קצר לפרשת ויגש",
+  "date": "2025-12-25",
+  "language": "he",
+  "duration_s": "835",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "416789",
+  "title": "פרשת ויגש: ערבות במצוות וממונות",
+  "date": "2025-12-23",
+  "language": "he",
+  "duration_s": "3240",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "416585",
+  "title": "Can a Shaliach Make Birkas HaMitzvah?",
+  "date": "2025-12-22",
+  "language": "en",
+  "duration_s": "3165",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "416444",
+  "title": "בקושית הבית יוסף על שמונת ימי חנוכה",
+  "date": "2025-12-21",
+  "language": "he",
+  "duration_s": "2366",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "416506",
+  "title": "Chanukah: Elevation and Illumination",
+  "date": "2025-12-21",
+  "language": "en",
+  "duration_s": "300",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "416526",
+  "title": "Thoughts on the Story of Yosef HaTzadik",
+  "date": "2025-12-21",
+  "language": "en",
+  "duration_s": "1097",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "416259",
+  "title": "Chanukah: The Question of the Beis Yosef",
+  "date": "2025-12-19",
+  "language": "en",
+  "duration_s": "2377",
+  "normalized": false,
+  "audio": ""
  },
  {
   "id": "399213",
