@@ -1371,9 +1371,9 @@
   "id": "423502",
   "title": "The Mitzvah of Heseibah",
   "date": "2026-03-12",
-  "language": "he",
+  "language": "en",
   "duration_s": "2868",
-  "normalized": true,
+  "normalized": false,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/423502/423502-t94q8j.mp3"
  },
  {
@@ -2550,9 +2550,9 @@
   "id": "402727",
   "title": "Lech Lecha: Our Koach to Endure from the Avos",
   "date": "2025-10-30",
-  "language": "he",
+  "language": "en",
   "duration_s": "594",
-  "normalized": true,
+  "normalized": false,
   "audio": ""
  },
  {
@@ -2775,9 +2775,9 @@
   "id": "396601",
   "title": "The Mitzvah of Teshuvah",
   "date": "2025-09-26",
-  "language": "he",
+  "language": "en",
   "duration_s": "3008",
-  "normalized": true,
+  "normalized": false,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396601/396601-t36xj8.mp3"
  },
  {
@@ -2937,9 +2937,9 @@
   "id": "393146",
   "title": "Short Thought for Elul & Rosh Hashanah: The Message of the Shofar",
   "date": "2025-09-10",
-  "language": "he",
+  "language": "en",
   "duration_s": "1046",
-  "normalized": true,
+  "normalized": false,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/393146/393146-t2dsd0.mp3"
  },
  {

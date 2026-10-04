@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T00:45:08Z",
+ "generated_at": "2026-10-04T01:40:30Z",
  "total": {
   "count": 1100,
   "seconds": 2404817,
@@ -23,12 +23,12 @@
   "seconds": 675523,
   "by_lang": {
    "en": {
-    "count": 213,
-    "seconds": 398834
+    "count": 217,
+    "seconds": 406350
    },
    "he": {
-    "count": 111,
-    "seconds": 238450
+    "count": 107,
+    "seconds": 230934
    },
    "yi": {
     "count": 21,
@@ -47,11 +47,15 @@
   },
   {
    "date": "2026-10-02",
-   "count": 114
+   "count": 113
   },
   {
    "date": "2026-10-03",
-   "count": 110
+   "count": 107
+  },
+  {
+   "date": "2026-10-04",
+   "count": 4
   }
  ]
 }
