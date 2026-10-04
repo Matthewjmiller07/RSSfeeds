@@ -193,6 +193,18 @@ async function show(id, t){
       if (para) para.classList.add("hl");
       setTimeout(() => { try { best.scrollIntoView({block:"center"}); } catch(e){} }, 80);
     }
+    const aud = document.getElementById("dAudio");
+    if (aud && aud.getAttribute("src")){
+      const seekPlay = () => {
+        try { aud.currentTime = targetSecs; } catch(e){}
+        try {
+          const pr = aud.play();
+          if (pr && pr.catch) pr.catch(() => {});
+        } catch(e){}
+      };
+      if (aud.readyState >= 1) seekPlay();
+      else aud.addEventListener("loadedmetadata", seekPlay, {once:true});
+    }
   }
 }
 
