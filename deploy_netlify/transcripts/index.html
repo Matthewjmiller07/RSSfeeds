@@ -53,6 +53,8 @@
         padding:.1rem .45rem; margin-inline-end:.5rem; vertical-align:baseline;
         cursor:pointer; }
   .ts:hover { background:#e0d3b6; }
+  .para.hl { background:#fff8e1; border-radius:8px; padding:.6rem .7rem;
+             border-inline-start:3px solid #d4a017; }
   #dAudio { width:100%; margin:0 0 1.2rem; display:block; }
   footer { text-align:center; color:var(--muted); font-size:.8rem; padding:2rem 1rem; }
 </style>
@@ -124,7 +126,7 @@ function fmVal(fm, k){
   return m ? m[1].trim().replace(/^"|"$/g,"") : "";
 }
 
-async function show(id){
+async function show(id, t){
   const it = items.find(x => String(x.id) === String(id));
   if (!it) return;
   document.getElementById("list").style.display = "none";
@@ -161,12 +163,37 @@ async function show(id){
     }
     body.querySelectorAll(".ts").forEach(chip => chip.onclick = () => {
       const a = document.getElementById("dAudio");
+      try { history.replaceState(null, "", "#" + id + "@" + chip.dataset.t); } catch(e){}
       if (!a.getAttribute("src")) return;
       a.currentTime = +chip.dataset.t;
       a.play();
     });
   } catch(e){ body.innerHTML = "<p>Could not load transcript.</p>"; }
   window.scrollTo(0,0);
+  let targetSecs = null;
+  if (t !== undefined && t !== null && String(t).length){
+    const s = String(t).trim();
+    if (/^\d+$/.test(s)) targetSecs = +s;
+    else {
+      const parts = s.split(":").map(Number);
+      if (parts.length === 3 && parts.every(x => !isNaN(x)))
+        targetSecs = parts[0]*3600 + parts[1]*60 + parts[2];
+      else if (parts.length === 2 && parts.every(x => !isNaN(x)))
+        targetSecs = parts[0]*60 + parts[1];
+    }
+  }
+  if (targetSecs !== null){
+    let best = null, bestDiff = 1e12;
+    body.querySelectorAll(".ts").forEach(chip => {
+      const d = Math.abs(+chip.dataset.t - targetSecs);
+      if (d < bestDiff){ bestDiff = d; best = chip; }
+    });
+    if (best && bestDiff <= 600){
+      const para = best.closest(".para");
+      if (para) para.classList.add("hl");
+      setTimeout(() => { try { best.scrollIntoView({block:"center"}); } catch(e){} }, 80);
+    }
+  }
 }
 
 function back(){
@@ -218,7 +245,12 @@ function renderStats(st){
 fetch("index.json").then(r => r.json()).then(data => {
   items = data;
   renderList();
-  if (location.hash.length > 1) show(location.hash.slice(1));
+  if (location.hash.length > 1){
+    const hsh = location.hash.slice(1);
+    const at = hsh.indexOf("@");
+    if (at > 0) show(hsh.slice(0, at), hsh.slice(at + 1));
+    else show(hsh);
+  }
 });
 
 fetch("stats.json").then(r => r.ok ? r.json() : null).then(renderStats).catch(()=>{});
