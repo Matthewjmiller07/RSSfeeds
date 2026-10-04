@@ -2772,6 +2772,15 @@
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/397184/397184-t3czrs.mp3"
  },
  {
+  "id": "396904",
+  "title": "דרשת שבת שובה: בגדר מצוות סוכה בהלכה ובאגדה (יידיש)",
+  "date": "2025-09-28",
+  "language": "yi",
+  "duration_s": "4065",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396904/396904-t3aty4.mp3"
+ },
+ {
   "id": "396601",
   "title": "The Mitzvah of Teshuvah",
   "date": "2025-09-26",
@@ -3103,5 +3112,374 @@
   "duration_s": "1245",
   "normalized": false,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/384772/384772-t06a52.mp3"
+ },
+ {
+  "id": "383002",
+  "title": "מחלל שבת בפרהסיא: דרשה לכשרות הOU",
+  "date": "2025-07-21",
+  "language": "he",
+  "duration_s": "1397",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/383002/383002-szrldi.mp3"
+ },
+ {
+  "id": "382485",
+  "title": "מסר קצר לימי בין המצרים ובין הזמנים",
+  "date": "2025-07-18",
+  "language": "he",
+  "duration_s": "760",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/382485/382485-szl9yz.mp3"
+ },
+ {
+  "id": "382287",
+  "title": "הלכות נדה #14 דיני כתמים",
+  "date": "2025-07-17",
+  "language": "yi",
+  "duration_s": "2241",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/382287/382287-szk6vx.mp3"
+ },
+ {
+  "id": "381603",
+  "title": "גדרי הצומות",
+  "date": "2025-07-15",
+  "language": "he",
+  "duration_s": "2503",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/381603/381603-szg1sh.mp3"
+ },
+ {
+  "id": "380899",
+  "title": "מסר קצר לפרשת בלק",
+  "date": "2025-07-11",
+  "language": "he",
+  "duration_s": "640",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/380899/380899-sz8dw3.mp3"
+ },
+ {
+  "id": "380900",
+  "title": "The Yartzeit of The Ohr HaChaim",
+  "date": "2025-07-11",
+  "language": "en",
+  "duration_s": "395",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/380900/380900-sz8eeo.mp3"
+ },
+ {
+  "id": "380930",
+  "title": "Parshat Balak: Shema & Malchut Shamayim",
+  "date": "2025-07-11",
+  "language": "en",
+  "duration_s": "2118",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/380930/380930-sz8m4r.mp3"
+ },
+ {
+  "id": "380546",
+  "title": "Preparing for the Three Weeks",
+  "date": "2025-07-10",
+  "language": "en",
+  "duration_s": "1594",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/380546/380546-sz6m2j.mp3"
+ },
+ {
+  "id": "380252",
+  "title": "פרשת בלק: היזק ראיה",
+  "date": "2025-07-09",
+  "language": "he",
+  "duration_s": "2949",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/380252/380252-sz4bx9.mp3"
+ },
+ {
+  "id": "380394",
+  "title": "Ohr Somayach Yarchei Kallah 2025: Birchos Ha'nehnin",
+  "date": "2025-07-09",
+  "language": "en",
+  "duration_s": "2441",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/380394/380394-sz5bzs.mp3"
+ },
+ {
+  "id": "379353",
+  "title": "Short Thought on Parshat Chukat",
+  "date": "2025-07-04",
+  "language": "en",
+  "duration_s": "732",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/379353/379353-syuzwh.mp3"
+ },
+ {
+  "id": "379160",
+  "title": "מסר קצר לפרשת חוקת",
+  "date": "2025-07-03",
+  "language": "he",
+  "duration_s": "798",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/379160/379160-syttel.mp3"
+ },
+ {
+  "id": "378672",
+  "title": "הלכות נדה #13 כתם או עד שהלכו לאיבוד",
+  "date": "2025-07-01",
+  "language": "yi",
+  "duration_s": "1903",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/378672/378672-syq320.mp3"
+ },
+ {
+  "id": "378877",
+  "title": "פרשת חוקת: מצוות פרה אדומה",
+  "date": "2025-07-01",
+  "language": "he",
+  "duration_s": "2531",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/378877/378877-syrtn2.mp3"
+ },
+ {
+  "id": "378481",
+  "title": "Parshat Chukat: Ta'amei HaMitzvot",
+  "date": "2025-06-30",
+  "language": "en",
+  "duration_s": "3705",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/378481/378481-syo7ey.mp3"
+ },
+ {
+  "id": "378060",
+  "title": "מסר קצר בענייני דיומא",
+  "date": "2025-06-27",
+  "language": "he",
+  "duration_s": "627",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/378060/378060-syibua.mp3"
+ },
+ {
+  "id": "378071",
+  "title": "ברכת המצוה: על קיום המצוה או על מעשה המצוה",
+  "date": "2025-06-27",
+  "language": "he",
+  "duration_s": "2678",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/378071/378071-syigtr.mp3"
+ },
+ {
+  "id": "376568",
+  "title": "דברי חיזוק בעקבות המלחמה בארץ ישראל",
+  "date": "2025-06-20",
+  "language": "he",
+  "duration_s": "547",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/376568/376568-sy4yah.mp3"
+ },
+ {
+  "id": "376610",
+  "title": "Parshat Shelach: The Mitzvah of Tzitzis",
+  "date": "2025-06-20",
+  "language": "en",
+  "duration_s": "2401",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/376610/376610-sy5dry.mp3"
+ },
+ {
+  "id": "376616",
+  "title": "Short Thought on Parshat Shelach",
+  "date": "2025-06-20",
+  "language": "en",
+  "duration_s": "981",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/376616/376616-sy5h74.mp3"
+ },
+ {
+  "id": "376483",
+  "title": "Divrei Chizzuk: Israel at War with Iran",
+  "date": "2025-06-19",
+  "language": "en",
+  "duration_s": "640",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/376483/376483-sy4bp2.mp3"
+ },
+ {
+  "id": "376009",
+  "title": "7th Chemed Medicine & Ethics Conference: Vaccine Conversations",
+  "date": "2025-06-17",
+  "language": "en",
+  "duration_s": "1881",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/376009/376009-sy0nsh.mp3"
+ },
+ {
+  "id": "374785",
+  "title": "Short Thought on Parshat Be'halot'cha",
+  "date": "2025-06-12",
+  "language": "en",
+  "duration_s": "948",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/374785/374785-sxqb0h.mp3"
+ },
+ {
+  "id": "374814",
+  "title": "פרשת בהעלותך: מטריות בשבת ובניין לשעה",
+  "date": "2025-06-12",
+  "language": "he",
+  "duration_s": "2822",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/374814/374814-sxqthg.mp3"
+ },
+ {
+  "id": "375020",
+  "title": "הלכות נדה #12 חכם שאסר אין חברו רשאי להתיר",
+  "date": "2025-06-12",
+  "language": "yi",
+  "duration_s": "2915",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/375020/375020-sxrflm.mp3"
+ },
+ {
+  "id": "375021",
+  "title": "מסר קצר לפרשת בהעלותך",
+  "date": "2025-06-12",
+  "language": "he",
+  "duration_s": "701",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/375021/375021-sxrfne.mp3"
+ },
+ {
+  "id": "374625",
+  "title": "What the IDF Commanders Told Me",
+  "date": "2025-06-11",
+  "language": "en",
+  "duration_s": "220",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/374625/374625-sxozb4.mp3"
+ },
+ {
+  "id": "374217",
+  "title": "Parshat Be'halot'cha: ​Using Umbrellas on Shabbos",
+  "date": "2025-06-09",
+  "language": "en",
+  "duration_s": "3455",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/374217/374217-sxlu4y.mp3"
+ },
+ {
+  "id": "373742",
+  "title": "מסר קצר לפרשת נשא",
+  "date": "2025-06-06",
+  "language": "he",
+  "duration_s": "676",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/373742/373742-sxf8rb.mp3"
+ },
+ {
+  "id": "373267",
+  "title": "פרשת נשא: ברכת כהנים",
+  "date": "2025-06-04",
+  "language": "he",
+  "duration_s": "2802",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/373267/373267-sxbvw8.mp3"
+ },
+ {
+  "id": "372955",
+  "title": "Shiur to Ranana Kollel: Preparation for Shavuot",
+  "date": "2025-05-31",
+  "language": "en",
+  "duration_s": "2786",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/372955/372955-sx57ug.mp3"
+ },
+ {
+  "id": "372755",
+  "title": "Halachos of Birchat HaTorah",
+  "date": "2025-05-30",
+  "language": "en",
+  "duration_s": "2513",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/372755/372755-sx2ffa.mp3"
+ },
+ {
+  "id": "372786",
+  "title": "Pardes Shlomo Daily: Preparing for Shavuos",
+  "date": "2025-05-30",
+  "language": "en",
+  "duration_s": "485",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/372786/372786-sx2qh0.mp3"
+ },
+ {
+  "id": "372835",
+  "title": "מסר קצר לחג שבועות",
+  "date": "2025-05-30",
+  "language": "he",
+  "duration_s": "667",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/372835/372835-sx2wt1.mp3"
+ },
+ {
+  "id": "372147",
+  "title": "תלמוד תורה בהרהור",
+  "date": "2025-05-28",
+  "language": "he",
+  "duration_s": "2718",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/372147/372147-swyq6h.mp3"
+ },
+ {
+  "id": "372026",
+  "title": "Shavuot: Countdown to Matan Torah",
+  "date": "2025-05-27",
+  "language": "en",
+  "duration_s": "767",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/372026/372026-swxpzn.mp3"
+ },
+ {
+  "id": "371664",
+  "title": "Shavuot: Mitzvat Talmud Torah",
+  "date": "2025-05-26",
+  "language": "en",
+  "duration_s": "3100",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/371664/371664-swxhzf.mp3"
+ },
+ {
+  "id": "371208",
+  "title": "Pardes Shlomo Daily: Parshas Behar",
+  "date": "2025-05-23",
+  "language": "en",
+  "duration_s": "403",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/371208/371208-swpciv.mp3"
+ },
+ {
+  "id": "371216",
+  "title": "Shavuot: The Mitzvos of Talmud Torah",
+  "date": "2025-05-23",
+  "language": "en",
+  "duration_s": "1940",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/371216/371216-swph18.mp3"
+ },
+ {
+  "id": "371237",
+  "title": "מסר קצר לפרשת בהר בחוקותי",
+  "date": "2025-05-23",
+  "language": "he",
+  "duration_s": "791",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/371237/371237-swpnc5.mp3"
+ },
+ {
+  "id": "370352",
+  "title": "איסור חדש בזמן הזה",
+  "date": "2025-05-19",
+  "language": "he",
+  "duration_s": "3080",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/370352/370352-swk326.mp3"
  }
 ]
