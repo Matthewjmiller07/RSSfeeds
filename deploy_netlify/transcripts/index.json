@@ -813,9 +813,9 @@
   "id": "453320",
   "title": "הלכות נדה #23 אשה שהכשילה את בעלה באיסור נדה כיצר חוזרת לנאמנותה",
   "date": "2026-06-03",
-  "language": "he",
+  "language": "yi",
   "duration_s": "1946",
-  "normalized": true,
+  "normalized": false,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/453320/453320-tg21p5.mp3"
  },
  {
@@ -1128,9 +1128,9 @@
   "id": "443691",
   "title": "פתיחת זמן קיץ בכולל חיי נפש - ימי הספירה",
   "date": "2026-04-22",
-  "language": "he",
+  "language": "yi",
   "duration_s": "2027",
-  "normalized": true,
+  "normalized": false,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/443691/443691-tdwcg6.mp3"
  },
  {
@@ -1713,9 +1713,9 @@
   "id": "428986",
   "title": "הלכות נדה #20: דם מכה",
   "date": "2026-02-09",
-  "language": "he",
+  "language": "yi",
   "duration_s": "1878",
-  "normalized": true,
+  "normalized": false,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/428986/428986-ta75mc.mp3"
  },
  {
@@ -2178,6 +2178,501 @@
   "audio": ""
  },
  {
+  "id": "416233",
+  "title": "Short Thought on Chanukah (@TC)",
+  "date": "2025-12-17",
+  "language": "en",
+  "duration_s": "820",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "415443",
+  "title": "Short Thought for Chanukah (@ Chanukah Mesiba)",
+  "date": "2025-12-16",
+  "language": "en",
+  "duration_s": "554",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "415206",
+  "title": "Hidur B'Ner Chanukah",
+  "date": "2025-12-15",
+  "language": "en",
+  "duration_s": "4113",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "415122",
+  "title": "The Essence of Chanukah",
+  "date": "2025-12-14",
+  "language": "en",
+  "duration_s": "1127",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "414239",
+  "title": "Short Thought for Chanukah",
+  "date": "2025-12-11",
+  "language": "en",
+  "duration_s": "894",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "414067",
+  "title": "Where and When to Light Neiros Chanuka",
+  "date": "2025-12-10",
+  "language": "en",
+  "duration_s": "2608",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "411615",
+  "title": "Short Thought for Chanukah",
+  "date": "2025-12-06",
+  "language": "en",
+  "duration_s": "681",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "411163",
+  "title": "הלכות נדה #17 סילוק דמים בניתוח קיסרי",
+  "date": "2025-12-04",
+  "language": "yi",
+  "duration_s": "1780",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "411292",
+  "title": "מסר קצר לקראת ימי חנוכה",
+  "date": "2025-12-04",
+  "language": "he",
+  "duration_s": "579",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "410489",
+  "title": "זמן ומקום הדלקת נר חנוכה",
+  "date": "2025-12-02",
+  "language": "he",
+  "duration_s": "3032",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "410226",
+  "title": "The Time & Place of Lighting Chanukah Candles",
+  "date": "2025-12-01",
+  "language": "en",
+  "duration_s": "2944",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "409717",
+  "title": "Short Thought on Parshas Vayetzei",
+  "date": "2025-11-28",
+  "language": "en",
+  "duration_s": "728",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "409763",
+  "title": "Parshas Vayetzei: Tefillah B'Tzibur",
+  "date": "2025-11-28",
+  "language": "en",
+  "duration_s": "2422",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "409572",
+  "title": "מסר קצר לפרשת ויצא",
+  "date": "2025-11-27",
+  "language": "he",
+  "duration_s": "652",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "408756",
+  "title": "פרשת ויצא: מצוות תפילה",
+  "date": "2025-11-25",
+  "language": "he",
+  "duration_s": "3239",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "408546",
+  "title": "Parshat Vayetzei: Mitzvas Tefillah",
+  "date": "2025-11-24",
+  "language": "en",
+  "duration_s": "3325",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "408593",
+  "title": "הלכות נדה #16 מסולקת דמים",
+  "date": "2025-11-24",
+  "language": "yi",
+  "duration_s": "2086",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "408652",
+  "title": "Short Thought on Parshas Vayetzei & Tefillah",
+  "date": "2025-11-24",
+  "language": "en",
+  "duration_s": "516",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "407862",
+  "title": "Short Thought on Parshat Toldot",
+  "date": "2025-11-21",
+  "language": "en",
+  "duration_s": "597",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "407864",
+  "title": "מסר קצר לפרשת תולדות",
+  "date": "2025-11-21",
+  "language": "he",
+  "duration_s": "642",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "407876",
+  "title": "Parshat Toldos: Trusting a Non-observant Jew B'Kashrus.",
+  "date": "2025-11-21",
+  "language": "en",
+  "duration_s": "2004",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "406948",
+  "title": "פרשת תולדות: נאמנות בכשרות",
+  "date": "2025-11-18",
+  "language": "he",
+  "duration_s": "3508",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "407127",
+  "title": "Short Thought Parshat Toldot: Brachos by Deception",
+  "date": "2025-11-18",
+  "language": "en",
+  "duration_s": "784",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "406779",
+  "title": "Parshat Toldos: Ne'emanus B'Kashrus",
+  "date": "2025-11-17",
+  "language": "en",
+  "duration_s": "3974",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "406071",
+  "title": "Short Thought on Parshat Chayei Sarah",
+  "date": "2025-11-14",
+  "language": "en",
+  "duration_s": "983",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "406104",
+  "title": "Parshat Chayei Sarah: Davening in an Open Area",
+  "date": "2025-11-14",
+  "language": "en",
+  "duration_s": "2355",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "405944",
+  "title": "מסר קצר לפרשת חיי שרה.",
+  "date": "2025-11-13",
+  "language": "he",
+  "duration_s": "578",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "405963",
+  "title": "פרשת חיי שרה: תפילה בחצר תחת כפת השמים",
+  "date": "2025-11-13",
+  "language": "he",
+  "duration_s": "2451",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "405273",
+  "title": "פרשת חיי שרה: אונן ועוסק במצווה",
+  "date": "2025-11-11",
+  "language": "he",
+  "duration_s": "3757",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "405160",
+  "title": "היארצייט הרביעי של אימי מורתי",
+  "date": "2025-11-10",
+  "language": "he",
+  "duration_s": "957",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "404929",
+  "title": "4th Yartzheit of My Late Mother",
+  "date": "2025-11-09",
+  "language": "en",
+  "duration_s": "465",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "404944",
+  "title": "Parshat Chayei Sarah: Onen & Osek B'Mitzvah",
+  "date": "2025-11-09",
+  "language": "en",
+  "duration_s": "3754",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "404492",
+  "title": "מסר קצר לפרשת וירא",
+  "date": "2025-11-07",
+  "language": "he",
+  "duration_s": "668",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "404511",
+  "title": "Short Thought on Parshat Vayeira: The Akeida",
+  "date": "2025-11-07",
+  "language": "en",
+  "duration_s": "729",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "404522",
+  "title": "Parshat Vayeira: The Mitzva of Hachnasas Orchim",
+  "date": "2025-11-07",
+  "language": "en",
+  "duration_s": "2761",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "404163",
+  "title": "Short Thought Parshat Vayeira",
+  "date": "2025-11-06",
+  "language": "en",
+  "duration_s": "471",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "404336",
+  "title": "הלכות נדה #15 שימוש סמוך לוסת",
+  "date": "2025-11-06",
+  "language": "yi",
+  "duration_s": "2538",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "403896",
+  "title": "פרשת וירא: ביקור חולים והכנסת אורחים",
+  "date": "2025-11-04",
+  "language": "he",
+  "duration_s": "3107",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "403347",
+  "title": "Parshat Vayeira: Bikur Cholim & Hachnasas Orchim",
+  "date": "2025-11-02",
+  "language": "en",
+  "duration_s": "3348",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "402901",
+  "title": "Short Thought on Parshat Lech Lecha",
+  "date": "2025-10-31",
+  "language": "en",
+  "duration_s": "867",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "402940",
+  "title": "Parshat Lech Lecha: Mitzvas Milah",
+  "date": "2025-10-31",
+  "language": "en",
+  "duration_s": "2895",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "402727",
+  "title": "Lech Lecha: Our Koach to Endure from the Avos",
+  "date": "2025-10-30",
+  "language": "he",
+  "duration_s": "594",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "402803",
+  "title": "מסר קצר לפרשת לך לך",
+  "date": "2025-10-30",
+  "language": "he",
+  "duration_s": "852",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "402026",
+  "title": "Short Thought for Chodesh MarCheshvan",
+  "date": "2025-10-28",
+  "language": "en",
+  "duration_s": "165",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "402263",
+  "title": "פרשת לך לך: מילה בזמנה ושלא בזמנה",
+  "date": "2025-10-28",
+  "language": "he",
+  "duration_s": "2803",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "401920",
+  "title": "Introduction to Pas & Bishul Akum (Zichron HMC Kollel)",
+  "date": "2025-10-27",
+  "language": "en",
+  "duration_s": "2159",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "401738",
+  "title": "פתיחת הזמן בכולל חיי הנפש (יידיש)",
+  "date": "2025-10-26",
+  "language": "yi",
+  "duration_s": "1526",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "401800",
+  "title": "Parshat Lech Lecha: Insights into Mitzvas Milah",
+  "date": "2025-10-26",
+  "language": "en",
+  "duration_s": "3226",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "401350",
+  "title": "Parshat Noach: Doing a Mitzvah When You're Exempt",
+  "date": "2025-10-24",
+  "language": "en",
+  "duration_s": "2274",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "401354",
+  "title": "Short Thought on Parshat Noach",
+  "date": "2025-10-24",
+  "language": "en",
+  "duration_s": "960",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "401228",
+  "title": "מסר קצר לפרשת נח ותחילת זמן חורף",
+  "date": "2025-10-23",
+  "language": "he",
+  "duration_s": "388",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "399828",
+  "title": "Hesped on Rabbi Moshe Hauer ZT''L",
+  "date": "2025-10-18",
+  "language": "en",
+  "duration_s": "649",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "399641",
+  "title": "הפטור מן הדבר ועושהו נקרא הדיוט בביהמ''ד אהבת תורה רמב''ש ג",
+  "date": "2025-10-17",
+  "language": "he",
+  "duration_s": "3454",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "399435",
+  "title": "מסר קצר לימי בין הזמנים",
+  "date": "2025-10-16",
+  "language": "he",
+  "duration_s": "356",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "399194",
+  "title": "The Days of Awe Reaching the Summit",
+  "date": "2025-10-13",
+  "language": "en",
+  "duration_s": "2063",
+  "normalized": false,
+  "audio": ""
+ },
+ {
   "id": "399213",
   "title": "מסר קצר לסוכות",
   "date": "2025-10-13",
@@ -2185,5 +2680,428 @@
   "duration_s": "638",
   "normalized": true,
   "audio": ""
+ },
+ {
+  "id": "398692",
+  "title": "עוסק במצווה פטור מן המצווה בביהכ''נ חניכי הישיבות חוה''מ סוכות תשפ''ו",
+  "date": "2025-10-09",
+  "language": "he",
+  "duration_s": "2600",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "398730",
+  "title": "(כמה כסף אדם מחוייב להוציא על מצוות (בישיבת נצח ישראל חוה''מ סוכות תשפ''ו",
+  "date": "2025-10-09",
+  "language": "he",
+  "duration_s": "2202",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "398473",
+  "title": "(יסודות במצוות חינוך (בקהילת בני תורה הר נוף חוה''מ סוכות תשפ''ו",
+  "date": "2025-10-08",
+  "language": "he",
+  "duration_s": "2804",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "398137",
+  "title": "Sukkos: Spending Money on Mitzvot",
+  "date": "2025-10-05",
+  "language": "en",
+  "duration_s": "2986",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "398275",
+  "title": "Short Thought for Sukkos",
+  "date": "2025-10-05",
+  "language": "en",
+  "duration_s": "1119",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "398077",
+  "title": "מסר קצר לחג הסוכות: מיזוג דין ורחמים",
+  "date": "2025-10-04",
+  "language": "he",
+  "duration_s": "808",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/398077/398077-t3mizo.mp3"
+ },
+ {
+  "id": "397914",
+  "title": "ט''ו ט''ו פסח לסוכות (בישיבת אור אלחנן מוצאי יוהכ''פ)",
+  "date": "2025-10-03",
+  "language": "he",
+  "duration_s": "3642",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/397914/397914-t3jtb9.mp3"
+ },
+ {
+  "id": "397504",
+  "title": "Short Thought for Yom Kippur",
+  "date": "2025-09-30",
+  "language": "en",
+  "duration_s": "680",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/397504/397504-t3f41x.mp3"
+ },
+ {
+  "id": "397107",
+  "title": "הכנס השנתי לרבנים ורופאים בדיני חולה ביוהכ\"פ תשפ\"ו",
+  "date": "2025-09-29",
+  "language": "he",
+  "duration_s": "5840",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/397107/397107-t3c86y.mp3"
+ },
+ {
+  "id": "397184",
+  "title": "הכנה ליום הכיפורים (יידיש)",
+  "date": "2025-09-29",
+  "language": "yi",
+  "duration_s": "2044",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/397184/397184-t3czrs.mp3"
+ },
+ {
+  "id": "396601",
+  "title": "The Mitzvah of Teshuvah",
+  "date": "2025-09-26",
+  "language": "he",
+  "duration_s": "3008",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396601/396601-t36xj8.mp3"
+ },
+ {
+  "id": "396682",
+  "title": "Fasting on Yom Kippur with Medical Health Issues, Harav Asher Weiss, Kav Halacha Rabbonim and Medical Professionals",
+  "date": "2025-09-26",
+  "language": "en",
+  "duration_s": "4731",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396682/396682-t37fnp.mp3"
+ },
+ {
+  "id": "396708",
+  "title": "Short Thought on Teshuvah",
+  "date": "2025-09-26",
+  "language": "en",
+  "duration_s": "1243",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396708/396708-t37a7y.mp3"
+ },
+ {
+  "id": "396274",
+  "title": "Mitzvas Teshuvah",
+  "date": "2025-09-24",
+  "language": "en",
+  "duration_s": "2741",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396274/396274-t33w85.mp3"
+ },
+ {
+  "id": "396091",
+  "title": "Short Thought for Rosh Hashanah",
+  "date": "2025-09-22",
+  "language": "en",
+  "duration_s": "869",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396091/396091-t2zc3c.mp3"
+ },
+ {
+  "id": "395836",
+  "title": "Cholim",
+  "date": "2025-09-21",
+  "language": "en",
+  "duration_s": "2863",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395836/395836-t2yh3m.mp3"
+ },
+ {
+  "id": "395837",
+  "title": "Hashana Rabbah",
+  "date": "2025-09-21",
+  "language": "en",
+  "duration_s": "1744",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395837/395837-t2yh45.mp3"
+ },
+ {
+  "id": "395839",
+  "title": "Neilat Hasandal",
+  "date": "2025-09-21",
+  "language": "en",
+  "duration_s": "866",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395839/395839-t2yh52.mp3"
+ },
+ {
+  "id": "395529",
+  "title": "Short Thought on Rosh Hashanah",
+  "date": "2025-09-20",
+  "language": "en",
+  "duration_s": "530",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395529/395529-t2wg97.mp3"
+ },
+ {
+  "id": "395280",
+  "title": "מסר קצר לראש השנה",
+  "date": "2025-09-19",
+  "language": "he",
+  "duration_s": "1008",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395280/395280-t2to2l.mp3"
+ },
+ {
+  "id": "395292",
+  "title": "Mechila in Bein Adam L'Chaveiro",
+  "date": "2025-09-19",
+  "language": "en",
+  "duration_s": "2491",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395292/395292-t2twvu.mp3"
+ },
+ {
+  "id": "395406",
+  "title": "עניני שופר בהלכה ובאגדה",
+  "date": "2025-09-19",
+  "language": "he",
+  "duration_s": "2214",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395406/395406-t2u9i5.mp3"
+ },
+ {
+  "id": "395126",
+  "title": "Eating Before Hearing Shofar",
+  "date": "2025-09-18",
+  "language": "en",
+  "duration_s": "3405",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395126/395126-t2stvd.mp3"
+ },
+ {
+  "id": "396467",
+  "title": "You Can Be Holding In Shas & Poskim",
+  "date": "2025-09-18",
+  "language": "en",
+  "duration_s": "281",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396467/396467-t35nky.mp3"
+ },
+ {
+  "id": "394700",
+  "title": "בדיני עבירות שבין אדם לחבירו",
+  "date": "2025-09-16",
+  "language": "he",
+  "duration_s": "2752",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/394700/394700-t2qdo8.mp3"
+ },
+ {
+  "id": "393885",
+  "title": "Short Thought for Rosh Hashanah & Shofar",
+  "date": "2025-09-14",
+  "language": "en",
+  "duration_s": "494",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/393885/393885-t2kxp0.mp3"
+ },
+ {
+  "id": "393610",
+  "title": "מסר קצר לפרשת כי תבא",
+  "date": "2025-09-12",
+  "language": "he",
+  "duration_s": "873",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/393610/393610-t2gwn9.mp3"
+ },
+ {
+  "id": "393615",
+  "title": "Rosh Hashanah: Eating and Kiddush Before Tekias Shofar",
+  "date": "2025-09-12",
+  "language": "en",
+  "duration_s": "2731",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/393615/393615-t2gzm4.mp3"
+ },
+ {
+  "id": "393146",
+  "title": "Short Thought for Elul & Rosh Hashanah: The Message of the Shofar",
+  "date": "2025-09-10",
+  "language": "he",
+  "duration_s": "1046",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/393146/393146-t2dsd0.mp3"
+ },
+ {
+  "id": "392466",
+  "title": "The Essence of Mitzvas Shofar",
+  "date": "2025-09-08",
+  "language": "en",
+  "duration_s": "3608",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/392466/392466-t297hv.mp3"
+ },
+ {
+  "id": "392742",
+  "title": "אכילה לפני תקיעת שופר",
+  "date": "2025-09-08",
+  "language": "he",
+  "duration_s": "3253",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/392742/392742-t2b2c6.mp3"
+ },
+ {
+  "id": "392022",
+  "title": "The Mitzvah of Tekias Shofar",
+  "date": "2025-09-05",
+  "language": "en",
+  "duration_s": "2032",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/392022/392022-t23xtz.mp3"
+ },
+ {
+  "id": "391873",
+  "title": "הכנה לימים הנוראים תשפ״ה",
+  "date": "2025-09-04",
+  "language": "yi",
+  "duration_s": "1877",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/391873/391873-t22xan.mp3"
+ },
+ {
+  "id": "391878",
+  "title": "מסר קצר לקראת ראש השנה",
+  "date": "2025-09-04",
+  "language": "he",
+  "duration_s": "592",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/391878/391878-t22xwq.mp3"
+ },
+ {
+  "id": "391258",
+  "title": "מצוות שופר: תקיעה או שמיעה",
+  "date": "2025-09-02",
+  "language": "he",
+  "duration_s": "3302",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/391258/391258-t1ym3u.mp3"
+ },
+ {
+  "id": "390690",
+  "title": "שיחת פתיחה לזמן אלול תשפ״ה",
+  "date": "2025-08-30",
+  "language": "he",
+  "duration_s": "1430",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/390690/390690-t1tlsv.mp3"
+ },
+ {
+  "id": "390549",
+  "title": "Short Thought on Parshat Shoftim",
+  "date": "2025-08-29",
+  "language": "en",
+  "duration_s": "687",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/390549/390549-t1qz06.mp3"
+ },
+ {
+  "id": "390552",
+  "title": "Parshat Shoftim: The Obligation to Return a Bribe",
+  "date": "2025-08-29",
+  "language": "en",
+  "duration_s": "2474",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/390552/390552-t1r0g6.mp3"
+ },
+ {
+  "id": "390568",
+  "title": "פרשת שופטים: שוחד וחיוב השבתו",
+  "date": "2025-08-29",
+  "language": "he",
+  "duration_s": "3274",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/390568/390568-t1r85e.mp3"
+ },
+ {
+  "id": "390572",
+  "title": "מסר קצר לפרשת שופטים",
+  "date": "2025-08-29",
+  "language": "he",
+  "duration_s": "753",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/390572/390572-t1r9ek.mp3"
+ },
+ {
+  "id": "389361",
+  "title": "Pardes Shlomo Daily: Chodesh Elul",
+  "date": "2025-08-24",
+  "language": "en",
+  "duration_s": "320",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/389361/389361-t1htdj.mp3"
+ },
+ {
+  "id": "385416",
+  "title": "תשעה באב שחל במוצ\"ש",
+  "date": "2025-08-01",
+  "language": "he",
+  "duration_s": "3559",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/385416/385416-t0b0jx.mp3"
+ },
+ {
+  "id": "385419",
+  "title": "מסר קצר לתשעה באב",
+  "date": "2025-08-01",
+  "language": "he",
+  "duration_s": "1056",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/385419/385419-t0b1zn.mp3"
+ },
+ {
+  "id": "385028",
+  "title": "Tisha B'Av: Mourning with Meaning",
+  "date": "2025-07-30",
+  "language": "en",
+  "duration_s": "1850",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/385028/385028-t082q8.mp3"
+ },
+ {
+  "id": "384497",
+  "title": "Shiur in Kehillas Derech Chaim Baltimore: Four Types of Fasts",
+  "date": "2025-07-28",
+  "language": "en",
+  "duration_s": "3093",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/384497/384497-t046wx.mp3"
+ },
+ {
+  "id": "384581",
+  "title": "Shiur in Baltimore for Medical Professionals (Shomrei Mishmeres HaKodesh)",
+  "date": "2025-07-28",
+  "language": "en",
+  "duration_s": "1211",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/384581/384581-t08uua.mp3"
+ },
+ {
+  "id": "384772",
+  "title": "Shiur in Mercaz Torah U'Tefillah Baltimore: The Mitzvah of Teffilah",
+  "date": "2025-07-28",
+  "language": "en",
+  "duration_s": "1245",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/384772/384772-t06a52.mp3"
  }
 ]
