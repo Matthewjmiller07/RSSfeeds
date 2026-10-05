@@ -3481,5 +3481,725 @@
   "duration_s": "3080",
   "normalized": true,
   "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/370352/370352-swk326.mp3"
+ },
+ {
+  "id": "369732",
+  "title": "7th Chemed Medicine & Ethics Conference: Ask the Rav",
+  "date": "2025-05-17",
+  "language": "en",
+  "duration_s": "3807",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/369732/369732-swf76s.mp3"
+ },
+ {
+  "id": "369011",
+  "title": "Pardes Shlomo Daily: Lag Beomer",
+  "date": "2025-05-15",
+  "language": "en",
+  "duration_s": "789",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/369011/369011-sw8y1r.mp3"
+ },
+ {
+  "id": "369274",
+  "title": "Short Thought on Lag B 'Omer",
+  "date": "2025-05-15",
+  "language": "en",
+  "duration_s": "993",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/369274/369274-swade6.mp3"
+ },
+ {
+  "id": "369375",
+  "title": "מסר קצר לל\"ג בעומר (יידיש)",
+  "date": "2025-05-15",
+  "language": "yi",
+  "duration_s": "752",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/369375/369375-swb6d1.mp3"
+ },
+ {
+  "id": "369591",
+  "title": "שיעור קצר בל\"ג בעומר",
+  "date": "2025-05-15",
+  "language": "he",
+  "duration_s": "1359",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/369591/369591-swclqs.mp3"
+ },
+ {
+  "id": "369097",
+  "title": "מסר קצר לל\"ג בעומר",
+  "date": "2025-05-14",
+  "language": "he",
+  "duration_s": "772",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/369097/369097-sw9h7r.mp3"
+ },
+ {
+  "id": "368731",
+  "title": "רב בית כנסת ששכח לספור ספירת העומר",
+  "date": "2025-05-13",
+  "language": "he",
+  "duration_s": "3249",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/368731/368731-sw6s31.mp3"
+ },
+ {
+  "id": "368834",
+  "title": "הלכות נדה #11 בדיני מראות דמים",
+  "date": "2025-05-13",
+  "language": "yi",
+  "duration_s": "2566",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/368834/368834-sw7jma.mp3"
+ },
+ {
+  "id": "368604",
+  "title": "Short Thought on Sefirat HaOmer & Lag B'Omer",
+  "date": "2025-05-12",
+  "language": "en",
+  "duration_s": "862",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/368604/368604-sw5zf4.mp3"
+ },
+ {
+  "id": "368347",
+  "title": "The Correct Time for Sefirat HaOmer",
+  "date": "2025-05-11",
+  "language": "en",
+  "duration_s": "3819",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/368347/368347-sw45vy.mp3"
+ },
+ {
+  "id": "368201",
+  "title": "7th Chemed Medicine & Ethics Conference: Organ Donation After Cardiac Death",
+  "date": "2025-05-10",
+  "language": "en",
+  "duration_s": "2639",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/368201/368201-sw26qc.mp3"
+ },
+ {
+  "id": "367987",
+  "title": "The Unique Qualities of Mitzva V'Ohavta L'rayacha Kamocha",
+  "date": "2025-05-09",
+  "language": "en",
+  "duration_s": "2310",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/367987/367987-svzkp5.mp3"
+ },
+ {
+  "id": "367850",
+  "title": "מסר קצר לימי העומר",
+  "date": "2025-05-08",
+  "language": "he",
+  "duration_s": "533",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/367850/367850-svymg5.mp3"
+ },
+ {
+  "id": "367321",
+  "title": "פרשת אחרי מות קדושים: ואהבת לרעך כמוך",
+  "date": "2025-05-06",
+  "language": "he",
+  "duration_s": "3087",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/367321/367321-svubla.mp3"
+ },
+ {
+  "id": "366906",
+  "title": "Parshas Acharei-Mot Kedoshim: The Mitzvah of V'Ohavta L'rayacha Kamocha",
+  "date": "2025-05-05",
+  "language": "en",
+  "duration_s": "3735",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/366906/366906-svrx8b.mp3"
+ },
+ {
+  "id": "366799",
+  "title": "Short Thought on the Aveilos of Sefiras HaOmer",
+  "date": "2025-05-04",
+  "language": "en",
+  "duration_s": "762",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/366799/366799-svr6yp.mp3"
+ },
+ {
+  "id": "366567",
+  "title": "The Mitzvah of Sefiras HaOmer",
+  "date": "2025-05-03",
+  "language": "en",
+  "duration_s": "2092",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/366567/366567-svpaaw.mp3"
+ },
+ {
+  "id": "366415",
+  "title": "Short Thought on Sefirat HaOmer",
+  "date": "2025-05-02",
+  "language": "en",
+  "duration_s": "803",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/366415/366415-svmlo5.mp3"
+ },
+ {
+  "id": "366133",
+  "title": "פרדס שלמה טעגליך: פ' תזו''מ",
+  "date": "2025-05-01",
+  "language": "yi",
+  "duration_s": "576",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/366133/366133-svkqgs.mp3"
+ },
+ {
+  "id": "366158",
+  "title": "פתיחת הזמן בכולל הוראה דקהילת חיי הנפש",
+  "date": "2025-05-01",
+  "language": "yi",
+  "duration_s": "1378",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/366158/366158-svl1qt.mp3"
+ },
+ {
+  "id": "366289",
+  "title": "מסר קצר לימי ספירת העומר",
+  "date": "2025-05-01",
+  "language": "he",
+  "duration_s": "681",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/366289/366289-svlllw.mp3"
+ },
+ {
+  "id": "365862",
+  "title": "Pardes Shlomo Daily: Parshas tazria-metzora",
+  "date": "2025-04-30",
+  "language": "en",
+  "duration_s": "546",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/365862/365862-svj363.mp3"
+ },
+ {
+  "id": "365831",
+  "title": "שבות דשבות במקום מצווה",
+  "date": "2025-04-29",
+  "language": "he",
+  "duration_s": "3097",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/365831/365831-svikvx.mp3"
+ },
+ {
+  "id": "363641",
+  "title": "ברכת הפסח והזבח",
+  "date": "2025-04-17",
+  "language": "he",
+  "duration_s": "3509",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/363641/363641-suvoyr.mp3"
+ },
+ {
+  "id": "363215",
+  "title": "חזקת ג' פעמים - בקהילת בני תורה הר נוף",
+  "date": "2025-04-15",
+  "language": "he",
+  "duration_s": "3326",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/363215/363215-suqzap.mp3"
+ },
+ {
+  "id": "363291",
+  "title": "מסר קצר בחוה''מ פסח",
+  "date": "2025-04-15",
+  "language": "he",
+  "duration_s": "883",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/363291/363291-sus0at.mp3"
+ },
+ {
+  "id": "362871",
+  "title": "Pardes Shlomo Daily: Leil HaSeder",
+  "date": "2025-04-11",
+  "language": "en",
+  "duration_s": "440",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/362871/362871-suiedp.mp3"
+ },
+ {
+  "id": "362655",
+  "title": "מסר קצר לליל הסדר",
+  "date": "2025-04-09",
+  "language": "he",
+  "duration_s": "1008",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/362655/362655-sugvck.mp3"
+ },
+ {
+  "id": "362222",
+  "title": "ערב פסח שחל בשבת: סעודה שניה",
+  "date": "2025-04-08",
+  "language": "he",
+  "duration_s": "2898",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/362222/362222-suewxj.mp3"
+ },
+ {
+  "id": "362406",
+  "title": "Short Thought on Pesach: The 4 Sons",
+  "date": "2025-04-08",
+  "language": "en",
+  "duration_s": "546",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/362406/362406-sug8ol.mp3"
+ },
+ {
+  "id": "361856",
+  "title": "Erev Pesach on Shabbos",
+  "date": "2025-04-07",
+  "language": "en",
+  "duration_s": "4170",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/361856/361856-suc9vr.mp3"
+ },
+ {
+  "id": "361864",
+  "title": "שיעור בקהילת חיי נפש בירושלים: ערב פסח שחל בשבת (יידיש)",
+  "date": "2025-04-07",
+  "language": "yi",
+  "duration_s": "3469",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/361864/361864-sucknw.mp3"
+ },
+ {
+  "id": "361906",
+  "title": "Structure of The Haggadah",
+  "date": "2025-04-07",
+  "language": "en",
+  "duration_s": "1327",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/361906/361906-sucw9d.mp3"
+ },
+ {
+  "id": "361229",
+  "title": "מסר קצר לפסח.",
+  "date": "2025-04-03",
+  "language": "he",
+  "duration_s": "702",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/361229/361229-su5s4p.mp3"
+ },
+ {
+  "id": "360320",
+  "title": "שיעור בביהכ''נ בני הישיבות רמב''ש ד': מצוות מצה כל שבעה",
+  "date": "2025-03-31",
+  "language": "he",
+  "duration_s": "3523",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/360320/360320-stz68q.mp3"
+ },
+ {
+  "id": "360495",
+  "title": "סעודת שבת בערב פסח שחל בשבת",
+  "date": "2025-03-31",
+  "language": "he",
+  "duration_s": "3232",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/360495/360495-su0djs.mp3"
+ },
+ {
+  "id": "360231",
+  "title": "שיעור בביהכ''נ אור אליהו רמב''ש ג': ערב פסח שחל בשבת",
+  "date": "2025-03-30",
+  "language": "he",
+  "duration_s": "3297",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/360231/360231-stycq9.mp3"
+ },
+ {
+  "id": "359933",
+  "title": "Pardes Shlomo Daily: Parshas Pikudei",
+  "date": "2025-03-28",
+  "language": "en",
+  "duration_s": "295",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/359933/359933-sttsko.mp3"
+ },
+ {
+  "id": "359841",
+  "title": "בעל שואל ומשיב זצ\"ל: משנתו דרכו והשפעתו על עולם ההלכה",
+  "date": "2025-03-27",
+  "language": "he",
+  "duration_s": "3074",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/359841/359841-sttz5n.mp3"
+ },
+ {
+  "id": "359411",
+  "title": "שיעור במקסיקו במאור אברהם בנושא מצוות מצה",
+  "date": "2025-03-26",
+  "language": "he",
+  "duration_s": "3117",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/359411/359411-stqg3s.mp3"
+ },
+ {
+  "id": "359478",
+  "title": "שיעור במקסיקו בכתר תורה טקמצ'לקו בנושא דינא דמלכותא דינא",
+  "date": "2025-03-26",
+  "language": "he",
+  "duration_s": "2962",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/359478/359478-stqn9w.mp3"
+ },
+ {
+  "id": "358356",
+  "title": "מסר קצר: סמיכות גאולה לגאולה",
+  "date": "2025-03-20",
+  "language": "he",
+  "duration_s": "309",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/358356/358356-stfqef.mp3"
+ },
+ {
+  "id": "357736",
+  "title": "שואלין ודורשין בהלכות החג וקורבנות בזמנינו",
+  "date": "2025-03-18",
+  "language": "he",
+  "duration_s": "2523",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/357736/357736-stbi86.mp3"
+ },
+ {
+  "id": "357353",
+  "title": "Short Thought on Purim & Current Events",
+  "date": "2025-03-16",
+  "language": "en",
+  "duration_s": "745",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/357353/357353-st7yju.mp3"
+ },
+ {
+  "id": "357425",
+  "title": "Hesped on Rav Nota Schiller ZTL",
+  "date": "2025-03-16",
+  "language": "en",
+  "duration_s": "493",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/357425/357425-st8f0l.mp3"
+ },
+ {
+  "id": "356724",
+  "title": "מסר קצר לפורים: עד דלא ידע",
+  "date": "2025-03-12",
+  "language": "he",
+  "duration_s": "450",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/356724/356724-st0j8e.mp3"
+ },
+ {
+  "id": "356603",
+  "title": "מקרא מגילה בפורים משולש",
+  "date": "2025-03-11",
+  "language": "he",
+  "duration_s": "2966",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/356603/356603-sszdl2.mp3"
+ },
+ {
+  "id": "356026",
+  "title": "פורים משולש (יידיש)",
+  "date": "2025-03-09",
+  "language": "yi",
+  "duration_s": "3253",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/356026/356026-ssvm0l.mp3"
+ },
+ {
+  "id": "355699",
+  "title": "Short Thought on Purim",
+  "date": "2025-03-07",
+  "language": "en",
+  "duration_s": "462",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/355699/355699-ssqzqh.mp3"
+ },
+ {
+  "id": "355712",
+  "title": "Purim Meshulash",
+  "date": "2025-03-07",
+  "language": "en",
+  "duration_s": "2228",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/355712/355712-ssr1hh.mp3"
+ },
+ {
+  "id": "355545",
+  "title": "הלכות נדה #10 וסתות דאורייתא או דרבנן",
+  "date": "2025-03-06",
+  "language": "yi",
+  "duration_s": "2192",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/355545/355545-sspyjd.mp3"
+ },
+ {
+  "id": "355550",
+  "title": "מסר קצר לימי הפורים",
+  "date": "2025-03-06",
+  "language": "he",
+  "duration_s": "567",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/355550/355550-sspyvd.mp3"
+ },
+ {
+  "id": "355038",
+  "title": "פורים המשולש",
+  "date": "2025-03-04",
+  "language": "he",
+  "duration_s": "2764",
+  "normalized": true,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/355038/355038-ssmdcn.mp3"
+ },
+ {
+  "id": "354417",
+  "title": "Short Thought on Chodesh Adar",
+  "date": "2025-03-02",
+  "language": "en",
+  "duration_s": "1093",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/354417/354417-sshhao.mp3"
+ },
+ {
+  "id": "354421",
+  "title": "Bringing Korbanos Nowadays (David Grossman Yahrtzeit Shiur)",
+  "date": "2025-03-02",
+  "language": "en",
+  "duration_s": "3528",
+  "normalized": false,
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/354421/354421-sshjgk.mp3"
+ },
+ {
+  "id": "354194",
+  "title": "הלכות נדה #9 עונה בינונית",
+  "date": "2025-02-28",
+  "language": "yi",
+  "duration_s": "1967",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/354194--____01_05_2025__4b9e74dd-490a-49b5-925c-3cdc2269469d.mp4.mp3"
+ },
+ {
+  "id": "354229",
+  "title": "Short Thought for Shabbos Rosh Chodesh",
+  "date": "2025-02-28",
+  "language": "en",
+  "duration_s": "543",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/354229--____01_05_2025__0fa55072-3735-4b35-ac39-6a72b96e3f49.mp4.mp3"
+ },
+ {
+  "id": "354246",
+  "title": "Shabbos Rosh Chodesh Davening",
+  "date": "2025-02-28",
+  "language": "en",
+  "duration_s": "2035",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/354246--____01_05_2025__be59dd3b-ad4d-488f-a56e-80567f23bf9a.mp4.mp3"
+ },
+ {
+  "id": "354085",
+  "title": "מסר קצר לפרשת תרומה",
+  "date": "2025-02-27",
+  "language": "he",
+  "duration_s": "475",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/354085--____01_04_2025__55d2cb8c-287f-43be-b456-893f7f8830f8.mp4.mp3"
+ },
+ {
+  "id": "353470",
+  "title": "תפילת שבת ראש חודש",
+  "date": "2025-02-25",
+  "language": "he",
+  "duration_s": "2744",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/353470--____01_02_2025__79039e16-4999-4834-8fa6-1b2b5095b71e.mp4.mp3"
+ },
+ {
+  "id": "352853",
+  "title": "Short Thought on Tefillah",
+  "date": "2025-02-21",
+  "language": "en",
+  "duration_s": "337",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/352853--____01_05_2025__8ec02846-86e4-481f-9052-70b337d67e34.mp4.mp3"
+ },
+ {
+  "id": "352856",
+  "title": "Parshat Mishpatim: The Mitzvah of Tefillah",
+  "date": "2025-02-21",
+  "language": "en",
+  "duration_s": "2234",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/352856--____01_05_2025__28de5ac4-a0b0-4b5c-bee9-d1accf26892d.mp4.mp3"
+ },
+ {
+  "id": "352727",
+  "title": "מסר קצר לפרשת משפטים",
+  "date": "2025-02-20",
+  "language": "he",
+  "duration_s": "406",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/352727--____01_04_2025__3f3fd03d-9347-42c5-b1d0-0b93d1434889.mp4.mp3"
+ },
+ {
+  "id": "352435",
+  "title": "Agudah Yerushalayim Yarchei Kallah 5785: Wednesday Shiur Iyun",
+  "date": "2025-02-19",
+  "language": "en",
+  "duration_s": "2925",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/352435--____01_03_2025__8a37effc-076c-41b2-b172-282d628f1368.mp4.mp3"
+ },
+ {
+  "id": "352195",
+  "title": "Agudah Yerushalayim Yarchei Kallah 5785: Monday Hakdama Shiur",
+  "date": "2025-02-18",
+  "language": "en",
+  "duration_s": "4034",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/352195--____01_02_2025__a5b9d44d-a6d9-46a1-8f5b-b0560f9ce59d.mp4.mp3"
+ },
+ {
+  "id": "352013",
+  "title": "פרשת משפטים: מצוות תפילה",
+  "date": "2025-02-17",
+  "language": "he",
+  "duration_s": "3211",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/352013--____01_01_2025__12e7cf08-b201-43ba-bac5-9795629c6916.mp4.mp3"
+ },
+ {
+  "id": "351806",
+  "title": "Shiur in the Yeshiva of South Florida: The Three Fundamentals of קנין התורה",
+  "date": "2025-02-16",
+  "language": "en",
+  "duration_s": "2342",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/351806--____01_00_2025__70cc182e-e689-481c-b08c-04cb02e1ff99.mp3"
+ },
+ {
+  "id": "351428",
+  "title": "Pardes Shlomo Daily: Harav Asher Weiss - Parshas Yisro",
+  "date": "2025-02-15",
+  "language": "en",
+  "duration_s": "428",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/351428--____01_05_2025__be577094-5bce-4873-9f2d-611e55a8374d.mp3"
+ },
+ {
+  "id": "351106",
+  "title": "Shiur in Boca Raton Florida: Klal Yisroel at War - Thoughts, Insights & Halachic Questions",
+  "date": "2025-02-13",
+  "language": "en",
+  "duration_s": "2294",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/351106--____01_04_2025__3689b479-ad42-4b03-85a0-8507d2d18611.mp4.mp3"
+ },
+ {
+  "id": "349310",
+  "title": "שיעור בברזיל: הידור מצווה",
+  "date": "2025-02-08",
+  "language": "he",
+  "duration_s": "1961",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/349310--____01_06_2025__6e2eb006-c6b5-4b47-bcc3-3efccb2f4d9d.mp4.mp3"
+ },
+ {
+  "id": "349168",
+  "title": "Pardes Shlomo Daily: Harav Asher Weiss - Shabbos Shira",
+  "date": "2025-02-07",
+  "language": "en",
+  "duration_s": "408",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/349168--____01_05_2025__757d5aa0-956e-4477-9ccd-9a4da4e65a44.mp3"
+ },
+ {
+  "id": "348911",
+  "title": "Shiur in Brazil: Seeing Miracles in Our Daily Lives",
+  "date": "2025-02-06",
+  "language": "en",
+  "duration_s": "1828",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/348911--____01_04_2025__0834bad7-0948-44c2-94b5-53e6df94c71f.mp4.mp3"
+ },
+ {
+  "id": "348418",
+  "title": "שיעור בברזיל: מצוות תלמוד תורה",
+  "date": "2025-02-04",
+  "language": "he",
+  "duration_s": "1711",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/348418--____01_02_2025__7ee578ae-6125-4858-9c13-73991adf02e1.mp4.mp3"
+ },
+ {
+  "id": "347690",
+  "title": "Short Thought on Parshat Bo",
+  "date": "2025-01-31",
+  "language": "en",
+  "duration_s": "573",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/347690--____00_05_2025__49d51450-4b25-440d-b9bd-979fcef0387c.mp4.mp3"
+ },
+ {
+  "id": "347695",
+  "title": "Parshat Bo: Kiddush Levanah",
+  "date": "2025-01-31",
+  "language": "en",
+  "duration_s": "2245",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/347695--____00_05_2025__d7319d73-de4d-4b13-af92-b82bd285d081.mp4.mp3"
+ },
+ {
+  "id": "347415",
+  "title": "הלכות נדה #8 כללי הפסיקה",
+  "date": "2025-01-30",
+  "language": "yi",
+  "duration_s": "1859",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/347415--____00_04_2025__452bd454-3772-40bb-947a-59f5ffd1a6af.mp4.mp3"
+ },
+ {
+  "id": "347535",
+  "title": "מסר קצר לפרשת בא",
+  "date": "2025-01-30",
+  "language": "he",
+  "duration_s": "681",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/347535--____00_04_2025__0edc1bc8-b883-4093-8e07-2265be58c561.mp4.mp3"
+ },
+ {
+  "id": "347229",
+  "title": "פרשת בא: מצוות קידוש לבנה",
+  "date": "2025-01-29",
+  "language": "he",
+  "duration_s": "2291",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/347229--____00_03_2025__62d03cad-3dfe-43b9-b651-1d416ce9c771.mp4.mp3"
+ },
+ {
+  "id": "346397",
+  "title": "Parshat Vaera: The Mitzvah of Kiddush Hashem",
+  "date": "2025-01-24",
+  "language": "en",
+  "duration_s": "2100",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/346397--____00_05_2025__193a2dc4-9d3e-494d-a092-6d62b4abc57c.mp4.mp3"
+ },
+ {
+  "id": "346242",
+  "title": "מסר קצר לפרשת וארא",
+  "date": "2025-01-23",
+  "language": "he",
+  "duration_s": "534",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/346242--____00_04_2025__6911610c-ece4-47ef-8519-af2c94b994e2.mp4.mp3"
  }
 ]
