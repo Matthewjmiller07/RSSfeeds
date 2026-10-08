@@ -1,5 +1,14 @@
 [
  {
+  "id": "481965",
+  "title": "שיעור מיוחד לרגל יומא ההילולא ה 187 של החתם סופר זי\"ע בביהמ\"ד פרשבורג בני ברק",
+  "date": "2026-10-07",
+  "language": "he",
+  "duration_s": "2898",
+  "normalized": true,
+  "audio": ""
+ },
+ {
   "id": "481337",
   "title": "Hoshanah Rabbah: The Takeaway for an Awesome Year",
   "date": "2026-10-02",
@@ -6309,6 +6318,15 @@
   "audio": "https://dl.torahanytime.com/mp3/259774--____09_06_2023__a90dde75-dc93-4828-8e8f-364341e4f829.mp4.mp3"
  },
  {
+  "id": "259548",
+  "title": "Halachos of Shabbos During a War",
+  "date": "2023-10-12",
+  "language": "en",
+  "duration_s": "2980",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/259548--____09_02_2023__c498da7e-0440-4c8c-88d4-6d96faacdab6.mp4.mp3"
+ },
+ {
   "id": "259660",
   "title": "Waging War on Shabbos & Divrei Chizuk",
   "date": "2023-10-12",
@@ -6316,5 +6334,1022 @@
   "duration_s": "2474",
   "normalized": false,
   "audio": "https://dl.torahanytime.com/mp3/259660--____09_05_2023__15889548-350d-4607-bc2f-b4aae310d991.mp4.mp3"
+ },
+ {
+  "id": "259416",
+  "title": "פרשת בראשית: מצוות פריה ורביה",
+  "date": "2023-10-11",
+  "language": "he",
+  "duration_s": "3262",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/259416--____09_04_2023__362fe312-d0da-447e-ad4d-0a03844490a5.mp4.mp3"
+ },
+ {
+  "id": "259241",
+  "title": "Chizzuk In Light of The War in Eretz Yisrael",
+  "date": "2023-10-10",
+  "language": "en",
+  "duration_s": "3216",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/259241--____09_03_2023__f89a8683-a3c3-43b4-8d35-97531620d6d8.mp3"
+ },
+ {
+  "id": "259121",
+  "title": "דברי חיזוק בעקבות המלחמה הקשה בארץ ישראל",
+  "date": "2023-10-09",
+  "language": "he",
+  "duration_s": "2567",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/259121--____09_02_2023__f6c5da3e-242a-4d13-af54-71a3dba5c8a7.mp4.mp3"
+ },
+ {
+  "id": "258845",
+  "title": "דברי חיזוק והתעוררות בעקבות הפיגוע בשמחת תורה התשפ\"ד",
+  "date": "2023-10-07",
+  "language": "he",
+  "duration_s": "668",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/258845--____09_00_2023__128cc0a4-2ce4-4880-acab-1eaae1bfd642.mp4.mp3"
+ },
+ {
+  "id": "258622",
+  "title": "סוכות: לולב היבש ודבר המסור לחכמים",
+  "date": "2023-10-04",
+  "language": "he",
+  "duration_s": "3848",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/258622--____09_04_2023__7b7067c2-e360-4cfb-ad68-38343ade8da3.mp4.mp3"
+ },
+ {
+  "id": "258487",
+  "title": "מסר קצר לימי הסוכות",
+  "date": "2023-10-03",
+  "language": "he",
+  "duration_s": "657",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/258487--____09_03_2023__f512384d-0c72-4dbf-bddf-fcd3c0c69b3a.mp4.mp3"
+ },
+ {
+  "id": "258336",
+  "title": "סוכות: אתרוג שנשתנה מראהו מחמת משמוש",
+  "date": "2023-10-02",
+  "language": "he",
+  "duration_s": "4015",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/258336--____09_02_2023__9bf23690-ce6c-4708-985a-617b8a0c64e0.mp4.mp3"
+ },
+ {
+  "id": "257945",
+  "title": "Hiddur Mitzvah for Sukkah, Lulav and Esrog",
+  "date": "2023-09-27",
+  "language": "en",
+  "duration_s": "3930",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/257945--____08_04_2023__ae406834-94d0-4f85-80f8-35ec07e1bdb2.mp3"
+ },
+ {
+  "id": "257843",
+  "title": "הקשר בין חג הסוכות לימים נוראים",
+  "date": "2023-09-26",
+  "language": "he",
+  "duration_s": "754",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/257843--____08_03_2023__b27688a8-1b2a-4cd9-9dbb-1af48ca1f845.mp4.mp3"
+ },
+ {
+  "id": "257443",
+  "title": "Short Thought on Yom Kippur",
+  "date": "2023-09-23",
+  "language": "en",
+  "duration_s": "816",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/257443--____08_00_2023__d7794fce-cc5d-4824-9425-a02286bf8c57.mp4.mp3"
+ },
+ {
+  "id": "257311",
+  "title": "Yom Kippur: Sick People Fasting",
+  "date": "2023-09-21",
+  "language": "en",
+  "duration_s": "2839",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/257311--____08_05_2023__2a9f4d69-c7d0-421b-a352-92193fc94887.mp4.mp3"
+ },
+ {
+  "id": "257006",
+  "title": "כנס להלכות צום יום הכיפורים לחולים: הרב אשר וייס, פרופסר יונתן הלוי ועוד",
+  "date": "2023-09-20",
+  "language": "he",
+  "duration_s": "5001",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/257006--____08_04_2023__2130c050-9b60-4cbb-9ab8-24a358aed6dd.mp4.mp3"
+ },
+ {
+  "id": "256027",
+  "title": "ראש השנה: תקיעת שופר בשבת",
+  "date": "2023-09-13",
+  "language": "he",
+  "duration_s": "2911",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/256027--____08_04_2023__afc1a618-8a41-4034-bb13-44145cebd3d6.mp4.mp3"
+ },
+ {
+  "id": "256072",
+  "title": "Rosh Hashanah on Shabbos: Shofar Blowing",
+  "date": "2023-09-13",
+  "language": "en",
+  "duration_s": "2000",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/256072--____08_04_2023__2ad9c61d-5718-4bb2-8e37-bddd08bf55b5.mp4.mp3"
+ },
+ {
+  "id": "256184",
+  "title": "ראש השנה שחל להיות בשבת",
+  "date": "2023-09-13",
+  "language": "he",
+  "duration_s": "3156",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/256184--____08_04_2023__e052aa00-2407-47d4-bcbb-1f4c2bcab348.mp4.mp3"
+ },
+ {
+  "id": "255343",
+  "title": "מסר קצר לימי הסליחות",
+  "date": "2023-09-09",
+  "language": "he",
+  "duration_s": "925",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/255343--____08_00_2023__7e03032a-cbcb-4633-9242-ccc2af248980.mp4.mp3"
+ },
+ {
+  "id": "255210",
+  "title": "Short Thought on Selichos",
+  "date": "2023-09-08",
+  "language": "en",
+  "duration_s": "322",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/255210--____08_06_2023__506b4606-02dc-46bb-bd9b-bc36f592454a.mp4.mp3"
+ },
+ {
+  "id": "255105",
+  "title": "Selichos: Davening to Malachim",
+  "date": "2023-09-07",
+  "language": "en",
+  "duration_s": "2087",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/255105--____08_05_2023__e8c72e5c-8d51-41ca-be4b-d43c849b2d1c.mp4.mp3"
+ },
+ {
+  "id": "254793",
+  "title": "שבת סליחות - פניה למלאכי השרת",
+  "date": "2023-09-05",
+  "language": "he",
+  "duration_s": "2916",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/254793--____08_03_2023__92afcaed-933f-40b3-948b-f6f1d63b71ad.mp4.mp3"
+ },
+ {
+  "id": "254215",
+  "title": "Short Thought on Chodesh Elul 2",
+  "date": "2023-09-02",
+  "language": "en",
+  "duration_s": "204",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/254215--____08_00_2023__91b107f5-a798-470e-a09d-b9e779fb2a7e.mp4.mp3"
+ },
+ {
+  "id": "254040",
+  "title": "Parshat Ki Tavo: Brachos in Halacha",
+  "date": "2023-08-31",
+  "language": "en",
+  "duration_s": "2263",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/254040--____08_05_2023__78b6699d-d3ea-45a5-9314-b0e523c33560.mp4.mp3"
+ },
+ {
+  "id": "253844",
+  "title": "פרשת כי תבא: גדרי הברכות",
+  "date": "2023-08-30",
+  "language": "he",
+  "duration_s": "2490",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/253844--____07_04_2023__08c38af1-27a1-46fe-a018-288c9f4cec0a.mp4.mp3"
+ },
+ {
+  "id": "253286",
+  "title": "מסר קצר לחודש אלול",
+  "date": "2023-08-27",
+  "language": "he",
+  "duration_s": "664",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/253286--____07_01_2023__caf78ce3-fc4f-47d6-be57-068e4c5b51d1.mp4.mp3"
+ },
+ {
+  "id": "253177",
+  "title": "Short Thought on Chodesh Elul",
+  "date": "2023-08-26",
+  "language": "en",
+  "duration_s": "747",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/253177--____07_00_2023__03ea76bd-13c6-4743-9730-56183d0fce11.mp4.mp3"
+ },
+ {
+  "id": "252978",
+  "title": "Parshat Ki Tetzei: Shiluach HaKen",
+  "date": "2023-08-24",
+  "language": "en",
+  "duration_s": "2404",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/252978--____07_05_2023__24de6f8b-e37f-4827-b8ad-2b21fe28ae5e.mp4.mp3"
+ },
+ {
+  "id": "252693",
+  "title": "פרשת כי תצא: מצוות שילוח הקן",
+  "date": "2023-08-22",
+  "language": "he",
+  "duration_s": "3303",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/252693--____07_03_2023__b1f2e4ae-2834-4c16-93bd-bf52e76dfd7d.mp4.mp3"
+ },
+ {
+  "id": "249949",
+  "title": "מסר מיוחד לימי בין הזמנים",
+  "date": "2023-07-31",
+  "language": "he",
+  "duration_s": "1012",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/249949--____07_02_2023__70e6f889-c954-4ae8-b579-dff56c33f630.mp4.mp3"
+ },
+ {
+  "id": "249418",
+  "title": "דיני חולה בתשעה באב",
+  "date": "2023-07-26",
+  "language": "he",
+  "duration_s": "3375",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/249418--____06_04_2023__0cd8f516-d471-4964-a7ec-27417744f3f8.mp4.mp3"
+ },
+ {
+  "id": "249024",
+  "title": "Halachos of One who is Sick on Tisha B'Av",
+  "date": "2023-07-24",
+  "language": "en",
+  "duration_s": "2289",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/249024--____06_02_2023__401fbf7c-8bc3-4269-a19f-240faad6e72b.mp4.mp3"
+ },
+ {
+  "id": "248552",
+  "title": "דיני חולה בתשעה באב",
+  "date": "2023-07-22",
+  "language": "he",
+  "duration_s": "3488",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/248552--____06_00_2023__7cbe395d-d36a-41f3-8166-d090617587aa.mp4.mp3"
+ },
+ {
+  "id": "248391",
+  "title": "Short Thought on The Three Weeks",
+  "date": "2023-07-20",
+  "language": "en",
+  "duration_s": "738",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/248391--____06_05_2023__57edd366-0ade-45f8-bffa-bb9e54490e1b.mp3"
+ },
+ {
+  "id": "248272",
+  "title": "Learning Halacha from Tanach",
+  "date": "2023-07-19",
+  "language": "en",
+  "duration_s": "3973",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/248272--____06_04_2023__8d04b528-5b4c-4f64-88f8-120fcc9a9a2d.mp3"
+ },
+ {
+  "id": "248076",
+  "title": "?האם למדין הלכה מדברי אגדה",
+  "date": "2023-07-18",
+  "language": "he",
+  "duration_s": "3336",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/248076--____06_03_2023__272ead21-91f9-46a5-9816-ed1dfd8be6da.mp4.mp3"
+ },
+ {
+  "id": "246947",
+  "title": "Divrei Chizuk for The Three Weeks",
+  "date": "2023-07-11",
+  "language": "en",
+  "duration_s": "1128",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/246947--____06_03_2023__01babba3-8ac0-44fb-8ffc-971c9896a6d9.mp4.mp3"
+ },
+ {
+  "id": "246475",
+  "title": "Parshat Pinchas: Dividing Eretz Yisrael",
+  "date": "2023-07-08",
+  "language": "en",
+  "duration_s": "2386",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/246475--____06_00_2023__182b4608-96a0-4930-9195-e6d25d89e9cd.mp4.mp3"
+ },
+ {
+  "id": "246351",
+  "title": "Short Thought on Parshat Pinchas",
+  "date": "2023-07-06",
+  "language": "en",
+  "duration_s": "406",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/246351--____06_05_2023__7da91d32-3b91-414c-bf68-572ea8ca9c3c.mp4.mp3"
+ },
+ {
+  "id": "246097",
+  "title": "Parshat Pinchas: Lotteries in Halacha",
+  "date": "2023-07-05",
+  "language": "en",
+  "duration_s": "2852",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/246097--____06_04_2023__0086e4db-ef22-4a68-a1eb-f868e4a11784.mp4.mp3"
+ },
+ {
+  "id": "245932",
+  "title": "פרשת פנחס: הגורל בהלכה",
+  "date": "2023-07-04",
+  "language": "he",
+  "duration_s": "3802",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/245932--____06_03_2023__d2716edc-4a4e-4169-979a-e11bfa613571.mp4.mp3"
+ },
+ {
+  "id": "245290",
+  "title": "דברי זכרון על הרבי מקלויזנבורג זצ\"ל",
+  "date": "2023-06-30",
+  "language": "he",
+  "duration_s": "1574",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/245290--____05_05_2023__a7baabd8-25d6-4d15-b980-ed64d7b2f355.mp4.mp3"
+ },
+ {
+  "id": "245256",
+  "title": "Short Thought on Parshat Chukat",
+  "date": "2023-06-29",
+  "language": "en",
+  "duration_s": "512",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/245256--____05_05_2023__1950f880-4c9f-4c3d-aa82-de957113395d.mp4.mp3"
+ },
+ {
+  "id": "245264",
+  "title": "Short Thought on Parshat Balak",
+  "date": "2023-06-29",
+  "language": "en",
+  "duration_s": "704",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/245264--____05_05_2023__ebfed757-8abe-4da3-8fb2-fc7d6b24c8c7.mp4.mp3"
+ },
+ {
+  "id": "245162",
+  "title": "Parshat Balak: The Kedusha of Batei Midrash & Batei Knesset",
+  "date": "2023-06-28",
+  "language": "en",
+  "duration_s": "2429",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/245162--____05_04_2023__44161499-38d4-49a9-9aeb-6a5fc97bf1b9.mp4.mp3"
+ },
+ {
+  "id": "244884",
+  "title": "פרשת בלק: קדושת בתי מדרשות ובתי כנסיות",
+  "date": "2023-06-27",
+  "language": "he",
+  "duration_s": "3894",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/244884--____05_03_2023__99be9a0a-a9b5-4ca4-a3fd-b33e0881288f.mp4.mp3"
+ },
+ {
+  "id": "244470",
+  "title": "Parshat Chukas: Tumas Kohanim Nowadays",
+  "date": "2023-06-25",
+  "language": "en",
+  "duration_s": "1828",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/244470--____05_01_2023__63a42fc5-2e80-4225-97bf-16e8d805f26d.mp4.mp3"
+ },
+ {
+  "id": "244311",
+  "title": "Parshat Chukat: The Prosecutor can't be the Defender",
+  "date": "2023-06-23",
+  "language": "en",
+  "duration_s": "2452",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/244311--____05_06_2023__fa283eaa-09b2-48e2-a95d-f0efff49a23d.mp4.mp3"
+ },
+ {
+  "id": "243993",
+  "title": "פרשת חוקת: טומאת כהנים בזמן הזה",
+  "date": "2023-06-21",
+  "language": "he",
+  "duration_s": "3369",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/243993--____05_04_2023__31931f3e-d19e-42eb-8231-cec0c0a6d7b3.mp4.mp3"
+ },
+ {
+  "id": "243149",
+  "title": "Parshat Korach: Shlichut in Aveiros",
+  "date": "2023-06-16",
+  "language": "en",
+  "duration_s": "2154",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/243149--____05_00_2023__9d9fe85e-489b-4123-858b-602c4c02bc21.mp4.mp3"
+ },
+ {
+  "id": "243054",
+  "title": "דברי הספד על מרן ראש הישיבה הרב גרשון אדלשטיין זצ\"ל",
+  "date": "2023-06-14",
+  "language": "he",
+  "duration_s": "1049",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/243054--____05_04_2023__20d9c0ed-4782-4230-b411-0db1657478ce.mp4.mp3"
+ },
+ {
+  "id": "242826",
+  "title": "פרשת קרח: אין שליח לדבר עבירה",
+  "date": "2023-06-13",
+  "language": "he",
+  "duration_s": "3040",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/242826--____05_03_2023__9c5f5326-c2db-43ff-988e-5235c93b9623.mp4.mp3"
+ },
+ {
+  "id": "242202",
+  "title": "Short Thought on Parshat Shelach",
+  "date": "2023-06-09",
+  "language": "en",
+  "duration_s": "508",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/242202--____05_06_2023__b1dd36c0-325b-42d4-ba3e-386510935698.mp4.mp3"
+ },
+ {
+  "id": "241981",
+  "title": "מסר קצר לפרשת שלח",
+  "date": "2023-06-08",
+  "language": "he",
+  "duration_s": "783",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/241981--____05_04_2023__6b2ccd89-4126-417b-a040-4dd2f7698e51.mp4.mp3"
+ },
+ {
+  "id": "242074",
+  "title": "Parshat Shelach: Tzitzis and Mezuzah",
+  "date": "2023-06-08",
+  "language": "en",
+  "duration_s": "1948",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/242074--____05_05_2023__cd6f135a-b2c4-466f-8b37-015de7fe78d5.mp4.mp3"
+ },
+ {
+  "id": "241767",
+  "title": "פרשת שלח: מצוות ציצית",
+  "date": "2023-06-07",
+  "language": "he",
+  "duration_s": "3450",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/241767--____05_03_2023__b958d9d0-5ab2-4924-9dc9-8c9fe39a0581.mp4.mp3"
+ },
+ {
+  "id": "241585",
+  "title": "מסר קצר לפרשת בהעלותך",
+  "date": "2023-06-05",
+  "language": "he",
+  "duration_s": "448",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/241585--____05_02_2023__7397c093-6331-44ab-9845-f65db84dff26.mp4.mp3"
+ },
+ {
+  "id": "241154",
+  "title": "The Greatness of Rav Gershon Edelshtein Z”TL",
+  "date": "2023-06-02",
+  "language": "en",
+  "duration_s": "497",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/241154--____05_06_2023__918c01e1-1bd8-4356-b657-3f10eeb121c2.mp4.mp3"
+ },
+ {
+  "id": "241055",
+  "title": "Parshat Be'halot'cha: Shabbos Candles",
+  "date": "2023-06-01",
+  "language": "en",
+  "duration_s": "1116",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/241055--____05_05_2023__b99aa5f0-209e-4369-9377-2a68acbb3213.mp4.mp3"
+ },
+ {
+  "id": "240954",
+  "title": "מרן ראש הישיבה הרב גרשון אדלשטיין זצ\"ל: אברך בן 100",
+  "date": "2023-05-31",
+  "language": "he",
+  "duration_s": "748",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/240954--____05_04_2023__3ba2844a-bb4c-437f-a846-5332ad0fa721.mp4.mp3"
+ },
+ {
+  "id": "240598",
+  "title": "פרשת בהעלתך: נרות שבת",
+  "date": "2023-05-30",
+  "language": "he",
+  "duration_s": "2567",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/240598--____04_03_2023__d1555702-9349-4a2c-8986-16868c5ffa13.mp4.mp3"
+ },
+ {
+  "id": "240509",
+  "title": "דברי הספד על מרן ראש הישיבה הרב גרשון אדלשטיין זצ\"ל",
+  "date": "2023-05-29",
+  "language": "he",
+  "duration_s": "709",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/240509--____04_02_2023__f624722d-6e2d-46ba-a5fa-a54596a82f78.mp4.mp3"
+ },
+ {
+  "id": "239651",
+  "title": "Shavuot: Preparation for Kabbalas HaTorah",
+  "date": "2023-05-23",
+  "language": "en",
+  "duration_s": "2679",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/239651--____04_03_2023__e15a7656-678c-43c1-9e45-d2bf4053b58c.mp4.mp3"
+ },
+ {
+  "id": "239552",
+  "title": "הכנה לחג השבועות",
+  "date": "2023-05-22",
+  "language": "he",
+  "duration_s": "1398",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/239552--____04_02_2023__09c0cd54-b068-4eb5-815e-620cbdfa03cd.mp4.mp3"
+ },
+ {
+  "id": "239068",
+  "title": "Shavuos: The Torah is not in Heaven",
+  "date": "2023-05-20",
+  "language": "en",
+  "duration_s": "2273",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/239068--____04_00_2023__1b7186f0-a870-4b9f-ad3c-7eaf97f2a99c.mp4.mp3"
+ },
+ {
+  "id": "239004",
+  "title": "Short Thought on Parshat Bamidbar 5783",
+  "date": "2023-05-19",
+  "language": "en",
+  "duration_s": "580",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/239004--____04_06_2023__f3418865-eae0-4c66-88f7-a3a2c78cf634.mp4.mp3"
+ },
+ {
+  "id": "238857",
+  "title": "Parshat Bamidbar: Shmiras HaMikdash",
+  "date": "2023-05-18",
+  "language": "en",
+  "duration_s": "2770",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/238857--____04_05_2023__834c2cf8-522d-43af-9c8c-726d16c1434a.mp4.mp3"
+ },
+ {
+  "id": "238356",
+  "title": "פרשת במדבר: מצוות שמירת המקדש",
+  "date": "2023-05-16",
+  "language": "he",
+  "duration_s": "3295",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/238356--____04_03_2023__9abbd540-dd48-4de7-8daa-f1cee8a70d23.mp4.mp3"
+ },
+ {
+  "id": "237627",
+  "title": "Short Thought on Parshat Behar-Bechukosai 5783",
+  "date": "2023-05-11",
+  "language": "en",
+  "duration_s": "327",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/237627--____04_05_2023__3c19d816-e632-49f0-8bfd-a72d97c7084b.mp4.mp3"
+ },
+ {
+  "id": "237649",
+  "title": "The Weight of Kabbala in Ruling Halacha",
+  "date": "2023-05-10",
+  "language": "en",
+  "duration_s": "2590",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/237649--____04_05_2023__f2213ffb-340f-492a-9260-b18f2c2c9bfe.mp4.mp3"
+ },
+ {
+  "id": "237249",
+  "title": "משקל הקבלה בהלכה הפסוקה",
+  "date": "2023-05-09",
+  "language": "he",
+  "duration_s": "3223",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/237249--____04_03_2023__d690d28f-8e31-4757-abb0-34cd21de92c6.mp4.mp3"
+ },
+ {
+  "id": "236612",
+  "title": "Short Thought on Sefirat HaOmer 5783",
+  "date": "2023-05-04",
+  "language": "en",
+  "duration_s": "438",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/236612--____04_05_2023__c358e73b-cac0-4efb-b5e6-4e2541ca6002.mp4.mp3"
+ },
+ {
+  "id": "236396",
+  "title": "Women in Sefirat HaOmer",
+  "date": "2023-05-03",
+  "language": "en",
+  "duration_s": "2031",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/236396--____04_04_2023__f5a733a6-da69-4466-8771-44a0e3ef1ce2.mp4.mp3"
+ },
+ {
+  "id": "236061",
+  "title": "נשים בספירת העומר",
+  "date": "2023-05-02",
+  "language": "he",
+  "duration_s": "3039",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/236061--____04_02_2023__e7ef41ce-3463-4e38-bbc0-1ec31b02f839.mp4.mp3"
+ },
+ {
+  "id": "235453",
+  "title": "Short Thought on Parshat Acharei Mos-Kedoshim 5783",
+  "date": "2023-04-28",
+  "language": "en",
+  "duration_s": "397",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/235453--____03_05_2023__2698bb2d-e9a1-47da-8322-9650e9434632.mp4.mp3"
+ },
+ {
+  "id": "235238",
+  "title": "‪פרשת אחרי מות - קדושים: ובחוקותיהם לא תלכו",
+  "date": "2023-04-27",
+  "language": "he",
+  "duration_s": "3141",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/235238--____03_04_2023__c3a9919f-4904-4873-96c0-8a498c50453b.mp4.mp3"
+ },
+ {
+  "id": "235297",
+  "title": "Parshat Achrei Mos-Kedoshim: Uvechukoseihem Lo Telechu",
+  "date": "2023-04-26",
+  "language": "en",
+  "duration_s": "2814",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/235297--____03_04_2023__697735f4-2733-402b-91a8-14fd5eaf9f43.mp4.mp3"
+ },
+ {
+  "id": "232956",
+  "title": "Pesach: The Mitzvah of Maror",
+  "date": "2023-04-05",
+  "language": "en",
+  "duration_s": "2409",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/232956--____03_03_2023__f28f35b6-a189-47c7-8c12-44cdf818788e.mp4.mp3"
+ },
+ {
+  "id": "232801",
+  "title": "פסח: מצוות מרור",
+  "date": "2023-04-04",
+  "language": "he",
+  "duration_s": "2410",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/232801--____03_02_2023__2c3942ee-975f-4267-b1df-23506718d487.mp4.mp3"
+ },
+ {
+  "id": "232294",
+  "title": "Short Thought on Parshat Tzav 5783",
+  "date": "2023-03-31",
+  "language": "en",
+  "duration_s": "302",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/232294--____02_05_2023__6d518a0d-595e-4b58-906f-b2d13b5058d6.mp4.mp3"
+ },
+ {
+  "id": "231861",
+  "title": "פסח: כל שלא אמר שלשה דברים פסח מצה ומרור",
+  "date": "2023-03-29",
+  "language": "he",
+  "duration_s": "2543",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/231861--____02_03_2023__3c0d7158-02c8-4de9-9c80-97e4d72f32c6.mp4.mp3"
+ },
+ {
+  "id": "231995",
+  "title": "Pesach, Matzah, UMaror",
+  "date": "2023-03-29",
+  "language": "en",
+  "duration_s": "2260",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/231995--____02_03_2023__8f22f9e7-425a-4431-bc03-05159c511479.mp4.mp3"
+ },
+ {
+  "id": "231209",
+  "title": "Short Thought on Parshat Vayikra 5783",
+  "date": "2023-03-24",
+  "language": "en",
+  "duration_s": "465",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/231209--____02_05_2023__1a0164d6-7390-42ca-b604-8697d66f1eb6.mp4.mp3"
+ },
+ {
+  "id": "231126",
+  "title": "Birkas Ha’ilanos in Nissan",
+  "date": "2023-03-23",
+  "language": "en",
+  "duration_s": "2240",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/231126--____02_04_2023__9ab531cc-40b1-40d7-82f4-b8518fd552ab.mp4.mp3"
+ },
+ {
+  "id": "230715",
+  "title": "ברכת האילנות בחודש ניסן",
+  "date": "2023-03-21",
+  "language": "he",
+  "duration_s": "2901",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/230715--____02_02_2023__d5878610-1a12-4c74-a245-d7b30a97d4e6.mp4.mp3"
+ },
+ {
+  "id": "230149",
+  "title": "Short Thought for Parashat Vayakhel-Pekudei 5783",
+  "date": "2023-03-17",
+  "language": "he",
+  "duration_s": "353",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/230149--____02_05_2023__ab253938-4f78-4fbb-97c8-25f08df24c0b.mp4.mp3"
+ },
+ {
+  "id": "230045",
+  "title": "Parshat Vayakhel-Pekudei: Meleches Machsheves B'Shabbos",
+  "date": "2023-03-16",
+  "language": "en",
+  "duration_s": "2202",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/230045--____02_04_2023__54621b64-9a43-4ca6-b38a-5b285c1be5e5.mp4.mp3"
+ },
+ {
+  "id": "229769",
+  "title": "פרשת ויקהל פקודי: מלאכת מחשבת בשבת",
+  "date": "2023-03-15",
+  "language": "he",
+  "duration_s": "2809",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/229769--____02_03_2023__ffcb1113-d44a-4450-8f50-619e7f02c00d.mp4.mp3"
+ },
+ {
+  "id": "228785",
+  "title": "פורים: מקרא מגילה",
+  "date": "2023-03-08",
+  "language": "he",
+  "duration_s": "1986",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/228785--____02_03_2023__cfc66e36-fd20-48e1-a467-29a9fc7b7aff.mp4.mp3"
+ },
+ {
+  "id": "228756",
+  "title": "Purim: Kavana While Reading the Megilla",
+  "date": "2023-03-07",
+  "language": "en",
+  "duration_s": "1503",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/228756--____02_02_2023__8273b29f-d528-4351-8d78-05ca7b9c9ad5.mp4.mp3"
+ },
+ {
+  "id": "228535",
+  "title": "מסר קצר לפורים תשפ\"ג",
+  "date": "2023-03-06",
+  "language": "he",
+  "duration_s": "438",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/228535--____02_01_2023__77f171a8-dfa4-46b4-99da-1498f6ec774c.mp4.mp3"
+ },
+ {
+  "id": "228150",
+  "title": "Short Thought on Purim 5783",
+  "date": "2023-03-03",
+  "language": "en",
+  "duration_s": "923",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/228150--____02_05_2023__73f38005-0eaa-4c1c-a541-64d8278bac4b.mp4.mp3"
+ },
+ {
+  "id": "228066",
+  "title": "פורים: משלוח מנות איש לרעהו ומתנות לאביונים",
+  "date": "2023-03-02",
+  "language": "he",
+  "duration_s": "3251",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/228066--____02_04_2023__24e4fb19-bc8a-4bfa-a44c-7ded349157a3.mp4.mp3"
+ },
+ {
+  "id": "227345",
+  "title": "Purim: The Reasons for Mishloach Manot",
+  "date": "2023-02-27",
+  "language": "en",
+  "duration_s": "3698",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/227345--____01_01_2023__80402725-4500-406a-899f-c4a0d10b554c.mp4.mp3"
+ },
+ {
+  "id": "227281",
+  "title": "The Centrality of בתי מדרשות: Home Away From Home",
+  "date": "2023-02-26",
+  "language": "en",
+  "duration_s": "382",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/227281--____01_00_2023__fdda9d0e-fd39-4dad-b91a-7242ecec53b5.mp4.mp3"
+ },
+ {
+  "id": "227022",
+  "title": "Short Though on Parshat Terumah",
+  "date": "2023-02-24",
+  "language": "en",
+  "duration_s": "779",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/227022--____01_05_2023__2dacbd0d-6b57-453a-b010-a357f606761a.mp4.mp3"
+ },
+ {
+  "id": "226049",
+  "title": "Short Thought on Parshat Mishpatim 5783",
+  "date": "2023-02-17",
+  "language": "en",
+  "duration_s": "469",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/226049--____01_05_2023__fc20c8cf-b543-44a1-9f91-222f3c17ca8f.mp4.mp3"
+ },
+ {
+  "id": "225816",
+  "title": "מסר קצר לפרשת משפטים תשפ\"ג",
+  "date": "2023-02-16",
+  "language": "he",
+  "duration_s": "511",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/225816--____01_04_2023__2006d4a9-a9e7-48b8-b8a1-7d59f0cc91dd.mp4.mp3"
+ },
+ {
+  "id": "225647",
+  "title": "Parshat Mishpatim: Milk & Meat in the Same Fridge",
+  "date": "2023-02-15",
+  "language": "en",
+  "duration_s": "2171",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/225647--____01_03_2023__179a079d-916f-4e38-b77e-e4ff7eb24152.mp4.mp3"
+ },
+ {
+  "id": "225555",
+  "title": "פרשת משפטים: חלב ובשר באותו מקרר",
+  "date": "2023-02-14",
+  "language": "he",
+  "duration_s": "2264",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/225555--____01_02_2023__7afddbc5-f745-467d-8aa2-4f27cb960986.mp4.mp3"
+ },
+ {
+  "id": "225339",
+  "title": "Agudah Yerushalayim Yarchai Kallah 2023: Shiur Hakdama",
+  "date": "2023-02-13",
+  "language": "en",
+  "duration_s": "3098",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/225339--____01_01_2023__9f599f10-1836-4adf-b604-612da9dad315.mp4.mp3"
+ },
+ {
+  "id": "224966",
+  "title": "Short Thought on Parshat Yitro 5783",
+  "date": "2023-02-10",
+  "language": "en",
+  "duration_s": "476",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/224966--____01_05_2023__5742e9cb-a269-4bb8-9b1e-dab3dc82e72d.mp4.mp3"
+ },
+ {
+  "id": "224977",
+  "title": "מסר קצר לפרשת יתרו תשפ״ג",
+  "date": "2023-02-10",
+  "language": "he",
+  "duration_s": "579",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/224977--____01_05_2023__87e7f10c-eef3-4f6f-81a8-5b47f78dda5d.mp4.mp3"
+ },
+ {
+  "id": "224886",
+  "title": "Parshat Yitro: One for Zachor and One for Shamor",
+  "date": "2023-02-09",
+  "language": "en",
+  "duration_s": "2856",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/224886--____01_04_2023__11cc2a0d-6e6e-44dd-8f7b-5c30301d6494.mp4.mp3"
+ },
+ {
+  "id": "224452",
+  "title": "פרשת יתרו: אחד כנגד זכור ואחד כנגד שמור",
+  "date": "2023-02-07",
+  "language": "he",
+  "duration_s": "3401",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/224452--____01_02_2023__319337e7-7286-409b-ace4-70f9caf6b5f0.mp4.mp3"
+ },
+ {
+  "id": "223858",
+  "title": "Parshat Beshalach: The Issur of Techumin on Shabbos",
+  "date": "2023-02-03",
+  "language": "en",
+  "duration_s": "2195",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/223858--____01_05_2023__0fe63dad-3d57-43dd-907e-63c975844bca.mp4.mp3"
+ },
+ {
+  "id": "223882",
+  "title": "Short Thought on Parshat Beshalach 5783",
+  "date": "2023-02-03",
+  "language": "en",
+  "duration_s": "372",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/223882--____01_05_2023__44fc3b2a-98ab-4235-93a4-b8385f91ff6e.mp4.mp3"
+ },
+ {
+  "id": "223704",
+  "title": "פרשת בשלח - דין תחומין",
+  "date": "2023-02-02",
+  "language": "he",
+  "duration_s": "3305",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/223704--____01_04_2023__3b8cad2c-fe59-401d-9340-3971dc7553ed.mp4.mp3"
+ },
+ {
+  "id": "222791",
+  "title": "Short Thought on Parshat Bo",
+  "date": "2023-01-27",
+  "language": "en",
+  "duration_s": "412",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/222791--____00_05_2023__2cba6001-4650-4cf2-9449-be6b5d791269.mp4.mp3"
+ },
+ {
+  "id": "222450",
+  "title": "Parshat Bo: Amira L’Nochri – Shabbos and Shvi’is",
+  "date": "2023-01-25",
+  "language": "en",
+  "duration_s": "2295",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/222450--____00_03_2023__daef0a3b-5d44-4e79-a57c-0d6cb13ed5a1.mp4.mp3"
+ },
+ {
+  "id": "221879",
+  "title": "Short Thought on Parshat Va'eira 5783",
+  "date": "2023-01-20",
+  "language": "en",
+  "duration_s": "338",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/221879--____00_05_2023__e11ce801-ee51-466d-b2dc-36b8b58cb29a.mp4.mp3"
+ },
+ {
+  "id": "221512",
+  "title": "פרשת וארא: זכירת יציאת מצרים",
+  "date": "2023-01-18",
+  "language": "he",
+  "duration_s": "3091",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/221512--____00_03_2023__2cceaf75-6e6d-4223-848c-279309fe961b.mp4.mp3"
+ },
+ {
+  "id": "221642",
+  "title": "Parashat Va'eira: Remembering Yetzias Mitzrayim",
+  "date": "2023-01-18",
+  "language": "en",
+  "duration_s": "2004",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/221642--____00_03_2023__13f34953-b7c0-4e75-955b-2117e85d10ed.mp4.mp3"
+ },
+ {
+  "id": "221055",
+  "title": "מסר קצר לפרשת שמות",
+  "date": "2023-01-15",
+  "language": "he",
+  "duration_s": "700",
+  "normalized": true,
+  "audio": "https://dl.torahanytime.com/mp3/221055--____00_00_2023__2ff43085-c10c-4fc8-aef2-e4987933d46a.mp4.mp3"
+ },
+ {
+  "id": "220907",
+  "title": "Short Thought on Parshat Shemot 5783",
+  "date": "2023-01-13",
+  "language": "en",
+  "duration_s": "620",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/220907--____00_05_2023__7f84da78-e44b-44e9-a715-315c8ad36e5a.mp4.mp3"
+ },
+ {
+  "id": "220841",
+  "title": "Parshat Shemot: Using Non-Jewish Names",
+  "date": "2023-01-12",
+  "language": "en",
+  "duration_s": "2858",
+  "normalized": false,
+  "audio": "https://dl.torahanytime.com/mp3/220841--____00_04_2023__c5d31378-efac-4572-9b28-0c0436afb53f.mp4.mp3"
  }
 ]
