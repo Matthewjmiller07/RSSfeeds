@@ -1,5 +1,23 @@
 [
  {
+  "id": "482463",
+  "title": "מסר קצר לפרשת בראשית",
+  "date": "2026-10-09",
+  "language": "he",
+  "duration_s": "466",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "482350",
+  "title": "פרשת בראשית: מצוות פריה ורביה",
+  "date": "2026-10-08",
+  "language": "he",
+  "duration_s": "3071",
+  "normalized": true,
+  "audio": ""
+ },
+ {
   "id": "481965",
   "title": "שיעור מיוחד לרגל יומא ההילולא ה 187 של החתם סופר זי\"ע בביהמ\"ד פרשבורג בני ברק",
   "date": "2026-10-07",
@@ -8348,6 +8366,861 @@
   "date": "2021-01-21",
   "language": "en",
   "duration_s": "3433",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "137321",
+  "title": "Yehareg V'Al Yaavor",
+  "date": "2021-01-13",
+  "language": "en",
+  "duration_s": "2470",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "136687",
+  "title": "The Halachic Status of a Fetus",
+  "date": "2021-01-07",
+  "language": "en",
+  "duration_s": "3194",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "136704",
+  "title": "Powerful COVID - 19 Discussion",
+  "date": "2021-01-07",
+  "language": "en",
+  "duration_s": "646",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "136021",
+  "title": "Parashat Vayechi: Yissaschar/Zevulan Contract",
+  "date": "2021-01-01",
+  "language": "en",
+  "duration_s": "3129",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "134903",
+  "title": "Reciting the “Shehecheyanu” Blessing Upon Seeing a Dear Friend after Covid 19",
+  "date": "2020-12-24",
+  "language": "en",
+  "duration_s": "2466",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "133917",
+  "title": "The Covid 19 vaccine",
+  "date": "2020-12-16",
+  "language": "en",
+  "duration_s": "3993",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "133901",
+  "title": "Hilchot Chanukah Series: זמן ומקום בנר חנוכה",
+  "date": "2020-12-13",
+  "language": "en",
+  "duration_s": "2793",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "133893",
+  "title": "Lighting Chanukah Candles in the Covid 19 Era",
+  "date": "2020-12-11",
+  "language": "en",
+  "duration_s": "3141",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "132782",
+  "title": "Halacha's Reliance on Medicine and Science",
+  "date": "2020-12-07",
+  "language": "en",
+  "duration_s": "3083",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "133885",
+  "title": "Hilchot Chanukah Series: הקדמה לעניני חנוכה",
+  "date": "2020-12-06",
+  "language": "en",
+  "duration_s": "2327",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "131963",
+  "title": "קיבלו עלייהו חובה",
+  "date": "2020-11-27",
+  "language": "en",
+  "duration_s": "3465",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "131036",
+  "title": "Gereira B'Kinyanim",
+  "date": "2020-11-22",
+  "language": "en",
+  "duration_s": "2844",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "130382",
+  "title": "The Mitzvah of Mourning",
+  "date": "2020-11-16",
+  "language": "en",
+  "duration_s": "3126",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "131051",
+  "title": "Agudah Hilchot Shabbat Halacha Lemaaseh Series: Microwave and Alternate Forms of Bishul",
+  "date": "2020-11-15",
+  "language": "en",
+  "duration_s": "3484",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "130366",
+  "title": "Short Vort on Parashat Chayei Sarah",
+  "date": "2020-11-13",
+  "language": "en",
+  "duration_s": "569",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "130462",
+  "title": "Agudah Hilchot Shabbat Halacha Lemaaseh Series: הגדרת מלאכת מבשל",
+  "date": "2020-11-08",
+  "language": "en",
+  "duration_s": "2943",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "129050",
+  "title": "Parashat Vayeira: Visiting the Sick During a Pandemic",
+  "date": "2020-11-04",
+  "language": "en",
+  "duration_s": "3322",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "130449",
+  "title": "Agudah Hilchot Shabbat Halacha Lemaaseh Series: יסוד מלאכת בורר",
+  "date": "2020-11-01",
+  "language": "en",
+  "duration_s": "2961",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "128150",
+  "title": "Parashat Lech Lecha: The Death of a Brother Due to Brit Milah",
+  "date": "2020-10-28",
+  "language": "en",
+  "duration_s": "3442",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "128708",
+  "title": "Agudah Hilchot Shabbat Halacha Lemaaseh Series - יסוד מלאכת דש",
+  "date": "2020-10-25",
+  "language": "en",
+  "duration_s": "3130",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "127367",
+  "title": "‏נכרי שעוסק בתורה חייב מיתה",
+  "date": "2020-10-21",
+  "language": "he",
+  "duration_s": "3341",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "127788",
+  "title": "Talmud Torah for Non-Jews",
+  "date": "2020-10-21",
+  "language": "en",
+  "duration_s": "2856",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "127303",
+  "title": "Yartzheit of Maran HaGaon HaRav Ovadia Yosef ZTL",
+  "date": "2020-10-20",
+  "language": "en",
+  "duration_s": "985",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "128694",
+  "title": "Agudah Hilchot Shabbat Halacha Lemaaseh Series - יסוד מלאכת זורע ובישול",
+  "date": "2020-10-18",
+  "language": "en",
+  "duration_s": "2621",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "127376",
+  "title": "פרשת בראשית תשפ\"א",
+  "date": "2020-10-17",
+  "language": "he",
+  "duration_s": "1113",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "126923",
+  "title": "Chamira Sakanta Miesura",
+  "date": "2020-10-15",
+  "language": "en",
+  "duration_s": "2671",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "126557",
+  "title": "Hoshana Raba - The Essense of the Day",
+  "date": "2020-10-08",
+  "language": "en",
+  "duration_s": "1469",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "125151",
+  "title": "Agudah Yerach Ha’eyosnim Series: Teshuva",
+  "date": "2020-09-22",
+  "language": "en",
+  "duration_s": "2685",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "125722",
+  "title": "Hatarat Nedarim on Erev Rosh Hashanah",
+  "date": "2020-09-17",
+  "language": "en",
+  "duration_s": "2410",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "124142",
+  "title": "Panama Yarchei Kallah: מצוות תשובה",
+  "date": "2020-09-13",
+  "language": "he",
+  "duration_s": "2944",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "124508",
+  "title": "Agudah Yarchei Kallah: Cholim on Yom Kippur In The Time Of Corona",
+  "date": "2020-09-13",
+  "language": "en",
+  "duration_s": "4587",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "123872",
+  "title": "Simcha on Rosh Hashanah and Yom Kippur",
+  "date": "2020-09-09",
+  "language": "en",
+  "duration_s": "2256",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "124497",
+  "title": "Agudah Yarchei Kallah: הקדמה למצות תקיעת שופר",
+  "date": "2020-09-06",
+  "language": "en",
+  "duration_s": "3197",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "123160",
+  "title": "Blowing Shofar in the COVID-19 Era",
+  "date": "2020-09-03",
+  "language": "en",
+  "duration_s": "2437",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "123375",
+  "title": "Agudah Yerach Ha’eyosnim Series: פתיחה למצות סוכה",
+  "date": "2020-08-30",
+  "language": "en",
+  "duration_s": "1928",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "122491",
+  "title": "Parashat Ki Tetzei: The First Year of Marriage",
+  "date": "2020-08-25",
+  "language": "en",
+  "duration_s": "3196",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "123364",
+  "title": "Agudah Yerach Ha’eyosnim Series: פתיחה להלכות ד’ מינים הדור מצוה",
+  "date": "2020-08-23",
+  "language": "en",
+  "duration_s": "2471",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "122125",
+  "title": "Parashat Shoftim: Baat Tashchit",
+  "date": "2020-08-19",
+  "language": "en",
+  "duration_s": "3065",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "121622",
+  "title": "The Prohibition To Consume Insects",
+  "date": "2020-08-13",
+  "language": "en",
+  "duration_s": "2567",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "120798",
+  "title": "Preventing Sakanah",
+  "date": "2020-08-03",
+  "language": "en",
+  "duration_s": "2853",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "119619",
+  "title": "The Galut & the Geula",
+  "date": "2020-07-28",
+  "language": "en",
+  "duration_s": "1095",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "119549",
+  "title": "Tishah B'av During COVID-19 Epidemic",
+  "date": "2020-07-27",
+  "language": "en",
+  "duration_s": "2392",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "119560",
+  "title": "Agudah Yarchei Kallah: Cholim on Tisha B'Av",
+  "date": "2020-07-26",
+  "language": "en",
+  "duration_s": "2621",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "118955",
+  "title": "החשיבות לשמור על הכללים",
+  "date": "2020-07-22",
+  "language": "he",
+  "duration_s": "659",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "119041",
+  "title": "Agudah Yarchei Kallah: ביסוד כלאחר יד",
+  "date": "2020-07-19",
+  "language": "en",
+  "duration_s": "2660",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "118350",
+  "title": "Conditions and Assumptions in Halacha",
+  "date": "2020-07-16",
+  "language": "en",
+  "duration_s": "3327",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "118221",
+  "title": "Agudah Yarchei Kallah: טכנלגי’ בשבת ברפואה",
+  "date": "2020-07-12",
+  "language": "en",
+  "duration_s": "2836",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "117699",
+  "title": "Do We Fast During Covid-19?",
+  "date": "2020-07-07",
+  "language": "en",
+  "duration_s": "3525",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "117747",
+  "title": "Agudah Yarchei Kallah: הקדמה לפסיק רישא",
+  "date": "2020-07-05",
+  "language": "en",
+  "duration_s": "3947",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "117209",
+  "title": "Tzar Balei Chayim",
+  "date": "2020-07-01",
+  "language": "en",
+  "duration_s": "3180",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "116543",
+  "title": "Halachot of When Can We Just Assume Something Is Kosher",
+  "date": "2020-06-28",
+  "language": "en",
+  "duration_s": "3054",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "116851",
+  "title": "Agudah Yarchei Kallah: הקדמה למלאכת מחשבת בשבת",
+  "date": "2020-06-28",
+  "language": "en",
+  "duration_s": "2873",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "116547",
+  "title": "Virtual Yarchei Kallah: יסוד דין אמירה לעכו״ם",
+  "date": "2020-06-21",
+  "language": "en",
+  "duration_s": "3154",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "115283",
+  "title": "Agudah Yarchei Kallah: בדין אמן על הברכות",
+  "date": "2020-06-14",
+  "language": "en",
+  "duration_s": "2771",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "114884",
+  "title": "Parashat Shelach: Checking Your Tzttzit Every Morning",
+  "date": "2020-06-11",
+  "language": "en",
+  "duration_s": "2604",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "114201",
+  "title": "The Proper Kavana in Kadish",
+  "date": "2020-06-07",
+  "language": "en",
+  "duration_s": "3994",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "114518",
+  "title": "Agudah Yarchei Kallah: יסוד בברכת המצות",
+  "date": "2020-06-07",
+  "language": "en",
+  "duration_s": "2779",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "113681",
+  "title": "Eruv Tavshilin during the Coronavirus",
+  "date": "2020-06-02",
+  "language": "en",
+  "duration_s": "2384",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "114499",
+  "title": "Agudah Yarchei Kallah: ברכת המזון",
+  "date": "2020-05-31",
+  "language": "en",
+  "duration_s": "2935",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "113444",
+  "title": "The Weather at Matan Torah",
+  "date": "2020-05-27",
+  "language": "en",
+  "duration_s": "259",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "113239",
+  "title": "Agudah Yarchei Kallah: ברכת התורה",
+  "date": "2020-05-24",
+  "language": "en",
+  "duration_s": "2853",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "113675",
+  "title": "The Atonement of One That Indirectly Caused the Demise of Another",
+  "date": "2020-05-18",
+  "language": "en",
+  "duration_s": "2745",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "112246",
+  "title": "Agudah Yarchei Kallah: ברכת המזון כדי שביעה",
+  "date": "2020-05-17",
+  "language": "en",
+  "duration_s": "2462",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "111332",
+  "title": "Divrei Chizuk and Halacha for the Entire Community",
+  "date": "2020-05-11",
+  "language": "en",
+  "duration_s": "3469",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "112313",
+  "title": "Agudah Yarchei Kallah: יםוד ברכת המזון",
+  "date": "2020-05-10",
+  "language": "en",
+  "duration_s": "2881",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "110671",
+  "title": "Agudah Yarchei Kallah: Yesod Din Keriat Shema",
+  "date": "2020-05-03",
+  "language": "en",
+  "duration_s": "3215",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "109696",
+  "title": "Agudah Yarchai Kallah: Yesod Din Kriat Shema",
+  "date": "2020-04-26",
+  "language": "en",
+  "duration_s": "3191",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "108843",
+  "title": "Birkat Hagomel",
+  "date": "2020-04-21",
+  "language": "en",
+  "duration_s": "3132",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "108668",
+  "title": "Agudah Yarchai Kallah: B'inyan Tefillat Arvit",
+  "date": "2020-04-19",
+  "language": "en",
+  "duration_s": "3194",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "108658",
+  "title": "Agudah Yarchai Kallah: Sefirat Haomer",
+  "date": "2020-04-12",
+  "language": "en",
+  "duration_s": "2936",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "107951",
+  "title": "Q&A on Tefillah as the Plague Spread",
+  "date": "2020-04-05",
+  "language": "en",
+  "duration_s": "3098",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "106872",
+  "title": "Agudah Pesach Yarchei Kallah: Intro to Seder Night - Yetziat Mitzrayim and The Mitzvot of The Night",
+  "date": "2020-03-31",
+  "language": "en",
+  "duration_s": "2985",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "105535",
+  "title": "Chizuk for Turbulent Times",
+  "date": "2020-03-19",
+  "language": "en",
+  "duration_s": "767",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "103720",
+  "title": "Parashat Terumah: Building a Beit Hamikdash snd a Beir Hakinesset",
+  "date": "2020-02-25",
+  "language": "en",
+  "duration_s": "3357",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "102931",
+  "title": "Agudah Yarchai Kallah 2020: Shiur Hakdama",
+  "date": "2020-02-18",
+  "language": "en",
+  "duration_s": "5959",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "102922",
+  "title": "Agudah Yarchai Kallah 2020: Mitzva of Tefila, The 3 Tefillos and Zmanim",
+  "date": "2020-02-17",
+  "language": "en",
+  "duration_s": "3536",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "102433",
+  "title": "Determining Maternity & Paternity",
+  "date": "2020-02-09",
+  "language": "en",
+  "duration_s": "2652",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "102435",
+  "title": "End Of Life Dilemmas",
+  "date": "2020-02-09",
+  "language": "en",
+  "duration_s": "1832",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "102438",
+  "title": "Shabbos In A Technological Age",
+  "date": "2020-02-09",
+  "language": "en",
+  "duration_s": "1725",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "101451",
+  "title": "Parashat Bo",
+  "date": "2020-01-30",
+  "language": "en",
+  "duration_s": "2944",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "100841",
+  "title": "Parashat Va'eira: 4 Kosot and Din Cheirut",
+  "date": "2020-01-23",
+  "language": "en",
+  "duration_s": "3157",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "100868",
+  "title": "An Introduction to Shas",
+  "date": "2020-01-16",
+  "language": "en",
+  "duration_s": "3266",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "98904",
+  "title": "Agudah Chicago Siyum Hashas",
+  "date": "2020-01-05",
+  "language": "en",
+  "duration_s": "1960",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "97695",
+  "title": "Chanukah Candles and Neirot Shabbat",
+  "date": "2019-12-18",
+  "language": "en",
+  "duration_s": "3079",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "96839",
+  "title": "Mitzvah of Tefillah",
+  "date": "2019-12-10",
+  "language": "en",
+  "duration_s": "3045",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "96828",
+  "title": "Utilizing a Person's Distress",
+  "date": "2019-11-28",
+  "language": "en",
+  "duration_s": "4047",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "95649",
+  "title": "Halachot of Onen",
+  "date": "2019-11-21",
+  "language": "en",
+  "duration_s": "3388",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "94673",
+  "title": "Parashat Vayeira: The Story of Sodom",
+  "date": "2019-11-11",
+  "language": "en",
+  "duration_s": "3191",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "94658",
+  "title": "Parashat Lech Lecha: Kibbud Av Va’em & Yishuv Eretz Yisrael",
+  "date": "2019-11-04",
+  "language": "en",
+  "duration_s": "3746",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "93895",
+  "title": "Parashat Noach: From What Age Is a Man Obligated in the Mitzvah of Pirya Virivya",
+  "date": "2019-10-28",
+  "language": "en",
+  "duration_s": "4589",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "92774",
+  "title": "מוצאי יום הכיפורים: עבירות שבין אדם לחבירו",
+  "date": "2019-10-10",
+  "language": "he",
+  "duration_s": "3894",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "91937",
+  "title": "Rosh Hashanah: What is a Kosher Shofar?",
+  "date": "2019-09-25",
+  "language": "en",
+  "duration_s": "3328",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "91343",
+  "title": "Parashat Ki Tavo: \"Mechikat Hashem",
+  "date": "2019-09-19",
+  "language": "en",
+  "duration_s": "3297",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "90952",
+  "title": "Parashat Ki Tetzei: \"Ribbit Devarim",
+  "date": "2019-09-11",
+  "language": "en",
+  "duration_s": "3755",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "90266",
+  "title": "Parashat Shoftim: \" Asmachta beAlma",
+  "date": "2019-09-05",
+  "language": "en",
+  "duration_s": "3788",
   "normalized": false,
   "audio": ""
  }
