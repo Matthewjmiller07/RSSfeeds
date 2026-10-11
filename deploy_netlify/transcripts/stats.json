@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T00:44:50Z",
+ "generated_at": "2026-10-11T00:44:02Z",
  "total": {
   "count": 1103,
   "seconds": 2411252,
@@ -19,12 +19,12 @@
   }
  },
  "transcribed": {
-  "count": 1025,
-  "seconds": 2144409,
+  "count": 1099,
+  "seconds": 2399324,
   "by_lang": {
    "en": {
-    "count": 644,
-    "seconds": 1325861
+    "count": 718,
+    "seconds": 1580776
    },
    "he": {
     "count": 336,
@@ -79,7 +79,11 @@
   },
   {
    "date": "2026-10-10",
-   "count": 1
+   "count": 72
+  },
+  {
+   "date": "2026-10-11",
+   "count": 3
   }
  ]
 }
