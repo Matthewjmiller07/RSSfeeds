@@ -1,5 +1,32 @@
 [
  {
+  "id": "482639",
+  "title": "Short Thought on Parshas Bereishis",
+  "date": "2026-10-11",
+  "language": "en",
+  "duration_s": "363",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "482640",
+  "title": "עצרת זיכרון למרן הרב עובדיה יוסף זצוק''ל",
+  "date": "2026-10-11",
+  "language": "he",
+  "duration_s": "1363",
+  "normalized": true,
+  "audio": ""
+ },
+ {
+  "id": "482746",
+  "title": "Parshas Noach: Mitzvas Piryah V’rivyah",
+  "date": "2026-10-11",
+  "language": "en",
+  "duration_s": "3285",
+  "normalized": false,
+  "audio": ""
+ },
+ {
   "id": "482463",
   "title": "מסר קצר לפרשת בראשית",
   "date": "2026-10-09",
@@ -9887,6 +9914,51 @@
   "date": "2017-02-20",
   "language": "en",
   "duration_s": "2431",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "39050",
+  "title": "Parashat Yitro: Innovative Technology on Shabbat",
+  "date": "2017-02-14",
+  "language": "en",
+  "duration_s": "3621",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "38618",
+  "title": "Aish Yarchai Kallah 5777: Doing a Sin to Save Your Friend",
+  "date": "2017-02-08",
+  "language": "en",
+  "duration_s": "2869",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "38625",
+  "title": "Aish Yarchai Kallah 5777: Q and A",
+  "date": "2017-02-08",
+  "language": "en",
+  "duration_s": "1288",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "33039",
+  "title": "Parashat Shoftim: The Tanach as a Halachic source",
+  "date": "2016-09-06",
+  "language": "en",
+  "duration_s": "3700",
+  "normalized": false,
+  "audio": ""
+ },
+ {
+  "id": "32029",
+  "title": "Tisha B'av and Churban HaBayis",
+  "date": "2016-08-08",
+  "language": "en",
+  "duration_s": "2245",
   "normalized": false,
   "audio": ""
  }
