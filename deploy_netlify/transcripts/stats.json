@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-10-12T00:42:23Z",
+ "generated_at": "2026-10-13T00:42:15Z",
  "total": {
-  "count": 1106,
-  "seconds": 2416263,
+  "count": 1108,
+  "seconds": 2422627,
   "by_lang": {
    "he": {
-    "count": 336,
-    "seconds": 722938
+    "count": 337,
+    "seconds": 726370
    },
    "en": {
-    "count": 724,
-    "seconds": 1596352
+    "count": 725,
+    "seconds": 1599284
    },
    "yi": {
     "count": 46,
@@ -19,16 +19,16 @@
   }
  },
  "transcribed": {
-  "count": 1107,
-  "seconds": 2418058,
+  "count": 1109,
+  "seconds": 2424422,
   "by_lang": {
    "en": {
-    "count": 725,
-    "seconds": 1598147
+    "count": 726,
+    "seconds": 1601079
    },
    "he": {
-    "count": 337,
-    "seconds": 724493
+    "count": 338,
+    "seconds": 727925
    },
    "yi": {
     "count": 45,
@@ -84,6 +84,10 @@
   {
    "date": "2026-10-11",
    "count": 11
+  },
+  {
+   "date": "2026-10-12",
+   "count": 2
   }
  ]
 }
