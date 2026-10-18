@@ -61,8 +61,12 @@
 </head>
 <body>
 <header>
-  <h1>Rav Asher Weiss</h1>
+  <h1 id="spkTitle">Rav Asher Weiss</h1>
   <p>Shiur transcripts &mdash; TorahAnytime archive</p>
+  <div id="spkChips" style="margin-top:1rem">
+    <button class="chip on" data-spk="rav_asher_weiss" style="border-color:#c9bfa9;color:#f3ecdd;background:transparent">Rav Asher Weiss</button>
+    <button class="chip" data-spk="dayan_fuerst" style="border-color:#c9bfa9;color:#f3ecdd;background:transparent">Dayan Fuerst</button>
+  </div>
 </header>
 <main>
   <div id="list">
@@ -95,7 +99,36 @@
 <footer>Transcripts generated with Whisper &middot; not reviewed</footer>
 <script>
 const LANG_LABEL = { en:"English", he:"עברית", yi:"יידיש" };
+const SPEAKERS = {
+  rav_asher_weiss: { title: "Rav Asher Weiss", dir: "rav_asher_weiss" },
+  dayan_fuerst:    { title: "Dayan Fuerst",    dir: "dayan_fuerst" },
+};
+let speaker = "rav_asher_weiss";
 let items = [], lang = "", query = "";
+const indexes = {};
+async function loadIndex(spk){
+  if (indexes[spk]) return indexes[spk];
+  const res = await fetch(SPEAKERS[spk].dir + "/index.json");
+  indexes[spk] = res.ok ? await res.json() : [];
+  return indexes[spk];
+}
+async function setSpeaker(spk){
+  speaker = spk;
+  document.getElementById("spkTitle").textContent = SPEAKERS[spk].title;
+  document.querySelectorAll("#spkChips .chip").forEach(c => {
+    const on = c.dataset.spk === spk;
+    c.classList.toggle("on", on);
+    c.style.background = on ? "#7a5c2e" : "transparent";
+  });
+  items = await loadIndex(spk);
+  renderList();
+  const res = await fetch(SPEAKERS[spk].dir + "/stats.json");
+  renderStats(res.ok ? await res.json() : null);
+}
+document.querySelectorAll("#spkChips .chip").forEach(c => c.onclick = () => {
+  back(); history.replaceState(null, "", " ");
+  setSpeaker(c.dataset.spk);
+});
 
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 
@@ -141,7 +174,7 @@ async function show(id, t){
   const body = document.getElementById("dBody");
   body.innerHTML = "<p>Loading&hellip;</p>";
   try {
-    const res = await fetch("rav_asher_weiss/" + encodeURIComponent(it.id) + ".md");
+    const res = await fetch(SPEAKERS[speaker].dir + "/" + encodeURIComponent(it.id) + ".md");
     if (!res.ok) throw new Error("HTTP " + res.status);
     const raw = await res.text();
     const parts = raw.split(/^---$/m);
@@ -217,9 +250,9 @@ function back(){
 document.getElementById("backBtn").onclick = e => { e.preventDefault(); back(); history.replaceState(null,""," "); };
 
 document.getElementById("q").addEventListener("input", e => { query = e.target.value; renderList(); });
-document.querySelectorAll(".chip").forEach(c => c.onclick = () => {
-  document.querySelectorAll(".chip").forEach(x => x.classList.remove("on"));
-  c.classList.add("on"); lang = c.dataset.lang; renderList();
+document.querySelectorAll("#controls .chip").forEach(c => c.onclick = () => {
+  document.querySelectorAll("#controls .chip").forEach(x => x.classList.remove("on"));
+  c.classList.add("on"); lang = c.dataset.lang || ""; renderList();
 });
 
 function fmtH(s){ return (s/3600).toFixed(s >= 36000 ? 0 : 1); }
@@ -254,18 +287,24 @@ function renderStats(st){
     (st.generated_at ? " · updated " + st.generated_at.slice(0,10) : "");
 }
 
-fetch("index.json").then(r => r.json()).then(data => {
-  items = data;
-  renderList();
+(async function init(){
+  await setSpeaker("rav_asher_weiss");
   if (location.hash.length > 1){
     const hsh = location.hash.slice(1);
     const at = hsh.indexOf("@");
-    if (at > 0) show(hsh.slice(0, at), hsh.slice(at + 1));
-    else show(hsh);
+    const id = at > 0 ? hsh.slice(0, at) : hsh;
+    const t = at > 0 ? hsh.slice(at + 1) : undefined;
+    let found = items.find(x => String(x.id) === String(id));
+    if (!found){
+      for (const spk of Object.keys(SPEAKERS)){
+        if (spk === speaker) continue;
+        const idx = await loadIndex(spk);
+        if (idx.find(x => String(x.id) === String(id))){ await setSpeaker(spk); found = true; break; }
+      }
+    }
+    if (found) show(id, t);
   }
-});
-
-fetch("stats.json").then(r => r.ok ? r.json() : null).then(renderStats).catch(()=>{});
+})();
 </script>
 </body>
 </html>
