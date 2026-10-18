@@ -104,15 +104,15 @@
 <script>
 const LANG_LABEL = { en:"English", he:"עברית", yi:"יידיש" };
 const SPEAKERS = {
-  rav_asher_weiss: { title: "Rav Asher Weiss", dir: "rav_asher_weiss" },
-  dayan_fuerst:    { title: "Dayan Fuerst",    dir: "dayan_fuerst" },
+  rav_asher_weiss: { title: "Rav Asher Weiss", dir: "rav_asher_weiss", base: "" },
+  dayan_fuerst:    { title: "Dayan Fuerst",    dir: "dayan_fuerst",    base: "dayan_fuerst/" },
 };
 let speaker = "rav_asher_weiss";
 let items = [], lang = "", query = "";
 const indexes = {};
 async function loadIndex(spk){
   if (indexes[spk]) return indexes[spk];
-  const res = await fetch(SPEAKERS[spk].dir + "/index.json");
+  const res = await fetch(SPEAKERS[spk].base + "index.json");
   indexes[spk] = res.ok ? await res.json() : [];
   return indexes[spk];
 }
@@ -126,7 +126,7 @@ async function setSpeaker(spk){
   });
   items = await loadIndex(spk);
   renderList();
-  const res = await fetch(SPEAKERS[spk].dir + "/stats.json");
+  const res = await fetch(SPEAKERS[spk].base + "stats.json");
   renderStats(res.ok ? await res.json() : null);
 }
 document.querySelectorAll("#spkChips .chip").forEach(c => c.onclick = () => {
