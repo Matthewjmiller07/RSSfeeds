@@ -173,7 +173,7 @@ async function show(id, t){
     (LANG_LABEL[it.language]||it.language) + " · " + (it.date||"") +
     (it.duration_s ? " · " + fmtDur(it.duration_s) : "");
   const audio = document.getElementById("dAudio");
-  if (it.audio){ audio.src = it.audio; audio.style.display = "block"; }
+  if (it.audio && it.audio.indexOf("redacted") === -1){ audio.src = it.audio; audio.style.display = "block"; }
   else { audio.removeAttribute("src"); audio.style.display = "none"; }
   const body = document.getElementById("dBody");
   body.innerHTML = "<p>Loading&hellip;</p>";
