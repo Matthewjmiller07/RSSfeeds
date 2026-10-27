@@ -1,6 +1,8 @@
 import os
 import sys
 import csv
+import base64
+import json
 import requests
 import datetime
 import subprocess
@@ -140,6 +142,77 @@ def fetch_torahanytime_lectures(speaker_id):
         print(f"❌ Error fetching data for speaker {speaker_id}: {e}")
         return []
 
+# ---------------- STABLE AUDIO URLS ---------------- #
+# TorahAnytime's `audio_url` is a signed proxier URL that EXPIRES (podcast
+# apps then fail with 410 Gone). The paginated API's proxier URLs embed the
+# permanent origin URL as a base64url first path segment; older lectures
+# use an opaque segment instead, so committed maps in data/ cover those.
+# Resolution order per lecture: paginated decode -> repo map -> proxier
+# fallback. A failure anywhere here must NEVER break the feed: worst case
+# is the old expiring URL, exactly as before.
+
+def decode_proxier_url(url):
+    """Decode a paginated-API proxier URL to its permanent origin URL.
+
+    Returns the decoded URL only if it parses as http(s) on a known
+    permanent host (Backblaze or dl.torahanytime.com); otherwise None.
+    """
+    try:
+        if not url or "proxier.torahanytime.com" not in url:
+            return None
+        seg = url.split("/")[3]
+        dec = base64.urlsafe_b64decode(seg + "=" * (-len(seg) % 4)).decode("utf-8")
+        if not (dec.startswith("http://") or dec.startswith("https://")):
+            return None
+        host = dec.split("/")[2]
+        if host == "dl.torahanytime.com" or host.endswith(".backblazeb2.com"):
+            return dec
+        return None
+    except Exception:
+        return None
+
+def load_repo_stable_map(speaker_id):
+    """Load the committed id->stable-URL map for a speaker, if present."""
+    path = os.path.join("data", f"stable_audio_urls_{speaker_id}.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        print(f"🗺️  Loaded {len(data)} committed stable URLs from {path}.")
+        return {str(k): v for k, v in data.items()}
+    except (OSError, ValueError) as e:
+        print(f"ℹ️  No usable committed stable map at {path} ({e}).")
+        return {}
+
+def fetch_paginated_stable_map(speaker_id):
+    """Page the API (limit=100) and map lecture id -> decoded stable URL."""
+    stable = {}
+    offset = 0
+    while True:
+        try:
+            res = requests.get(
+                f"https://api.torahanytime.com/speakers/{speaker_id}/lectures?limit=100&offset={offset}",
+                timeout=30)
+            res.raise_for_status()
+            data = res.json()
+            lectures = data.get("lecture", [])
+            if not lectures:
+                break
+            for lec in lectures:
+                dec = decode_proxier_url(lec.get("audio_url") or lec.get("proxy_mp3_url"))
+                if dec:
+                    stable[str(lec["id"])] = dec
+            total = data.get("resultsCount")
+            offset += len(lectures)
+            if total is not None and offset >= total:
+                break
+            if len(lectures) < 100:
+                break
+        except requests.RequestException as e:
+            print(f"⚠️  Stable-map pagination failed for {speaker_id} at offset {offset}: {e}")
+            break
+    print(f"🗺️  Paginated stable map for {speaker_id}: {len(stable)} URLs.")
+    return stable
+
 def fetch_yutorah_lectures(teacher_id):
     # This function is correct and does not need changes.
     # ... (function body remains the same)
@@ -253,10 +326,17 @@ def main():
         if not lectures:
             continue
 
+        # Prefer permanent audio URLs so podcast apps don't hit expired
+        # signed links. Paginated decode wins over the committed map on
+        # conflict; anything unmapped keeps the API URL as before.
+        stable_map = {**load_repo_stable_map(speaker['id']),
+                      **fetch_paginated_stable_map(speaker['id'])}
+
         entries = []
         for lec in lectures:
             # TorahAnytime schema: audio file is now in `audio_url` (was `mp3_url`)
-            audio_url = lec.get("audio_url") or lec.get("proxy_mp3_url")
+            audio_url = (stable_map.get(str(lec["id"]))
+                         or lec.get("audio_url") or lec.get("proxy_mp3_url"))
             if not audio_url:
                 continue
             
