@@ -1,5 +1,14 @@
 [
  {
+  "id": "487998",
+  "title": "Parshas Chayei Sarah: Dina DeBar Metzra",
+  "date": "2026-11-02",
+  "language": "en",
+  "duration_s": "2925",
+  "normalized": false,
+  "audio": ""
+ },
+ {
   "id": "487521",
   "title": "Divrei Hesped on HaGaon HaRav Pinchas Zelivansky ZT\"L, father-in-law of HaRav Menachem Zvi Twersky Shlita (Rosh Yeshivas Toras Chaim)",
   "date": "2026-10-31",
@@ -267,7 +276,7 @@
   "language": "he",
   "duration_s": "2898",
   "normalized": true,
-  "audio": ""
+  "audio": "https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/481965/481965-tmiun9.mp3"
  },
  {
   "id": "481337",
@@ -8799,7 +8808,7 @@
   "language": "he",
   "duration_s": "3341",
   "normalized": true,
-  "audio": ""
+  "audio": "https://dl.torahanytime.com/mp3/127367--____09_03_2020__44910b43-f3f3-4073-bee0-0c2e3e54e0de.mp4.mp3"
  },
  {
   "id": "127788",
@@ -8835,7 +8844,7 @@
   "language": "he",
   "duration_s": "1113",
   "normalized": true,
-  "audio": ""
+  "audio": "https://dl.torahanytime.com/mp3/127376--____09_03_2020__4c65fd91-8a44-4fc3-98fe-922343b7ee3f.mp4.mp3"
  },
  {
   "id": "126923",
@@ -9006,7 +9015,7 @@
   "language": "he",
   "duration_s": "659",
   "normalized": true,
-  "audio": ""
+  "audio": "https://dl.torahanytime.com/mp3/118955--____06_03_2020__4f93f714-e6c2-4286-bdc1-89a7ff2b7fc7.mp4.mp3"
  },
  {
   "id": "119041",
@@ -9429,7 +9438,7 @@
   "language": "he",
   "duration_s": "3894",
   "normalized": true,
-  "audio": ""
+  "audio": "https://dl.torahanytime.com/mp3/92774--Osher__Weiss__09_05_2019__ca1621cd-043d-4f75-aa14-3cfad3a69ae6.mp4.mp3"
  },
  {
   "id": "91937",
