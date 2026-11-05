@@ -1,0 +1,29 @@
+{
+ "generated_at": "2026-11-05T21:36:31Z",
+ "total": {
+  "count": 7626,
+  "seconds": 13180140,
+  "by_lang": {
+   "en": {
+    "count": 7626,
+    "seconds": 13180140
+   }
+  }
+ },
+ "transcribed": {
+  "count": 4,
+  "seconds": 5340,
+  "by_lang": {
+   "en": {
+    "count": 4,
+    "seconds": 5340
+   }
+  }
+ },
+ "daily": [
+  {
+   "date": "2026-11-05",
+   "count": 4
+  }
+ ]
+}
