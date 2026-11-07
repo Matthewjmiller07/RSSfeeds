@@ -1,5 +1,14 @@
 [
  {
+  "id": "582",
+  "title": "Shiur 582 – SELF DRIVING CARS ON SHABBOS?!",
+  "date": "2026-11-06",
+  "language": "en",
+  "duration_s": "3514",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/q8sj86445g2ekude/Headlines_11-7-26.mp3"
+ },
+ {
   "id": "581",
   "title": "Shiur 581 – Drunk in Yerushalayim: Who’s Responsible for the Yeshiva Drinking Crisis?",
   "date": "2026-10-29",
@@ -466,5 +475,32 @@
   "duration_s": "3744",
   "normalized": false,
   "audio": "https://mcdn.podbean.com/mf/web/byf2ggfcupu4hbjq/Headlines_9-27-25.mp3"
+ },
+ {
+  "id": "529",
+  "title": "Shiur 529 – Rosh Hashana & Yom Kippur Special: Making 5786 into “The Year”",
+  "date": "2025-09-18",
+  "language": "en",
+  "duration_s": "7830",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/rycdtnmk3td6p7kp/Headlines_9-20-25.mp3"
+ },
+ {
+  "id": "528",
+  "title": "Shiur 528 – “The Voice of Awe” – Halachic Debates on Chazanus and the Yamim Noraim",
+  "date": "2025-09-11",
+  "language": "en",
+  "duration_s": "7068",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/q584q4ngy23iyqgr/Headlines_9-13-25.mp3"
+ },
+ {
+  "id": "527",
+  "title": "Shiur 527 – Kosher Kitchen, Treif Business?",
+  "date": "2025-09-04",
+  "language": "en",
+  "duration_s": "4922",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/i88u7pqci552gn3h/Headlines_9-6-25.mp3"
  }
 ]
