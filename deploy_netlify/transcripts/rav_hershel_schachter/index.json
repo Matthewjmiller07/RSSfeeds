@@ -79,5 +79,95 @@
   "duration_s": "1920",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1194342/mishnah-berurahilchos-beis-haknesset-2---siman-151712.mp3"
+ },
+ {
+  "id": "1194062",
+  "title": "Perek RebbiEliezer D'Milah #5 - Pikuach Nefesh, Os of Tefillin, Bris Milah, Michusrai Kaparah, Tumah(132a)",
+  "date": "2026-1029T",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1194062/perek-rebbieliezer-d%27milah-5---pikuach-nefesh-os-of-tefillin-bris-milah-michusrai-kaparah-tumah132a.mp3"
+ },
+ {
+  "id": "1193799",
+  "title": "BishulAkum",
+  "date": "2026-1028T",
+  "language": "en",
+  "duration_s": "540",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/5704/1193799/bishulakum.mp3"
+ },
+ {
+  "id": "1193533",
+  "title": "Even HaezerShiur 25",
+  "date": "2026-1027T",
+  "language": "en",
+  "duration_s": "1020",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/1053/1193533/even-haezer-shiur25.mp3"
+ },
+ {
+  "id": "1193534",
+  "title": "Even HaezerShiur 26",
+  "date": "2026-1027T",
+  "language": "en",
+  "duration_s": "1860",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/1053/1193534/even-haezer-shiur26.mp3"
+ },
+ {
+  "id": "1193539",
+  "title": "Even HaezerShiur 27",
+  "date": "2026-1027T",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/1053/1193539/even-haezer-shiur27.mp3"
+ },
+ {
+  "id": "1193588",
+  "title": "Even HaezerShiur 28",
+  "date": "2026-1027T",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/1053/1193588/even-haezer-shiur28.mp3"
+ },
+ {
+  "id": "1192632",
+  "title": "ChagigaShiur#12 YCQ",
+  "date": "2026-1020T",
+  "language": "en",
+  "duration_s": "1980",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1192632/chagiga-shiur12ycq.mp3"
+ },
+ {
+  "id": "1193795",
+  "title": "MishnahBerura Hilchos Beis HaKnesset 1 - Siman 150:3-151:7",
+  "date": "2026-10-28",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1193795/mishnah-berurahilchos-beis-haknesset-1---siman-15031517.mp3"
+ },
+ {
+  "id": "1193867",
+  "title": "Katz KollelYevamos 93b: מילתא דעבידאלגלויי",
+  "date": "2026-10-28",
+  "language": "en",
+  "duration_s": "2760",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/47660/1193867/katz-kollelyevamos-93b-%D7%9E%D7%99%D7%9C%D7%AA%D7%90-%D7%93%D7%A2%D7%91%D7%99%D7%93%D7%90%D7%9C%D7%92%D7%9C%D7%95%D7%99%D7%99.mp3"
+ },
+ {
+  "id": "1193868",
+  "title": "ShabbosBechina 1 Chazara 7",
+  "date": "2026-10-28",
+  "language": "en",
+  "duration_s": "1680",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1193868/shabbos-bechina-1chazara-7.mp3"
  }
 ]
