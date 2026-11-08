@@ -4590,6 +4590,15 @@
   "audio": "https://download.yutorah.org/2023/176246/1058387/gittin--beki%27iut-63b-65a.mp3"
  },
  {
+  "id": "1057236",
+  "title": "Gittin - HaMegaresh #53 MiPihem veLo miPi Ketavam#1",
+  "date": "2023-02-10",
+  "language": "en",
+  "duration_s": "1320",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2023/176246/1057236/gittin--hamegaresh-53-mipihem-velo-mipi-ketavam1.mp3"
+ },
+ {
   "id": "1057237",
   "title": "Gittin - HaMegaresh #54 MiPihem veLo miPi Ketavam#2",
   "date": "2023-02-10",
@@ -4615,6 +4624,42 @@
   "duration_s": "None",
   "normalized": false,
   "audio": "https://download.yutorah.org/2023/176246/1057241/-gittin--hamegaresh-56-mipihem-velo-mipi-ketavam4.mp3"
+ },
+ {
+  "id": "1056914",
+  "title": "KJ's Dr.William Major Memorial Advanced Shiur in Talmud with Rabbi Dr. JeremyWieder",
+  "date": "2023-02-07",
+  "language": "en",
+  "duration_s": "3360",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2023/30160/1056914/kj%27s-dr.-williammajor-memorial-advanced-shiur-in-talmud-with-rabbi-dr.-jeremywieder.mp3"
+ },
+ {
+  "id": "1056593",
+  "title": "Gittin - HaMegaresh #50 Harei At Muteret, Penuyah#2",
+  "date": "2023-02-03",
+  "language": "en",
+  "duration_s": "1260",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2023/176246/1056593/gittin--hamegaresh-50-harei-at-muteret-penuyah2.mp3"
+ },
+ {
+  "id": "1056594",
+  "title": "Gittin - HaMegaresh #51 Harei At Muteret, Penuyah#3",
+  "date": "2023-02-03",
+  "language": "en",
+  "duration_s": "1680",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2023/176246/1056594/gittin--hamegaresh-51-harei-at-muteret-penuyah3.mp3"
+ },
+ {
+  "id": "1056595",
+  "title": "Gittin - HaMegaresh #52 Hea'rot beKetivat HaGet, GetShichrur",
+  "date": "2023-02-03",
+  "language": "en",
+  "duration_s": "120",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2023/176246/1056595/gittin--hamegaresh-52-hea%27rot-beketivat-haget-getshichrur.mp3"
  },
  {
   "id": "1043615",
