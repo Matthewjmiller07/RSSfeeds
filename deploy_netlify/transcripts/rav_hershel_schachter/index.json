@@ -169,5 +169,59 @@
   "duration_s": "1680",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1193868/shabbos-bechina-1chazara-7.mp3"
+ },
+ {
+  "id": "1193573",
+  "title": "ShabbosBechina 1 Chazara 5",
+  "date": "2026-10-27",
+  "language": "en",
+  "duration_s": "1920",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1193573/shabbos-bechina-1chazara-5.mp3"
+ },
+ {
+  "id": "1193575",
+  "title": "MishnahBerura Hilchos Kriyas HaTorah 6 - Siman 147:2-150:2",
+  "date": "2026-10-27",
+  "language": "en",
+  "duration_s": "2400",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1193575/mishnah-berurahilchos-kriyas-hatorah-6---siman-14721502.mp3"
+ },
+ {
+  "id": "1193661",
+  "title": "Why I WearTecheiles",
+  "date": "2026-10-27",
+  "language": "en",
+  "duration_s": "3120",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/55086/1193661/why-i-weartecheiles.mp3"
+ },
+ {
+  "id": "1193706",
+  "title": "ShabbosBechina 1 Chazara 6",
+  "date": "2026-10-27",
+  "language": "en",
+  "duration_s": "1620",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1193706/shabbos-bechina-1chazara-6.mp3"
+ },
+ {
+  "id": "1193729",
+  "title": "ChagigaShiur#13 YCQ",
+  "date": "2026-10-27",
+  "language": "en",
+  "duration_s": "2220",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1193729/chagiga-shiur13ycq.mp3"
+ },
+ {
+  "id": "1193434",
+  "title": "MishnahBerura Hilchos Kriyas HaTorah 6 - Siman 144:3-147:8",
+  "date": "2026-10-26",
+  "language": "en",
+  "duration_s": "1920",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1193434/mishnah-berurahilchos-kriyas-hatorah-6---siman-14431478.mp3"
  }
 ]
