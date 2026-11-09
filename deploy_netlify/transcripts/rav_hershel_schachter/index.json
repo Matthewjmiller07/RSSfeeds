@@ -216,6 +216,15 @@
   "audio": "https://download.yutorah.org/2026/959/1193729/chagiga-shiur13ycq.mp3"
  },
  {
+  "id": "1193383",
+  "title": "ShabbosBechina 1 Chazara 4",
+  "date": "2026-10-26",
+  "language": "en",
+  "duration_s": "2220",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1193383/shabbos-bechina-1chazara-4.mp3"
+ },
+ {
   "id": "1193434",
   "title": "MishnahBerura Hilchos Kriyas HaTorah 6 - Siman 144:3-147:8",
   "date": "2026-10-26",
@@ -223,5 +232,59 @@
   "duration_s": "1920",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1193434/mishnah-berurahilchos-kriyas-hatorah-6---siman-14431478.mp3"
+ },
+ {
+  "id": "1193295",
+  "title": "MishnahBerura Hilchos Kriyas HaTorah 5 - Siman 143:4-144:2",
+  "date": "2026-10-25",
+  "language": "en",
+  "duration_s": "2280",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1193295/mishnah-berurahilchos-kriyas-hatorah-5---siman-14341442.mp3"
+ },
+ {
+  "id": "1192967",
+  "title": "MishnahBerura Hilchos Kriyas HaTorah 4 - Siman 139:6-141:4",
+  "date": "2026-10-22",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192967/mishnah-berurahilchos-kriyas-hatorah-4---siman-13961414.mp3"
+ },
+ {
+  "id": "1192969",
+  "title": "MishnahBerura Hilchos Kriyas HaTorah 5 - Siman 141:5-143:4",
+  "date": "2026-10-22",
+  "language": "en",
+  "duration_s": "1680",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192969/mishnah-berurahilchos-kriyas-hatorah-5---siman-14151434.mp3"
+ },
+ {
+  "id": "1192970",
+  "title": "Perek RebbiEliezer D'Milah #4 - Mitzah of Lulav, When to Bake Matzah, Taz HaYaduah, Shofar ShelYovel, Machshierie Mitzvah Dosheh Shabbos (132a)",
+  "date": "2026-10-22",
+  "language": "en",
+  "duration_s": "1380",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192970/perek-rebbieliezer-d%27milah-4---mitzah-of-lulav-when-to-bake-matzah-taz-hayaduah-shofar-shel-yovelmachshierie-mitzvah-dosheh-shabbos132a.mp3"
+ },
+ {
+  "id": "1192692",
+  "title": "MishnahBerura Hilchos Kriyas HaTorah 3 - Siman 137:1-139:5",
+  "date": "2026-10-21",
+  "language": "en",
+  "duration_s": "2280",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192692/mishnah-berurahilchos-kriyas-hatorah-3---siman-13711395.mp3"
+ },
+ {
+  "id": "1192813",
+  "title": "ShabbosBechina 1 Chazara 3",
+  "date": "2026-10-21",
+  "language": "en",
+  "duration_s": "1380",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192813/shabbos-bechina-1chazara-3.mp3"
  }
 ]
