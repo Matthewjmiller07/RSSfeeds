@@ -286,5 +286,95 @@
   "duration_s": "1380",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1192813/shabbos-bechina-1chazara-3.mp3"
+ },
+ {
+  "id": "1192596",
+  "title": "ShabbosBechina 1 Chazara 2",
+  "date": "2026-10-20",
+  "language": "en",
+  "duration_s": "480",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192596/shabbos-bechina-1chazara-2.mp3"
+ },
+ {
+  "id": "1192461",
+  "title": "Shabbos Shiur#18 and Chazara 1 - Kim Leih Bidarabah Minae, Roof over Reshus HaRabim, Machloket in Metsius(94a)",
+  "date": "2026-10-19",
+  "language": "en",
+  "duration_s": "1500",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192461/shabbos-shiur-18and-chazara-1---kim-leih-bidarabah-minae-roof-over-reshus-harabim-machloket-in-metsius94a.mp3"
+ },
+ {
+  "id": "1192462",
+  "title": "MishnahBerura Hilchos Kriyas HaTorah 2 - Siman 135:6-136:1",
+  "date": "2026-10-19",
+  "language": "en",
+  "duration_s": "1320",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192462/mishnah-berurahilchos-kriyas-hatorah-2---siman-13561361.mp3"
+ },
+ {
+  "id": "1192305",
+  "title": "Shabbos Shiur #17 - Hotzah Sheino Tzarich LeGufah, Kavid Habrios,Muktzah, Migaben (93b-94b)",
+  "date": "2026-10-18",
+  "language": "en",
+  "duration_s": "1440",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192305/shabbos-shiur-17--hotzah-sheino-tzarich-legufah-kavid-habrios-muktzah-migaben-93b-94b.mp3"
+ },
+ {
+  "id": "1192307",
+  "title": "Mishnah Berura Hilchos Kriyas HaTorah 1 - Siman 133-135:6",
+  "date": "2026-10-18",
+  "language": "en",
+  "duration_s": "2760",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192307/mishnah-berurahilchos-kriyas-hatorah-1---siman-133-1356.mp3"
+ },
+ {
+  "id": "1191973",
+  "title": "Mishnah Berura Hilchos Birchas Kohanim 8 - Siman 132",
+  "date": "2026-10-15",
+  "language": "en",
+  "duration_s": "2280",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1191973/mishnah-berurahilchos-birchas-kohanim-8---siman-132.mp3"
+ },
+ {
+  "id": "1192045",
+  "title": "Perek Rebbi Eliezer D'Milah #3 - Carrying in a Hallway, Gezierat Shaveh,Sechira Kanyah (131a-131b)",
+  "date": "2026-10-15",
+  "language": "en",
+  "duration_s": "1920",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1192045/perek-rebbieliezer-d%27milah-3---carrying-in-a-hallway-gezierat-shaveh-sechira-kanyah-131a-131b.mp3"
+ },
+ {
+  "id": "1191860",
+  "title": "Shabbos Shiur #16 - Zeh Yachol ViZeh Aino Yachol, Misyayah Ain BoMamish, HaChai Noseh Es Atzmo, Kikar UTinok (93b)",
+  "date": "2026-10-14",
+  "language": "en",
+  "duration_s": "1920",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1191860/shabbos-shiur-16--zeh-yachol-vizeh-aino-yachol-misyayah-ain-bo-mamish-hachai-noseh-es-atzmo-kikar-utinok93b.mp3"
+ },
+ {
+  "id": "1191861",
+  "title": "Mishnah Berura Hilchos Birchas Kohanim 7 - Siman 130-131",
+  "date": "2026-10-14",
+  "language": "en",
+  "duration_s": "2100",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1191861/mishnah-berurahilchos-birchas-kohanim-7---siman-130-131.mp3"
+ },
+ {
+  "id": "1191633",
+  "title": "Mishnah Berura Hilchos Birchas Kohanim 6 - Siman 128:37-45",
+  "date": "2026-10-13",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1191633/mishnah-berurahilchos-birchas-kohanim-6---siman-12837-45.mp3"
  }
 ]
