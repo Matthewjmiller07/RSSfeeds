@@ -369,6 +369,15 @@
   "audio": "https://download.yutorah.org/2026/201682/1191861/mishnah-berurahilchos-birchas-kohanim-7---siman-130-131.mp3"
  },
  {
+  "id": "1191593",
+  "title": "Mishnah Berura Hilchos Birchas Kohanim 4 - Siman 128:15-19",
+  "date": "2026-10-13",
+  "language": "en",
+  "duration_s": "1440",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1191593/mishnah-berurahilchos-birchas-kohanim-4---siman-12815-19.mp3"
+ },
+ {
   "id": "1191633",
   "title": "Mishnah Berura Hilchos Birchas Kohanim 6 - Siman 128:37-45",
   "date": "2026-10-13",
@@ -376,5 +385,41 @@
   "duration_s": "1800",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1191633/mishnah-berurahilchos-birchas-kohanim-6---siman-12837-45.mp3"
+ },
+ {
+  "id": "1191695",
+  "title": "Shabbos Shiur #15 - Misasek, Davar Sheino Miskaven, Kosher, Battlah DatoEtzel Kul Adam (75b, 92a)",
+  "date": "2026-10-13",
+  "language": "en",
+  "duration_s": "1860",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1191695/shabbos-shiur-15--misasek-davar-sheino-miskaven-kosher-battlah-dato-etzel-kul-adam-75b-92a.mp3"
+ },
+ {
+  "id": "1191720",
+  "title": "Chagiga Shiur#11 YCQ",
+  "date": "2026-10-13",
+  "language": "en",
+  "duration_s": "2100",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1191720/chagiga-shiur11ycq.mp3"
+ },
+ {
+  "id": "1191568",
+  "title": "Mishnah Berura Hilchos Birchas Kohanim 5 - Siman 128:20-36",
+  "date": "2026-10-12",
+  "language": "en",
+  "duration_s": "1680",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1191568/mishnah-berurahilchos-birchas-kohanim-5---siman-12820-36.mp3"
+ },
+ {
+  "id": "1191569",
+  "title": "Shabbos Shiur #14 - Definition of Death, Korayah, Shnayim SheAsuhu,Pireches, Mimareach (75a)",
+  "date": "2026-10-12",
+  "language": "en",
+  "duration_s": "1860",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1191569/shabbos-shiur-14--definition-of-death-korayah-shnayim-sheasuhu-pireches-mimareach-75a.mp3"
  }
 ]
