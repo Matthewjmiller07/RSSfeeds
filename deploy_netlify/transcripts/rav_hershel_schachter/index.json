@@ -430,5 +430,50 @@
   "duration_s": "1800",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1191373/shabbos-shiur-13--sidurah-dipas-defention-of-death-gozez-tofer-74b.mp3"
+ },
+ {
+  "id": "1190988",
+  "title": "Mishnah Berura Hilchos Birchas Kohanim 3 - Siman 128:4-14",
+  "date": "2026-10-08",
+  "language": "en",
+  "duration_s": "1860",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1190988/mishnah-berurahilchos-birchas-kohanim-3---siman-1284-14.mp3"
+ },
+ {
+  "id": "1190993",
+  "title": "Perek Rebbi Eliezer D'Milah #2 - Simcha at a Bris, The Get of Cleves,K'Katan Shenolad Dami, Carrying in a Hallway (130a-130b)",
+  "date": "2026-10-08",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1190993/perek-rebbieliezer-d%27milah-2---simcha-at-a-bris-the-get-of-cleves-k%27katan-shenolad-dami-carrying-in-ahallway-130a-130b.mp3"
+ },
+ {
+  "id": "1190856",
+  "title": "Shabbos Shiur #12 - Nishtaneh, Koach Gavrah, Binyan B'Keliym, ChachmahYeserah Shaini, Melacha of a Bris (74b)",
+  "date": "2026-10-07",
+  "language": "en",
+  "duration_s": "1560",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1190856/shabbos-shiur-12--nishtaneh-koach-gavrah-binyan-b%27keliym-chachmah-yeserah-shaini-melacha-of-a-bris-74b.mp3"
+ },
+ {
+  "id": "1190857",
+  "title": "Mishnah Berura Hilchos Birchas Kohanim 1 - Siman 128",
+  "date": "2026-10-07",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1190857/mishnah-berurahilchos-birchas-kohanim-1---siman-128.mp3"
+ },
+ {
+  "id": "1190858",
+  "title": "Mishnah Berura Hilchos Birchas Kohanim 2 - Siman 128:1-3",
+  "date": "2026-10-07",
+  "language": "en",
+  "duration_s": "1740",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1190858/mishnah-berurahilchos-birchas-kohanim-2---siman-1281-3.mp3"
  }
 ]
