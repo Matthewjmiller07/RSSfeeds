@@ -1,5 +1,14 @@
 [
  {
+  "id": "583",
+  "title": "Shiur 583 – Why men and women don't understand each other – and how it affects Shalom Bayis",
+  "date": "2026-11-12",
+  "language": "en",
+  "duration_s": "5949",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/a7d425bqx9wzzp6i/Headlines_11-14-26.mp3"
+ },
+ {
   "id": "582",
   "title": "Shiur 582 – SELF DRIVING CARS ON SHABBOS?!",
   "date": "2026-11-06",
@@ -1168,5 +1177,32 @@
   "duration_s": "5574",
   "normalized": false,
   "audio": "https://mcdn.podbean.com/mf/web/4c8iwb/Headlines_1-27-24.mp3"
+ },
+ {
+  "id": "452",
+  "title": "Shiur 452 – Dealing with traumatic times – how to dig out of a rut",
+  "date": "2024-01-18",
+  "language": "en",
+  "duration_s": "7400",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/icrx97/Headlines_1-20-24.mp3"
+ },
+ {
+  "id": "451",
+  "title": "Shiur 451 – What’s really going on in the Gaza battlefield. In Memory of Yakir and David HY”D – “Chavrusas in life, Chavrusas in death, Chavrusas in Olam Habah”",
+  "date": "2024-01-11",
+  "language": "en",
+  "duration_s": "4854",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/mwbqk8/Headlines_1-13-24.mp3"
+ },
+ {
+  "id": "450",
+  "title": "Shiur 450 – Amazon in Halacha",
+  "date": "2024-01-04",
+  "language": "en",
+  "duration_s": "6732",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/k76zzi/Headlines_1-6-24.mp3"
  }
 ]
