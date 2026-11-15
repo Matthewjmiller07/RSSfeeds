@@ -450,6 +450,15 @@
   "audio": "https://download.yutorah.org/2026/201682/1190993/perek-rebbieliezer-d%27milah-2---simcha-at-a-bris-the-get-of-cleves-k%27katan-shenolad-dami-carrying-in-ahallway-130a-130b.mp3"
  },
  {
+  "id": "1190817",
+  "title": "Chagiga Shiur#10 YCQ",
+  "date": "2026-10-07",
+  "language": "en",
+  "duration_s": "2040",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1190817/chagiga-shiur10ycq.mp3"
+ },
+ {
   "id": "1190856",
   "title": "Shabbos Shiur #12 - Nishtaneh, Koach Gavrah, Binyan B'Keliym, ChachmahYeserah Shaini, Melacha of a Bris (74b)",
   "date": "2026-10-07",
@@ -484,5 +493,50 @@
   "duration_s": "3000",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/47660/1190859/katz-kollelyevamos-89b-90b-%D7%9C%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%A2%D7%A0%D7%99%D7%99%D7%A0%D7%99%D7%9D---%D7%A2%D7%A7%D7%99%D7%A8%D7%AA-%D7%93%D7%91%D7%A8%D7%9E%D7%94%22%D7%AA-%D7%95%D7%92%D7%96%D7%99%D7%A8%D7%95%D7%AA%D7%93%D7%A8%D7%91%D7%A0%D7%9F-%D7%92%D7%93%D7%A8-%D7%93%D7%99%D7%9F%D7%97%D7%99%D7%93%D7%95%D7%A9-%D7%98%22%D7%96-%D7%94%D7%99%D7%93%D7%95%D7%A2%D7%93%D7%91%D7%A8-%D7%94%D7%93%D7%95%D7%9E%D7%94-%D7%9E%D7%A9%D7%95%D7%9D%D7%A2%D7%99%D7%92%D7%95%D7%A0%D7%90-%D7%90%D7%A7%D7%99%D7%9C%D7%95-%D7%91%D7%94%D7%A8%D7%91%D7%A0%D7%9F.mp3"
+ },
+ {
+  "id": "1190743",
+  "title": "Shabbos Shiur #11 - Doing Mitzvos LiShmah, Color of Techeiles,Definition of Death, Tochein, Temperature of Bishul (74b)",
+  "date": "2026-10-06",
+  "language": "en",
+  "duration_s": "1920",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1190743/shabbos-shiur-11--doing-mitzvos-lishmah-color-of-techeiles-definition-of-death-tochein-temperature-of-bishul74b.mp3"
+ },
+ {
+  "id": "1190745",
+  "title": "The Mitzvah of Talmud Torah",
+  "date": "2026-10-06",
+  "language": "en",
+  "duration_s": "540",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1190745/the-mitzvah-oftalmud-torah.mp3"
+ },
+ {
+  "id": "1189856",
+  "title": "Inyanei Sukkos 5787 #2",
+  "date": "2026-09-23",
+  "language": "en",
+  "duration_s": "1500",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/55086/1189856/inyanei-sukkos5787-2.mp3"
+ },
+ {
+  "id": "1189881",
+  "title": "Inayanei Succos 5787 #2",
+  "date": "2026-09-23",
+  "language": "en",
+  "duration_s": "1440",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1189881/inayanei-succos5787-2.mp3"
+ },
+ {
+  "id": "1189745",
+  "title": "Inayanei Succos 5787",
+  "date": "2026-09-22",
+  "language": "en",
+  "duration_s": "2940",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1189745/inayanei-succos5787.mp3"
  }
 ]
