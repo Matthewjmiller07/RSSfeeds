@@ -538,5 +538,41 @@
   "duration_s": "2940",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1189745/inayanei-succos5787.mp3"
+ },
+ {
+  "id": "1189301",
+  "title": "Inayanei Yom Kippur 5787",
+  "date": "2026-09-17",
+  "language": "en",
+  "duration_s": "2220",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1189301/inayanei-yomkippur-5787.mp3"
+ },
+ {
+  "id": "1189129",
+  "title": "Shabbos Shiur #10 - Doing Melachos for a Choleh, Challah, PasHaBaBikisnin, Derech Achilah (73b-74a)",
+  "date": "2026-09-16",
+  "language": "en",
+  "duration_s": "1680",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1189129/shabbos-shiur-10--doing-melachos-for-a-choleh-challah-pas-hababikisnin-derech-achilah-73b-74a.mp3"
+ },
+ {
+  "id": "1188792",
+  "title": "Inayanei Taanios and Erev Yom Kippur",
+  "date": "2026-09-15",
+  "language": "en",
+  "duration_s": "1260",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1188792/inayanei-taaniosand-erev-yom-kippur.mp3"
+ },
+ {
+  "id": "1189000",
+  "title": "Yom Kippur 2026 YCQ",
+  "date": "2026-09-15",
+  "language": "en",
+  "duration_s": "2280",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1189000/yom-kippur-2026ycq.mp3"
  }
 ]
