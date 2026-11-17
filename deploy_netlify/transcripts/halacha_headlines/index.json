@@ -1591,5 +1591,23 @@
   "duration_s": "6367",
   "normalized": false,
   "audio": "https://mcdn.podbean.com/mf/web/m4e9am/Headlines_2-11-23.mp3"
+ },
+ {
+  "id": "406",
+  "title": "Shiur 406 – Is Kovea Ittim only for the wealthy and brilliant?",
+  "date": "2023-02-02",
+  "language": "en",
+  "duration_s": "7812",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/6diyq4/Headlines_2-4-23.mp3"
+ },
+ {
+  "id": "405",
+  "title": "Shiur 405 – Whom should you marry?",
+  "date": "2023-01-27",
+  "language": "en",
+  "duration_s": "5593",
+  "normalized": false,
+  "audio": "https://mcdn.podbean.com/mf/web/494mss/Headlines_1-28-23.mp3"
  }
 ]
