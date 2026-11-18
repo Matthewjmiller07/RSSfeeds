@@ -5463,6 +5463,114 @@
   "audio": "https://download.yutorah.org/2022/1053/1034852/elimelekh-boaz-andthe-go%E2%80%99el-three-models-ofgevirim.mp3"
  },
  {
+  "id": "1034402",
+  "title": "KJ's Dr.William Major Memorial Advanced Shiur in Talmud with Rabbi Dr. JeremyWieder",
+  "date": "2022-05-16",
+  "language": "en",
+  "duration_s": "3420",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/30160/1034402/kj%27s-dr.-williammajor-memorial-advanced-shiur-in-talmud-with-rabbi-dr.-jeremywieder.mp3"
+ },
+ {
+  "id": "1033882",
+  "title": "KJ's Dr.William Major Memorial Advanced Shiur in Talmud with Rabbi Dr. JeremyWieder",
+  "date": "2022-05-10",
+  "language": "en",
+  "duration_s": "3240",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/30160/1033882/kj%27s-dr.-williammajor-memorial-advanced-shiur-in-talmud-with-rabbi-dr.-jeremywieder.mp3"
+ },
+ {
+  "id": "1032396",
+  "title": "KJ's Dr.William Major Memorial Advanced Shiur in Talmud with Rabbi Dr. JeremyWieder",
+  "date": "2022-04-25",
+  "language": "en",
+  "duration_s": "None",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/30160/1032396/kj%27s-dr.-williammajor-memorial-advanced-shiur-in-talmud-with-rabbi-dr.-jeremywieder.mp3"
+ },
+ {
+  "id": "1031672",
+  "title": "Special PrePesach Shuir with Rabbi Dr. Jeremy Wieder",
+  "date": "2022-04-12",
+  "language": "en",
+  "duration_s": "240",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/30160/1031672/special-pre-pesachshuir-with-rabbi-dr.-jeremywieder.mp3"
+ },
+ {
+  "id": "1030565",
+  "title": "KJ's Dr.William Major Memorial Advanced Shiur in Talmud with Rabbi Dr. JeremyWieder",
+  "date": "2022-04-04",
+  "language": "en",
+  "duration_s": "120",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/30160/1030565/kj%27s-dr.-williammajor-memorial-advanced-shiur-in-talmud-with-rabbi-dr.-jeremywieder.mp3"
+ },
+ {
+  "id": "1030064",
+  "title": "Bava Batra 321-22 HaShutefin - Migo beSoveir Emet #1",
+  "date": "2022-03-29",
+  "language": "en",
+  "duration_s": "1320",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/195669/1030064/bava-batra-3-21-22-hashutefin---migo-besoveir-emet1.mp3"
+ },
+ {
+  "id": "1030065",
+  "title": "Bava Batra 322-22 HaShutefin - Migo beSoveir Emet #2",
+  "date": "2022-03-29",
+  "language": "en",
+  "duration_s": "1440",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/195669/1030065/bava-batra-3-2222-hashutefin---migo-besoveir-emet2.mp3"
+ },
+ {
+  "id": "1030066",
+  "title": "Bava Batra 323-22 HaShutefin - Migo leMafrea #1",
+  "date": "2022-03-29",
+  "language": "en",
+  "duration_s": "1560",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/195669/1030066/bava-batra-3-2322-hashutefin---migo-lemafrea1.mp3"
+ },
+ {
+  "id": "1030067",
+  "title": "Bava Batra 324-22 HaShutefin - Migo leMafrea #2",
+  "date": "2022-03-29",
+  "language": "en",
+  "duration_s": "3420",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/195669/1030067/bava-batra-3-2422-hashutefin---migo-lemafrea2.mp3"
+ },
+ {
+  "id": "1030068",
+  "title": "Sichah - TheMark of True Leadership",
+  "date": "2022-03-29",
+  "language": "en",
+  "duration_s": "780",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/195669/1030068/sichah---the-markof-true-leadership.mp3"
+ },
+ {
+  "id": "1030069",
+  "title": "Bava Batra Bekiyut - 30b-32a",
+  "date": "2022-03-29",
+  "language": "en",
+  "duration_s": "420",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/195669/1030069/bava-batra--bekiyut---30b-32a.mp3"
+ },
+ {
+  "id": "1030070",
+  "title": "Bava Batra 328-22 HaShutefin - Migo leMafrea #3",
+  "date": "2022-03-29",
+  "language": "en",
+  "duration_s": "1500",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2022/195669/1030070/bava-batra-3-2822-hashutefin---migo-lemafrea3.mp3"
+ },
+ {
   "id": "1015980",
   "title": "Sichah - GerveToshav",
   "date": "2021-1103T",
