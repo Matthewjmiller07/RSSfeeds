@@ -24,6 +24,19 @@
       <itunes:email>matthewjmiller07@gmail.com</itunes:email>
     </itunes:owner>
     <item>
+      <title>CHAZAQ Torah Talks #227 - Chizuk For Our Times (Rabbi Asher Weiss)</title>
+      <guid isPermaLink="false">492446</guid>
+      <link>https://www.torahanytime.com/lectures/492446</link>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      <description>CHAZAQ Torah Talks #227 - Chizuk For Our Times (Rabbi Asher Weiss)</description>
+      <itunes:summary>CHAZAQ Torah Talks #227 - Chizuk For Our Times (Rabbi Asher Weiss)</itunes:summary>
+      <itunes:subtitle>CHAZAQ Torah Talks #227 - Chizuk For Our Times (Rabbi Asher Weiss)</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:29:16</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/492446/492446-too6fn.mp3" length="17558548" type="audio/mpeg"/>
+    </item>
+    <item>
       <title>    פרשת ויצא: מעשר כספים </title>
       <guid isPermaLink="false">492138</guid>
       <link>https://www.torahanytime.com/lectures/492138</link>
@@ -102,17 +115,17 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/489149/489149-to5xst.mp3" length="26217354" type="audio/mpeg"/>
     </item>
     <item>
-      <title>One Who Can't Make a Bracha before Eating</title>
-      <guid isPermaLink="false">489345</guid>
-      <link>https://www.torahanytime.com/lectures/489345</link>
+      <title>Short Thought on Parshas Chayei Sarah</title>
+      <guid isPermaLink="false">489508</guid>
+      <link>https://www.torahanytime.com/lectures/489508</link>
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-      <description>One Who Can't Make a Bracha before Eating</description>
-      <itunes:summary>One Who Can't Make a Bracha before Eating</itunes:summary>
-      <itunes:subtitle>One Who Can't Make a Bracha before Eating</itunes:subtitle>
+      <description>Short Thought on Parshas Chayei Sarah</description>
+      <itunes:summary>Short Thought on Parshas Chayei Sarah</itunes:summary>
+      <itunes:subtitle>Short Thought on Parshas Chayei Sarah</itunes:subtitle>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:32:32</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/489345/489345-to1uv2.mp3" length="31231626" type="audio/mpeg"/>
+      <itunes:duration>00:06:31</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/489508/489508-to2qct.mp3" length="6262410" type="audio/mpeg"/>
     </item>
     <item>
       <title>מסר קצר פרשת חיי שרה</title>
@@ -141,17 +154,17 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/489143/489143-to6sy7.mp3" length="46254860" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Short Thought on Parshas Chayei Sarah</title>
-      <guid isPermaLink="false">489508</guid>
-      <link>https://www.torahanytime.com/lectures/489508</link>
+      <title>One Who Can't Make a Bracha before Eating</title>
+      <guid isPermaLink="false">489345</guid>
+      <link>https://www.torahanytime.com/lectures/489345</link>
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Short Thought on Parshas Chayei Sarah</description>
-      <itunes:summary>Short Thought on Parshas Chayei Sarah</itunes:summary>
-      <itunes:subtitle>Short Thought on Parshas Chayei Sarah</itunes:subtitle>
+      <description>One Who Can't Make a Bracha before Eating</description>
+      <itunes:summary>One Who Can't Make a Bracha before Eating</itunes:summary>
+      <itunes:subtitle>One Who Can't Make a Bracha before Eating</itunes:subtitle>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:06:31</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/489508/489508-to2qct.mp3" length="6262410" type="audio/mpeg"/>
+      <itunes:duration>00:32:32</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/489345/489345-to1uv2.mp3" length="31231626" type="audio/mpeg"/>
     </item>
     <item>
       <title>Summeray of Halachos Safek Berachos Lehakel </title>
@@ -167,19 +180,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/488885/488885-tnzwbm.mp3" length="24150352" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Parshas Chayei Sarah: Dina DeBar Metzra</title>
-      <guid isPermaLink="false">487998</guid>
-      <link>https://www.torahanytime.com/lectures/487998</link>
-      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
-      <description>Parshas Chayei Sarah: Dina DeBar Metzra</description>
-      <itunes:summary>Parshas Chayei Sarah: Dina DeBar Metzra</itunes:summary>
-      <itunes:subtitle>Parshas Chayei Sarah: Dina DeBar Metzra</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:48:45</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/487998/487998-tnvbi3.mp3" length="46794378" type="audio/mpeg"/>
-    </item>
-    <item>
       <title> פרשת חיי שרה: דינא דבר מצרא </title>
       <guid isPermaLink="false">488150</guid>
       <link>https://www.torahanytime.com/lectures/488150</link>
@@ -191,6 +191,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:51:52</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/488150/488150-tnw8zh.mp3" length="49798794" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Parshas Chayei Sarah: Dina DeBar Metzra</title>
+      <guid isPermaLink="false">487998</guid>
+      <link>https://www.torahanytime.com/lectures/487998</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Parshas Chayei Sarah: Dina DeBar Metzra</description>
+      <itunes:summary>Parshas Chayei Sarah: Dina DeBar Metzra</itunes:summary>
+      <itunes:subtitle>Parshas Chayei Sarah: Dina DeBar Metzra</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:48:45</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/487998/487998-tnvbi3.mp3" length="46794378" type="audio/mpeg"/>
     </item>
     <item>
       <title>Divrei Hesped on HaGaon HaRav Pinchas Zelivansky ZT&quot;L, father-in-law of HaRav Menachem Zvi Twersky Shlita (Rosh Yeshivas Toras Chaim)</title>
@@ -206,19 +219,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/487521/487521-tnsb0e.mp3" length="1372170" type="audio/mpeg"/>
     </item>
     <item>
-      <title> דברי זכרון לכבוד היארצייט החמישי של אמי מורתי</title>
-      <guid isPermaLink="false">487177</guid>
-      <link>https://www.torahanytime.com/lectures/487177</link>
-      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-      <description> דברי זכרון לכבוד היארצייט החמישי של אמי מורתי</description>
-      <itunes:summary> דברי זכרון לכבוד היארצייט החמישי של אמי מורתי</itunes:summary>
-      <itunes:subtitle> דברי זכרון לכבוד היארצייט החמישי של אמי מורתי</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:07:59</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/487177/487177-tnowo7.mp3" length="7669770" type="audio/mpeg"/>
-    </item>
-    <item>
       <title>Parshas Vayeira: Mitzvas Chinuch (@YTC)</title>
       <guid isPermaLink="false">487414</guid>
       <link>https://www.torahanytime.com/lectures/487414</link>
@@ -230,6 +230,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:40:09</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/487414/487414-tnq2ei.mp3" length="38549130" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title> דברי זכרון לכבוד היארצייט החמישי של אמי מורתי</title>
+      <guid isPermaLink="false">487177</guid>
+      <link>https://www.torahanytime.com/lectures/487177</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <description> דברי זכרון לכבוד היארצייט החמישי של אמי מורתי</description>
+      <itunes:summary> דברי זכרון לכבוד היארצייט החמישי של אמי מורתי</itunes:summary>
+      <itunes:subtitle> דברי זכרון לכבוד היארצייט החמישי של אמי מורתי</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:07:59</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/487177/487177-tnowo7.mp3" length="7669770" type="audio/mpeg"/>
     </item>
     <item>
       <title>Short Thought for Parshas Vayeira</title>
@@ -284,19 +297,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/486019/486019-tnijch.mp3" length="46162314" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Thoughts on My Mother’s 5th Yahrtzeit</title>
-      <guid isPermaLink="false">485914</guid>
-      <link>https://www.torahanytime.com/lectures/485914</link>
-      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Thoughts on My Mother’s 5th Yahrtzeit</description>
-      <itunes:summary>Thoughts on My Mother’s 5th Yahrtzeit</itunes:summary>
-      <itunes:subtitle>Thoughts on My Mother’s 5th Yahrtzeit</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:05:40</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/485914/485914-tnhfch.mp3" length="5437962" type="audio/mpeg"/>
-    </item>
-    <item>
       <title>Parshas Vayeira: Mitzvas Chinuch</title>
       <guid isPermaLink="false">485922</guid>
       <link>https://www.torahanytime.com/lectures/485922</link>
@@ -308,6 +308,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:56:55</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/485922/485922-tnhgw8.mp3" length="54646026" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Thoughts on My Mother’s 5th Yahrtzeit</title>
+      <guid isPermaLink="false">485914</guid>
+      <link>https://www.torahanytime.com/lectures/485914</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Thoughts on My Mother’s 5th Yahrtzeit</description>
+      <itunes:summary>Thoughts on My Mother’s 5th Yahrtzeit</itunes:summary>
+      <itunes:subtitle>Thoughts on My Mother’s 5th Yahrtzeit</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:05:40</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/485914/485914-tnhfch.mp3" length="5437962" type="audio/mpeg"/>
     </item>
     <item>
       <title>Parshas Lech Lecha: Yishuv Eretz Yisrael &amp; Kibbud Av V'Eim (@YTC)</title>
@@ -414,17 +427,17 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/484292/484292-tn4em7.mp3" length="54921354" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Parshas Noach: Can a Non-Jew Learn Torah?</title>
-      <guid isPermaLink="false">483923</guid>
-      <link>https://www.torahanytime.com/lectures/483923</link>
+      <title>Can a Jew become a גר?</title>
+      <guid isPermaLink="false">483938</guid>
+      <link>https://www.torahanytime.com/lectures/483938</link>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Parshas Noach: Can a Non-Jew Learn Torah?</description>
-      <itunes:summary>Parshas Noach: Can a Non-Jew Learn Torah?</itunes:summary>
-      <itunes:subtitle>Parshas Noach: Can a Non-Jew Learn Torah?</itunes:subtitle>
+      <description>Can a Jew become a גר?</description>
+      <itunes:summary>Can a Jew become a גר?</itunes:summary>
+      <itunes:subtitle>Can a Jew become a גר?</itunes:subtitle>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:35:18</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/483923/483923-tmzu2g.mp3" length="33885834" type="audio/mpeg"/>
+      <itunes:duration>00:09:10</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/483938/483938-tmzzl9.mp3" length="8807562" type="audio/mpeg"/>
     </item>
     <item>
       <title>Short Thought on Parshas Noach</title>
@@ -440,30 +453,17 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/483904/483904-tmzqgg.mp3" length="12617226" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Can a Jew become a גר?</title>
-      <guid isPermaLink="false">483938</guid>
-      <link>https://www.torahanytime.com/lectures/483938</link>
+      <title>Parshas Noach: Can a Non-Jew Learn Torah?</title>
+      <guid isPermaLink="false">483923</guid>
+      <link>https://www.torahanytime.com/lectures/483923</link>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Can a Jew become a גר?</description>
-      <itunes:summary>Can a Jew become a גר?</itunes:summary>
-      <itunes:subtitle>Can a Jew become a גר?</itunes:subtitle>
+      <description>Parshas Noach: Can a Non-Jew Learn Torah?</description>
+      <itunes:summary>Parshas Noach: Can a Non-Jew Learn Torah?</itunes:summary>
+      <itunes:subtitle>Parshas Noach: Can a Non-Jew Learn Torah?</itunes:subtitle>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:09:10</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/483938/483938-tmzzl9.mp3" length="8807562" type="audio/mpeg"/>
-    </item>
-    <item>
-      <title> ?מסר קצר לפרשת נח: האם יהודי יכול להתגייר</title>
-      <guid isPermaLink="false">483793</guid>
-      <link>https://www.torahanytime.com/lectures/483793</link>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      <description> ?מסר קצר לפרשת נח: האם יהודי יכול להתגייר</description>
-      <itunes:summary> ?מסר קצר לפרשת נח: האם יהודי יכול להתגייר</itunes:summary>
-      <itunes:subtitle> ?מסר קצר לפרשת נח: האם יהודי יכול להתגייר</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:09:20</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/483793/483793-tmyuxc.mp3" length="8966154" type="audio/mpeg"/>
+      <itunes:duration>00:35:18</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/483923/483923-tmzu2g.mp3" length="33885834" type="audio/mpeg"/>
     </item>
     <item>
       <title>  הלכות נדה #25 פתיחה לדיני הרחקות</title>
@@ -479,17 +479,17 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/483660/483660-tmy7zt.mp3" length="29657226" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Introduction to Basar B'Chalav (@ Kollel Zichron HMC)</title>
-      <guid isPermaLink="false">482846</guid>
-      <link>https://www.torahanytime.com/lectures/482846</link>
-      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Introduction to Basar B'Chalav (@ Kollel Zichron HMC)</description>
-      <itunes:summary>Introduction to Basar B'Chalav (@ Kollel Zichron HMC)</itunes:summary>
-      <itunes:subtitle>Introduction to Basar B'Chalav (@ Kollel Zichron HMC)</itunes:subtitle>
+      <title> ?מסר קצר לפרשת נח: האם יהודי יכול להתגייר</title>
+      <guid isPermaLink="false">483793</guid>
+      <link>https://www.torahanytime.com/lectures/483793</link>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <description> ?מסר קצר לפרשת נח: האם יהודי יכול להתגייר</description>
+      <itunes:summary> ?מסר קצר לפרשת נח: האם יהודי יכול להתגייר</itunes:summary>
+      <itunes:subtitle> ?מסר קצר לפרשת נח: האם יהודי יכול להתגייר</itunes:subtitle>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:48:52</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/482846/482846-tmsjbe.mp3" length="46909962" type="audio/mpeg"/>
+      <itunes:duration>00:09:20</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/483793/483793-tmyuxc.mp3" length="8966154" type="audio/mpeg"/>
     </item>
     <item>
       <title> פרשת נח: נכרי שעסק בתורה חייב מיתה </title>
@@ -505,17 +505,17 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/482987/482987-tmtb2l.mp3" length="54913674" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Short Thought on Parshas Bereishis</title>
-      <guid isPermaLink="false">482639</guid>
-      <link>https://www.torahanytime.com/lectures/482639</link>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Short Thought on Parshas Bereishis</description>
-      <itunes:summary>Short Thought on Parshas Bereishis</itunes:summary>
-      <itunes:subtitle>Short Thought on Parshas Bereishis</itunes:subtitle>
+      <title>Introduction to Basar B'Chalav (@ Kollel Zichron HMC)</title>
+      <guid isPermaLink="false">482846</guid>
+      <link>https://www.torahanytime.com/lectures/482846</link>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Introduction to Basar B'Chalav (@ Kollel Zichron HMC)</description>
+      <itunes:summary>Introduction to Basar B'Chalav (@ Kollel Zichron HMC)</itunes:summary>
+      <itunes:subtitle>Introduction to Basar B'Chalav (@ Kollel Zichron HMC)</itunes:subtitle>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:06:03</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/482639/482639-tmqkki.mp3" length="5809290" type="audio/mpeg"/>
+      <itunes:duration>00:48:52</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/482846/482846-tmsjbe.mp3" length="46909962" type="audio/mpeg"/>
     </item>
     <item>
       <title>Parshas Noach: Mitzvas Piryah V’rivyah</title>
@@ -542,6 +542,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:22:43</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/482640/482640-tmqlv0.mp3" length="21811338" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Short Thought on Parshas Bereishis</title>
+      <guid isPermaLink="false">482639</guid>
+      <link>https://www.torahanytime.com/lectures/482639</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Short Thought on Parshas Bereishis</description>
+      <itunes:summary>Short Thought on Parshas Bereishis</itunes:summary>
+      <itunes:subtitle>Short Thought on Parshas Bereishis</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:06:03</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/482639/482639-tmqkki.mp3" length="5809290" type="audio/mpeg"/>
     </item>
     <item>
       <title> מסר קצר לפרשת בראשית </title>
@@ -674,19 +687,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/480361/480361-tlvp6y.mp3" length="34974090" type="audio/mpeg"/>
     </item>
     <item>
-      <title>  שיעור בישיבת אור אלחנן בעניין הידור וטרחה במצוות </title>
-      <guid isPermaLink="false">479745</guid>
-      <link>https://www.torahanytime.com/lectures/479745</link>
-      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
-      <description>  שיעור בישיבת אור אלחנן בעניין הידור וטרחה במצוות </description>
-      <itunes:summary>  שיעור בישיבת אור אלחנן בעניין הידור וטרחה במצוות </itunes:summary>
-      <itunes:subtitle>  שיעור בישיבת אור אלחנן בעניין הידור וטרחה במצוות </itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>01:00:49</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479745/479745-tlqji7.mp3" length="58387338" type="audio/mpeg"/>
-    </item>
-    <item>
       <title>הימים שבין יום כיפור לסוכות</title>
       <guid isPermaLink="false">479743</guid>
       <link>https://www.torahanytime.com/lectures/479743</link>
@@ -698,6 +698,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:09:48</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479743/479743-tlqigl.mp3" length="9414666" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>  שיעור בישיבת אור אלחנן בעניין הידור וטרחה במצוות </title>
+      <guid isPermaLink="false">479745</guid>
+      <link>https://www.torahanytime.com/lectures/479745</link>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      <description>  שיעור בישיבת אור אלחנן בעניין הידור וטרחה במצוות </description>
+      <itunes:summary>  שיעור בישיבת אור אלחנן בעניין הידור וטרחה במצוות </itunes:summary>
+      <itunes:subtitle>  שיעור בישיבת אור אלחנן בעניין הידור וטרחה במצוות </itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>01:00:49</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479745/479745-tlqji7.mp3" length="58387338" type="audio/mpeg"/>
     </item>
     <item>
       <title>The Mitzvah of Eating on Erev Yom Kippur</title>
@@ -713,19 +726,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479620/479620-tlnodn.mp3" length="46831242" type="audio/mpeg"/>
     </item>
     <item>
-      <title>דרשה לפני שבת שובה</title>
-      <guid isPermaLink="false">479333</guid>
-      <link>https://www.torahanytime.com/lectures/479333</link>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <description>דרשה לפני שבת שובה</description>
-      <itunes:summary>דרשה לפני שבת שובה</itunes:summary>
-      <itunes:subtitle>דרשה לפני שבת שובה</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:42:04</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479333/479333-tlk6r8.mp3" length="40388490" type="audio/mpeg"/>
-    </item>
-    <item>
       <title>Short Thought for Shabbos Shuva</title>
       <guid isPermaLink="false">479288</guid>
       <link>https://www.torahanytime.com/lectures/479288</link>
@@ -739,17 +739,17 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479288/479288-tlk4tg.mp3" length="11525898" type="audio/mpeg"/>
     </item>
     <item>
-      <title>הכנה ליום כיפורים  </title>
-      <guid isPermaLink="false">479035</guid>
-      <link>https://www.torahanytime.com/lectures/479035</link>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
-      <description>הכנה ליום כיפורים  </description>
-      <itunes:summary>הכנה ליום כיפורים  </itunes:summary>
-      <itunes:subtitle>הכנה ליום כיפורים  </itunes:subtitle>
+      <title>דרשה לפני שבת שובה</title>
+      <guid isPermaLink="false">479333</guid>
+      <link>https://www.torahanytime.com/lectures/479333</link>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description>דרשה לפני שבת שובה</description>
+      <itunes:summary>דרשה לפני שבת שובה</itunes:summary>
+      <itunes:subtitle>דרשה לפני שבת שובה</itunes:subtitle>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:23:14</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479035/479035-tliwgj.mp3" length="22298634" type="audio/mpeg"/>
+      <itunes:duration>00:42:04</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479333/479333-tlk6r8.mp3" length="40388490" type="audio/mpeg"/>
     </item>
     <item>
       <title>  דברים קצרים לשבת שובה ויום הכיפורים </title>
@@ -763,6 +763,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:16:04</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479029/479029-tlivd2.mp3" length="15431178" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>הכנה ליום כיפורים  </title>
+      <guid isPermaLink="false">479035</guid>
+      <link>https://www.torahanytime.com/lectures/479035</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>הכנה ליום כיפורים  </description>
+      <itunes:summary>הכנה ליום כיפורים  </itunes:summary>
+      <itunes:subtitle>הכנה ליום כיפורים  </itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:23:14</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/479035/479035-tliwgj.mp3" length="22298634" type="audio/mpeg"/>
     </item>
     <item>
       <title> הכנה ליום הכיפורים בקהילת חיי נפש (יידיש)</title>
@@ -830,19 +843,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/477182/477182-tl2588.mp3" length="48916746" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Rosh Hashana on Shabbos</title>
-      <guid isPermaLink="false">476820</guid>
-      <link>https://www.torahanytime.com/lectures/476820</link>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Rosh Hashana on Shabbos</description>
-      <itunes:summary>Rosh Hashana on Shabbos</itunes:summary>
-      <itunes:subtitle>Rosh Hashana on Shabbos</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:49:40</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/476820/476820-tkzu3s.mp3" length="47674890" type="audio/mpeg"/>
-    </item>
-    <item>
       <title>  ראש השנה שחל להיות בשבת </title>
       <guid isPermaLink="false">476969</guid>
       <link>https://www.torahanytime.com/lectures/476969</link>
@@ -854,6 +854,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:57:03</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/476969/476969-tl0im5.mp3" length="54773130" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Rosh Hashana on Shabbos</title>
+      <guid isPermaLink="false">476820</guid>
+      <link>https://www.torahanytime.com/lectures/476820</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Rosh Hashana on Shabbos</description>
+      <itunes:summary>Rosh Hashana on Shabbos</itunes:summary>
+      <itunes:subtitle>Rosh Hashana on Shabbos</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:49:40</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/476820/476820-tkzu3s.mp3" length="47674890" type="audio/mpeg"/>
     </item>
     <item>
       <title> כליו של פוסק הלכה בעידן של מהפכה מדעית-טכנולוגית מתמדת (במכון לחקר הרפואה ע&quot;פ התורה ע&quot;ש ד&quot;ר פלק שלזינגר)</title>
@@ -973,19 +986,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471735/471735-tkdwj2.mp3" length="31922826" type="audio/mpeg"/>
     </item>
     <item>
-      <title>תקיעת שופר בחודש אלול</title>
-      <guid isPermaLink="false">471556</guid>
-      <link>https://www.torahanytime.com/lectures/471556</link>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
-      <description>תקיעת שופר בחודש אלול</description>
-      <itunes:summary>תקיעת שופר בחודש אלול</itunes:summary>
-      <itunes:subtitle>תקיעת שופר בחודש אלול</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:55:51</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471556/471556-tkceul.mp3" length="53623434" type="audio/mpeg"/>
-    </item>
-    <item>
       <title> שיעור כללי בישיבת שדרות בעניין רודף </title>
       <guid isPermaLink="false">471434</guid>
       <link>https://www.torahanytime.com/lectures/471434</link>
@@ -997,6 +997,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:44:07</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471434/471434-tkbzr1.mp3" length="42355338" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>תקיעת שופר בחודש אלול</title>
+      <guid isPermaLink="false">471556</guid>
+      <link>https://www.torahanytime.com/lectures/471556</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <description>תקיעת שופר בחודש אלול</description>
+      <itunes:summary>תקיעת שופר בחודש אלול</itunes:summary>
+      <itunes:subtitle>תקיעת שופר בחודש אלול</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:55:51</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/471556/471556-tkceul.mp3" length="53623434" type="audio/mpeg"/>
     </item>
     <item>
       <title>Agudah Zoom Shiur: Mitzvas Tekias Shofar</title>
@@ -1025,19 +1038,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/470998/470998-tk8oaz.mp3" length="53170314" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Hakdama to Stam Yeinam (@ Kollel Nota Besochenu)</title>
-      <guid isPermaLink="false">470614</guid>
-      <link>https://www.torahanytime.com/lectures/470614</link>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Hakdama to Stam Yeinam (@ Kollel Nota Besochenu)</description>
-      <itunes:summary>Hakdama to Stam Yeinam (@ Kollel Nota Besochenu)</itunes:summary>
-      <itunes:subtitle>Hakdama to Stam Yeinam (@ Kollel Nota Besochenu)</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:52:07</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/470614/470614-tk44mc.mp3" length="50036781" type="audio/mpeg"/>
-    </item>
-    <item>
       <title>Does Teshuva Exempt from Beis Din's Punishments</title>
       <guid isPermaLink="false">470681</guid>
       <link>https://www.torahanytime.com/lectures/470681</link>
@@ -1049,6 +1049,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:35:25</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/470681/470681-tk49m0.mp3" length="33993354" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Hakdama to Stam Yeinam (@ Kollel Nota Besochenu)</title>
+      <guid isPermaLink="false">470614</guid>
+      <link>https://www.torahanytime.com/lectures/470614</link>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Hakdama to Stam Yeinam (@ Kollel Nota Besochenu)</description>
+      <itunes:summary>Hakdama to Stam Yeinam (@ Kollel Nota Besochenu)</itunes:summary>
+      <itunes:subtitle>Hakdama to Stam Yeinam (@ Kollel Nota Besochenu)</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:52:07</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/470614/470614-tk44mc.mp3" length="50036781" type="audio/mpeg"/>
     </item>
     <item>
       <title>  שיעור מיוחד לרגל מלאת 100 שנה לפטירת האור שמח זצ&quot;ל</title>
@@ -1285,19 +1298,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/463671/463671-tifnd4.mp3" length="42061194" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Drasha on the Three Weeks  (@ Congregation Shomrei Emunah Baltimore)</title>
-      <guid isPermaLink="false">462448</guid>
-      <link>https://www.torahanytime.com/lectures/462448</link>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Drasha on the Three Weeks  (@ Congregation Shomrei Emunah Baltimore)</description>
-      <itunes:summary>Drasha on the Three Weeks  (@ Congregation Shomrei Emunah Baltimore)</itunes:summary>
-      <itunes:subtitle>Drasha on the Three Weeks  (@ Congregation Shomrei Emunah Baltimore)</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:39:24</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/462448/462448-ti45c4.mp3" length="37828362" type="audio/mpeg"/>
-    </item>
-    <item>
       <title>Coffee &amp; Shower Before Shachris</title>
       <guid isPermaLink="false">462513</guid>
       <link>https://www.torahanytime.com/lectures/462513</link>
@@ -1309,6 +1309,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:29:36</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/462513/462513-ti4m2z.mp3" length="28417290" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Drasha on the Three Weeks  (@ Congregation Shomrei Emunah Baltimore)</title>
+      <guid isPermaLink="false">462448</guid>
+      <link>https://www.torahanytime.com/lectures/462448</link>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Drasha on the Three Weeks  (@ Congregation Shomrei Emunah Baltimore)</description>
+      <itunes:summary>Drasha on the Three Weeks  (@ Congregation Shomrei Emunah Baltimore)</itunes:summary>
+      <itunes:subtitle>Drasha on the Three Weeks  (@ Congregation Shomrei Emunah Baltimore)</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:39:24</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/462448/462448-ti45c4.mp3" length="37828362" type="audio/mpeg"/>
     </item>
     <item>
       <title>מהות מצוות אבילות</title>
@@ -4743,19 +4756,6 @@
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395406/395406-t2u9i5.mp3" length="35430675" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Eating Before Hearing Shofar</title>
-      <guid isPermaLink="false">395126</guid>
-      <link>https://www.torahanytime.com/lectures/395126</link>
-      <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
-      <description>Eating Before Hearing Shofar</description>
-      <itunes:summary>Eating Before Hearing Shofar</itunes:summary>
-      <itunes:subtitle>Eating Before Hearing Shofar</itunes:subtitle>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>00:56:45</itunes:duration>
-      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395126/395126-t2stvd.mp3" length="54480147" type="audio/mpeg"/>
-    </item>
-    <item>
       <title>You Can Be Holding In Shas &amp; Poskim</title>
       <guid isPermaLink="false">396467</guid>
       <link>https://www.torahanytime.com/lectures/396467</link>
@@ -4767,6 +4767,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>00:04:41</itunes:duration>
       <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/396467/396467-t35nky.mp3" length="4492939" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Eating Before Hearing Shofar</title>
+      <guid isPermaLink="false">395126</guid>
+      <link>https://www.torahanytime.com/lectures/395126</link>
+      <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
+      <description>Eating Before Hearing Shofar</description>
+      <itunes:summary>Eating Before Hearing Shofar</itunes:summary>
+      <itunes:subtitle>Eating Before Hearing Shofar</itunes:subtitle>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:56:45</itunes:duration>
+      <enclosure url="https://ta-lectures.s3.us-east-005.backblazeb2.com/mp3/395126/395126-t2stvd.mp3" length="54480147" type="audio/mpeg"/>
     </item>
     <item>
       <title>בדיני עבירות שבין אדם לחבירו</title>
