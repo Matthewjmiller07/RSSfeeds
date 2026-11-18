@@ -621,6 +621,15 @@
   "audio": "https://download.yutorah.org/2026/201682/1187809/mishnah-berurahilchot-rosh-hashana-4---siman-5851-586.mp3"
  },
  {
+  "id": "1187837",
+  "title": "Introduction to Kodashim",
+  "date": "2026-09-08",
+  "language": "en",
+  "duration_s": "60",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/1142/1187837/introduction-tokodashim-.mp3"
+ },
+ {
   "id": "1187871",
   "title": "Shabbos Shiur #7 - Melacha of Miking, Making a Bracha on a Minhag,Melacha of Milah, Brain Death (73b-74a)",
   "date": "2026-09-08",
@@ -628,5 +637,32 @@
   "duration_s": "1740",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1187871/shabbos-shiur-7--melacha-of-miking-making-a-bracha-on-a-minhag-melacha-of-milah-brain-death-73b-74a.mp3"
+ },
+ {
+  "id": "1187884",
+  "title": "Rosh Hashanah 2026 YCQ",
+  "date": "2026-09-08",
+  "language": "en",
+  "duration_s": "1920",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1187884/rosh-hashanah-2026ycq.mp3"
+ },
+ {
+  "id": "1187720",
+  "title": "Shabbos Shiur #6 - Ravina V'Rav Ashi Sof Horaah, Kashia vs. Tiuvtah,Zomer V'Tzarich La'Eitzim, Milking on Shabbos (73a)",
+  "date": "2026-09-07",
+  "language": "en",
+  "duration_s": "1620",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1187720/shabbos-shiur-6---ravina-v%27rav-ashi-sof-horaah-kashia-vs.-tiuvtah-zomer-v%27tzarich-la%27eitzim-milking-onshabbos-73a.mp3"
+ },
+ {
+  "id": "1187615",
+  "title": "Shabbos Shiur #5 - Avos Melachos, Eruv Chazteros, Sidura D'Pas, Arguingwith Earlier Generations (73a)",
+  "date": "2026-09-06",
+  "language": "en",
+  "duration_s": "1680",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1187615/shabbos-shiur-5--avos-melachos-eruv-chazteros-sidura-d%27pas-arguing-with-earlier-generations-73a.mp3"
  }
 ]
