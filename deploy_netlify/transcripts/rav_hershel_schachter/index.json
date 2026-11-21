@@ -1105,5 +1105,32 @@
   "duration_s": "2100",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1179549/v%27elumegalchin-15---birkas-hashem-dini-aveilus-kriyah.mp3"
+ },
+ {
+  "id": "1179421",
+  "title": "V'Elu Megalchin #14 - Onen Patur Min HaMitzvos, Oman Koneh Shvach Kli,Kriyah",
+  "date": "2026-06-14",
+  "language": "en",
+  "duration_s": "1380",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1179421/v%27elu-megalchin-14---onen-patur-min-hamitzvos-oman-koneh-shvach-kli-kriyah.mp3"
+ },
+ {
+  "id": "1179333",
+  "title": "V'Elu Megalchin #13 - Challah, Tcheiles, Yom Shvi’i Oleh L’kan U’l’kan",
+  "date": "2026-06-12",
+  "language": "en",
+  "duration_s": "1500",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1179333/v%27elumegalchin-13---challah-tcheiles-yom-shvi%E2%80%99i-oleh-l%E2%80%99kanu%E2%80%99l%E2%80%99kan.mp3"
+ },
+ {
+  "id": "1179255",
+  "title": "Shelach 5786",
+  "date": "2026-06-11",
+  "language": "en",
+  "duration_s": "2940",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/55086/1179255/shelach-5786.mp3"
  }
 ]
