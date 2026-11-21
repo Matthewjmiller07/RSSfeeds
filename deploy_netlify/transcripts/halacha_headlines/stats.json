@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-11-20T03:42:27Z",
+ "generated_at": "2026-11-21T03:42:59Z",
  "total": {
-  "count": 583,
-  "seconds": 3423080,
+  "count": 584,
+  "seconds": 3428038,
   "by_lang": {
    "en": {
-    "count": 579,
-    "seconds": 3401480
+    "count": 580,
+    "seconds": 3406438
    },
    "other": {
     "count": 4,
@@ -15,24 +15,16 @@
   }
  },
  "transcribed": {
-  "count": 190,
-  "seconds": 1132781,
+  "count": 211,
+  "seconds": 1255189,
   "by_lang": {
    "en": {
-    "count": 190,
-    "seconds": 1132781
+    "count": 211,
+    "seconds": 1255189
    }
   }
  },
  "daily": [
-  {
-   "date": "2026-11-04",
-   "count": 9
-  },
-  {
-   "date": "2026-11-05",
-   "count": 33
-  },
   {
    "date": "2026-11-06",
    "count": 4
@@ -80,6 +72,14 @@
   {
    "date": "2026-11-17",
    "count": 11
+  },
+  {
+   "date": "2026-11-20",
+   "count": 19
+  },
+  {
+   "date": "2026-11-21",
+   "count": 2
   }
  ]
 }
