@@ -1132,5 +1132,68 @@
   "duration_s": "2940",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/55086/1179255/shelach-5786.mp3"
+ },
+ {
+  "id": "1179100",
+  "title": "V'Elu Megalchin #12 - Onen Patur M’Mitzvos, Kevura, Showering on YomTov",
+  "date": "2026-06-10",
+  "language": "en",
+  "duration_s": "2160",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1179100/v%27elumegalchin-12---onen-patur-m%E2%80%99mitzvos-kevura-showering-on-yom-tov.mp3"
+ },
+ {
+  "id": "1178962",
+  "title": "Chagiga Shiur#9 YCQ",
+  "date": "2026-06-09",
+  "language": "en",
+  "duration_s": "1320",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1178962/chagiga-shiur9ycq.mp3"
+ },
+ {
+  "id": "1178972",
+  "title": "V'Elu Megalchin #11 - Kiddushin B’Chol HaMoed, Kriyah L’Aviv V’Imo,Kriyah on Churban",
+  "date": "2026-06-09",
+  "language": "en",
+  "duration_s": "1980",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1178972/v%27elumegalchin-11---kiddushin-b%E2%80%99chol-hamoed-kriyah-l%E2%80%99aviv-v%E2%80%99imo-kriyah-onchurban.mp3"
+ },
+ {
+  "id": "1178749",
+  "title": "V'Elu Megalchin #9 - Domeh Ha’Rav L’Malach, Miktzas Hayom K’Kulo,haircuts for Lag Ba’Omer",
+  "date": "2026-06-08",
+  "language": "en",
+  "duration_s": "1560",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1178749/v%27elumegalchin-9---domeh-ha%E2%80%99rav-l%E2%80%99malach-miktzas-hayom-k%E2%80%99kulo-haircuts-forlag-ba%E2%80%99omer.mp3"
+ },
+ {
+  "id": "1178813",
+  "title": "V'Elu Megalchin #10 - Ger Toshav, Psik Reisha",
+  "date": "2026-06-08",
+  "language": "en",
+  "duration_s": "3420",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1178813/v%27elumegalchin-10---ger-toshav-psik-reisha.mp3"
+ },
+ {
+  "id": "1178518",
+  "title": "V'Elu Megalchin #8 - Simcha B'Mikdash, Nevu'as Moshe, Shliach Beis Din",
+  "date": "2026-06-05",
+  "language": "en",
+  "duration_s": "1980",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1178518/v%27elumegalchin-8---simcha-b%27mikdash-nevu%27as-moshe-shliach-beis-din.mp3"
+ },
+ {
+  "id": "1178269",
+  "title": "V'Elu Megalchin #7 - Beis HaAvel, Dinnim Dirabanan, Beis Shlishi",
+  "date": "2026-06-03",
+  "language": "en",
+  "duration_s": "2460",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1178269/v%27elumegalchin-7---beis-haavel-dinnim-dirabanan-beis-shlishi.mp3"
  }
 ]
