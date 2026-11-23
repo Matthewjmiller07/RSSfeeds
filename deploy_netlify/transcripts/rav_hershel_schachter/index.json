@@ -1188,6 +1188,15 @@
   "audio": "https://download.yutorah.org/2026/201682/1178518/v%27elumegalchin-8---simcha-b%27mikdash-nevu%27as-moshe-shliach-beis-din.mp3"
  },
  {
+  "id": "1178256",
+  "title": "V'Elu Megalchin #6 - Tisha B'Av SheNidcheh, Avel Aino MishaliachKorbanosav, Erev Pesach",
+  "date": "2026-06-03",
+  "language": "en",
+  "duration_s": "2220",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1178256/v%27elumegalchin-6---tisha-b%27av-shenidcheh-avel-aino-mishaliach-korbanosav-erev-pesach.mp3"
+ },
+ {
   "id": "1178269",
   "title": "V'Elu Megalchin #7 - Beis HaAvel, Dinnim Dirabanan, Beis Shlishi",
   "date": "2026-06-03",
@@ -1195,5 +1204,50 @@
   "duration_s": "2460",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1178269/v%27elumegalchin-7---beis-haavel-dinnim-dirabanan-beis-shlishi.mp3"
+ },
+ {
+  "id": "1178315",
+  "title": "Katz Kollel Beitzah 36b-39a: ביטול, טעם כעיקר, טבילת כלים לגר- ליקוטי עניינים דין קנין בחופה, מלקות בנדר ע\"י אחר,",
+  "date": "2026-06-03",
+  "language": "en",
+  "duration_s": "2940",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/47660/1178315/katz-kollelbeitzah-36b-39a-%D7%9C%D7%99%D7%A7%D7%95%D7%98%D7%99%D7%A2%D7%A0%D7%99%D7%99%D7%A0%D7%99%D7%9D---%D7%98%D7%91%D7%99%D7%9C%D7%AA%D7%9B%D7%9C%D7%99%D7%9D-%D7%9C%D7%92%D7%A8-%D7%98%D7%A2%D7%9D-%D7%9B%D7%A2%D7%99%D7%A7%D7%A8%D7%91%D7%99%D7%98%D7%95%D7%9C-%D7%91%D7%9E%D7%9E%D7%95%D7%A0%D7%95%D7%AA%D7%9E%D7%9C%D7%A7%D7%95%D7%AA-%D7%91%D7%A0%D7%93%D7%A8-%D7%A2%22%D7%99-%D7%90%D7%97%D7%A8%D7%93%D7%99%D7%9F-%D7%A7%D7%A0%D7%99%D7%9F-%D7%91%D7%97%D7%95%D7%A4%D7%94.mp3"
+ },
+ {
+  "id": "1178186",
+  "title": "Chagiga Shiur#8 YCQ",
+  "date": "2026-06-02",
+  "language": "en",
+  "duration_s": "1740",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1178186/chagiga-shiur8ycq.mp3"
+ },
+ {
+  "id": "1177993",
+  "title": "V'Elu Megalchin #4 - Cherem D’Rabeinu Gershom, Nidui for a TalmidChacham, Tisha B’Av",
+  "date": "2026-06-01",
+  "language": "en",
+  "duration_s": "1440",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1177993/v%27elumegalchin-4---cherem-d%E2%80%99rabeinu-gershom-nidui-for-a-talmid-chacham-tishab%E2%80%99av.mp3"
+ },
+ {
+  "id": "1178053",
+  "title": "V'Elu Megalchin #5 - Nidui Deoraysa, Gevinas Akum, Tisha b’av",
+  "date": "2026-06-01",
+  "language": "en",
+  "duration_s": "1980",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1178053/v%27elumegalchin-5---nidui-deoraysa-gevinas-akum-tisha-b%E2%80%99av.mp3"
+ },
+ {
+  "id": "1177601",
+  "title": "V'Elu Megalchin #3 - Simcha, Seudas Havra’ah, Kedusha Achas",
+  "date": "2026-05-28",
+  "language": "en",
+  "duration_s": "3000",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1177601/v%27elumegalchin-3---simcha-seudas-havra%E2%80%99ah-kedusha-achas.mp3"
  }
 ]
