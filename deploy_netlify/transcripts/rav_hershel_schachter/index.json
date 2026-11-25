@@ -1242,6 +1242,15 @@
   "audio": "https://download.yutorah.org/2026/201682/1178053/v%27elumegalchin-5---nidui-deoraysa-gevinas-akum-tisha-b%E2%80%99av.mp3"
  },
  {
+  "id": "1177529",
+  "title": "Chagiga Shiur#7 YCQ",
+  "date": "2026-05-28",
+  "language": "en",
+  "duration_s": "1920",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1177529/chagiga-shiur7ycq.mp3"
+ },
+ {
   "id": "1177601",
   "title": "V'Elu Megalchin #3 - Simcha, Seudas Havra’ah, Kedusha Achas",
   "date": "2026-05-28",
@@ -1249,5 +1258,32 @@
   "duration_s": "3000",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1177601/v%27elumegalchin-3---simcha-seudas-havra%E2%80%99ah-kedusha-achas.mp3"
+ },
+ {
+  "id": "1177379",
+  "title": "V'Elu Megalchin #1 - Source for Aveilus, Safek Aveilus Le'Kulah, MiksasHaYom KeKulo (13b)",
+  "date": "2026-05-27",
+  "language": "en",
+  "duration_s": "2160",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1177379/v%27elumegalchin-1---source-for-aveilus-safek-aveilus-le%27kulah-miksas-hayom-kekulo-13b.mp3"
+ },
+ {
+  "id": "1177402",
+  "title": "V'Elu Megalchin #2 - Derech Rechoka, Kriyah, Talmud Torah B’Aveilus(13b)",
+  "date": "2026-05-27",
+  "language": "en",
+  "duration_s": "1860",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1177402/v%27elumegalchin-2---derech-rechoka-kriyah-talmud-torah-b%E2%80%99aveilus-13b.mp3"
+ },
+ {
+  "id": "1177172",
+  "title": "Assorted Bechinos",
+  "date": "2026-05-25",
+  "language": "en",
+  "duration_s": "None",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/222558/1177172/assortedbechinos.pdf"
  }
 ]
