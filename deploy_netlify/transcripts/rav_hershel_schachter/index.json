@@ -1285,5 +1285,86 @@
   "duration_s": "None",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/222558/1177172/assortedbechinos.pdf"
+ },
+ {
+  "id": "1176931",
+  "title": "The Rav on Megillas Rut and Bamidbar",
+  "date": "2026-05-21",
+  "language": "en",
+  "duration_s": "480",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1176931/the-rav-onmegillas-rut-and-bamidbar.mp3"
+ },
+ {
+  "id": "1176729",
+  "title": "Shavuos 2026 YCQ",
+  "date": "2026-05-19",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1176729/shavuos-2026ycq.mp3"
+ },
+ {
+  "id": "1175983",
+  "title": "Chagiga Shiur#6 YCQ",
+  "date": "2026-05-12",
+  "language": "en",
+  "duration_s": "1980",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1175983/chagiga-shiur6ycq.mp3"
+ },
+ {
+  "id": "1175837",
+  "title": "Kesuvos Bechina 4 Chazara 3",
+  "date": "2026-05-11",
+  "language": "en",
+  "duration_s": "1080",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1175837/kesuvos-bechina4-chazara-3.mp3"
+ },
+ {
+  "id": "1175838",
+  "title": "Behind a Posek’s Derech HaPsak",
+  "date": "2026-05-11",
+  "language": "en",
+  "duration_s": "3540",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1175838/behind-a-posek%E2%80%99s-derech-hapsak.mp3"
+ },
+ {
+  "id": "1175839",
+  "title": "The Proper Chinuch For Our Children",
+  "date": "2026-05-11",
+  "language": "en",
+  "duration_s": "2760",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1175839/the-properchinuch-for-our-children.mp3"
+ },
+ {
+  "id": "1175407",
+  "title": "Saying Goodbye to Rabbi Jeremy Wieder as He Makes Aliyah",
+  "date": "2026-05-07",
+  "language": "en",
+  "duration_s": "600",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/55086/1175407/saying-goodbye-torabbi-jeremy-wieder-as-he-makes-aliyah.mp3"
+ },
+ {
+  "id": "1175452",
+  "title": "Behar (Bechukosai) 5786",
+  "date": "2026-05-07",
+  "language": "en",
+  "duration_s": "1920",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1175452/behar-bechukosai5786.mp3"
+ },
+ {
+  "id": "1175350",
+  "title": "Kesuvos Bechina 4 Chazara 2",
+  "date": "2026-05-06",
+  "language": "en",
+  "duration_s": "1980",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1175350/kesuvos-bechina4-chazara-2.mp3"
  }
 ]
