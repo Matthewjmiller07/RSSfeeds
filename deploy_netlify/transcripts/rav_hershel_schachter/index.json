@@ -1359,6 +1359,15 @@
   "audio": "https://download.yutorah.org/2026/201682/1175452/behar-bechukosai5786.mp3"
  },
  {
+  "id": "1175271",
+  "title": "Chagiga Shiur#5 YCQ",
+  "date": "2026-05-06",
+  "language": "en",
+  "duration_s": "1800",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1175271/chagiga-shiur5ycq.mp3"
+ },
+ {
   "id": "1175350",
   "title": "Kesuvos Bechina 4 Chazara 2",
   "date": "2026-05-06",
@@ -1366,5 +1375,50 @@
   "duration_s": "1980",
   "normalized": false,
   "audio": "https://download.yutorah.org/2026/201682/1175350/kesuvos-bechina4-chazara-2.mp3"
+ },
+ {
+  "id": "1175182",
+  "title": "Kesuvos Bechina 4 Chazara 1",
+  "date": "2026-05-05",
+  "language": "en",
+  "duration_s": "2040",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1175182/kesuvos-bechina4-chazara-1.mp3"
+ },
+ {
+  "id": "1175187",
+  "title": "The Rav on Inyanei Yom Kippur",
+  "date": "2026-05-05",
+  "language": "en",
+  "duration_s": "3060",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1175187/the-rav-oninyanei-yom-kippur-.mp3"
+ },
+ {
+  "id": "1174226",
+  "title": "Kesuvos Shiur #79 - Definition of a Chiddush, Bassar BiChalav, MiddosSheHaTorah Nidreshet BaHem (32a-32b)",
+  "date": "2026-04-28",
+  "language": "en",
+  "duration_s": "1440",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1174226/kesuvos-shiur-79--definition-of-a-chiddush-bassar-bichalav-middos-shehatorah-nidreshet-bahem-32a-32b.mp3"
+ },
+ {
+  "id": "1174296",
+  "title": "Chagiga Shiur#4 YCQ",
+  "date": "2026-04-28",
+  "language": "en",
+  "duration_s": "1320",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/959/1174296/chagiga-shiur4ycq.mp3"
+ },
+ {
+  "id": "1174056",
+  "title": "Mishnah Berura Hilchos Taanios 5 - Siman 552:1-12",
+  "date": "2026-04-27",
+  "language": "en",
+  "duration_s": "1260",
+  "normalized": false,
+  "audio": "https://download.yutorah.org/2026/201682/1174056/mishnah-berurahilchos-taanios-5---siman-5521-12.mp3"
  }
 ]
